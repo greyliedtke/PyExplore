@@ -1,0 +1,112 @@
+,DD_id,Base_quantity,Symbol,Description,SI_base_unit,Dimension,WIKI_LINK,L,M,T,K,I,N,J
+0,1,Absement,A,Measure of sustained displacement: the first integral with respect to time of displacement,m⋅s,L T,https://en.wikipedia.org/wiki/Absement,1.0,0.0,1.0,0.0,0.0,0.0,0.0
+1,2,Absorbed dose rate,,Absorbed dose received per unit of time,Gy/s,L2 T−3,https://en.wikipedia.org/wiki/Absorbed_dose_rate,2.0,0.0,-3.0,0.0,0.0,0.0,0.0
+2,3,Acceleration,a→,Rate of change of velocity per unit time: the second time derivative of position,m / s**2,L T−2,https://en.wikipedia.org/wiki/Acceleration,1.0,0.0,-2.0,0.0,0.0,0.0,0.0
+3,4,Angular acceleration,ωa,Change in angular velocity per unit time,rad / s ** 2,T−2,https://en.wikipedia.org/wiki/Angular_acceleration,0.0,0.0,-2.0,0.0,0.0,0.0,0.0
+4,5,Angular momentum,L,Measure of the extent and direction of an object rotates about a reference point,kg * m ** 2 / s,M L2 T−1,https://en.wikipedia.org/wiki/Angular_momentum,2.0,1.0,-1.0,0.0,0.0,0.0,0.0
+5,6,Angular velocity,ω,The angle incremented in a plane by a segment connecting an object and a reference point per unit time,rad/s,T−1,https://en.wikipedia.org/wiki/Angular_velocity,0.0,0.0,-1.0,0.0,0.0,0.0,0.0
+6,7,Area,A,Extent of a surface,m**2,L2,https://en.wikipedia.org/wiki/Area,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+7,8,Area density,ρA,Mass per unit area,kg/m**2,M L−2,https://en.wikipedia.org/wiki/Area_density,-2.0,1.0,0.0,0.0,0.0,0.0,0.0
+8,9,Capacitance,C,Stored charge per unit electric potential,farad,M−1 L−2 T4 I2,https://en.wikipedia.org/wiki/Capacitance,-2.0,-1.0,4.0,0.0,2.0,0.0,0.0
+9,10,Catalytic activity concentration,,Change in reaction rate due to presence of a catalyst per unit volume of the system,kat⋅m−3,L−3 T−1 N,https://en.wikipedia.org/wiki/Catalytic_activity_concentration,-3.0,0.0,-1.0,0.0,0.0,1.0,0.0
+10,11,Centrifugal force,Fc,Inertial force that appears to act on all objects when viewed in a rotating frame of reference,N⋅rad,M L T−2,https://en.wikipedia.org/wiki/Centrifugal_force,1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+11,12,Chemical potential,μ,Energy per unit change in amount of substance,J/mol,M L2 T−2 N−1,https://en.wikipedia.org/wiki/Chemical_potential,2.0,1.0,-2.0,0.0,0.0,-1.0,0.0
+12,13,Crackle,c→,Change of jounce per unit time: the fifth time derivative of position,m/s**5,L T−5,https://en.wikipedia.org/wiki/Crackle_(physics),1.0,0.0,-5.0,0.0,0.0,0.0,0.0
+13,14,Current density,J →,Electric current per unit cross-section area,A/m**2,L−2 I,https://en.wikipedia.org/wiki/Current_density,-2.0,0.0,0.0,0.0,1.0,0.0,0.0
+14,15,Dose equivalent,H,Received radiation adjusted for the effect on biological tissue,m2/s2,L2 T−2,https://en.wikipedia.org/wiki/Dose_equivalent,2.0,0.0,-2.0,0.0,0.0,0.0,0.0
+15,16,Dynamic viscosity,v,Measure for the resistance of an incompressible fluid to stress,Pa⋅s,M L−1 T−1,https://en.wikipedia.org/wiki/Dynamic_viscosity,-1.0,1.0,-1.0,0.0,0.0,0.0,0.0
+16,17,Electric charge,Q,The force per unit electric field strength,kg * m ** 3 / s ** 2 * C ** 2,T I,https://en.wikipedia.org/wiki/Electric_charge,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+17,18,Electric charge density,ρQ,Electric charge per unit volume,C/m**3,L−3 T I,https://en.wikipedia.org/wiki/Electric_charge_density,-3.0,0.0,1.0,0.0,1.0,0.0,0.0
+18,19,Electric displacement field,D→,Strength of the electric displacement,C/m**2,L−2 T I,https://en.wikipedia.org/wiki/Electric_displacement_field,-2.0,0.0,1.0,0.0,1.0,0.0,0.0
+19,20,Electric field strength,E→,Strength of the electric field,V/m,M L T−3 I−1,https://en.wikipedia.org/wiki/Electric_field_strength,1.0,1.0,-3.0,0.0,-1.0,0.0,0.0
+20,21,Electrical conductance,G,Measure for how easily current flows through a material,siemens,M−1 L−2 T3 I2,https://en.wikipedia.org/wiki/Electrical_conductance,-2.0,-1.0,3.0,0.0,2.0,0.0,0.0
+21,22,Electrical conductivity,σ,Measure of a material's ability to conduct an electric current,S/m,M−1 L−3 T3 I2,https://en.wikipedia.org/wiki/Electrical_conductivity,-3.0,-1.0,3.0,0.0,2.0,0.0,0.0
+22,23,Electric potential,φ,Energy required to move a unit charge through an electric field from a reference point,V,M L2 T−3 I−1,https://en.wikipedia.org/wiki/Electric_potential,2.0,1.0,-3.0,0.0,-1.0,0.0,0.0
+23,24,Electrical resistance,R,Electric potential per unit electric current,ohm,M L2 T−3 I−2,https://en.wikipedia.org/wiki/Electrical_resistance,2.0,1.0,-3.0,0.0,-2.0,0.0,0.0
+24,25,Electrical resistivity,ρe,Bulk property equivalent of electrical resistance,ohm*m,M L3 T−3 I−2,https://en.wikipedia.org/wiki/Electrical_resistivity,3.0,1.0,-3.0,0.0,-2.0,0.0,0.0
+25,26,Energy,E,Energy,J,M L2 T−2,https://en.wikipedia.org/wiki/Energy,2.0,1.0,-2.0,0.0,0.0,0.0,0.0
+26,27,Energy density,ρE,Energy per unit volume,J/m**3,M L−1 T−2,https://en.wikipedia.org/wiki/Energy_density,-1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+27,28,Entropy,S,Logarithmic measure of the number of available states of a system,J/K,M L2 T−2 K−1,https://en.wikipedia.org/wiki/Entropy,2.0,1.0,-2.0,-1.0,0.0,0.0,0.0
+28,29,Force,F→,Transfer of momentum per unit time,N,M L T−2,https://en.wikipedia.org/wiki/Force,1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+29,30,Frequency,f,Number of (periodic) occurrences per unit time,hertz,T−1,https://en.wikipedia.org/wiki/Frequency,0.0,0.0,-1.0,0.0,0.0,0.0,0.0
+30,31,Half-life,t1/2,Time for a quantity to decay to half its initial value,s,T,https://en.wikipedia.org/wiki/Half-life,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+31,32,Heat,Q,Thermal energy,J,M L2 T−2,https://en.wikipedia.org/wiki/Heat,2.0,1.0,-2.0,0.0,0.0,0.0,0.0
+32,33,Heat capacity,Cp,Energy per unit temperature change,J/K,M L2 T−2 K−1,https://en.wikipedia.org/wiki/Heat_capacity,2.0,1.0,-2.0,-1.0,0.0,0.0,0.0
+33,34,Heat flux density,ϕQ,Heat flow per unit time per unit surface area,W/m2,M T−3,https://en.wikipedia.org/wiki/Heat_flux,0.0,1.0,-3.0,0.0,0.0,0.0,0.0
+34,35,Illuminance,Ev,Luminous flux per unit surface area,lux,L−2 J,https://en.wikipedia.org/wiki/Illuminance,-2.0,0.0,0.0,0.0,0.0,0.0,1.0
+35,36,Impedance,Z,"Resistance to an alternating current of a given frequency, including effect on phase",ohm,M L2 T−3 I−2,https://en.wikipedia.org/wiki/Electrical_impedance,2.0,1.0,-3.0,0.0,-2.0,0.0,0.0
+36,37,Impulse,J,Transferred momentum,N⋅s,M L T−1,https://en.wikipedia.org/wiki/Impulse_(physics),1.0,1.0,-1.0,0.0,0.0,0.0,0.0
+37,38,Inductance,L,Magnetic flux generated per unit current through a circuit,henry,M L2 T−2 I−2,https://en.wikipedia.org/wiki/Inductance,2.0,1.0,-2.0,0.0,-2.0,0.0,0.0
+38,39,Irradiance,E,Electromagnetic radiation power per unit surface area,W/m2,M T−3,https://en.wikipedia.org/wiki/Irradiance,0.0,1.0,-3.0,0.0,0.0,0.0,0.0
+39,40,Intensity,I,Power per unit cross sectional area,W/m2,M T−3,https://en.wikipedia.org/wiki/Intensity_(physics),0.0,1.0,-3.0,0.0,0.0,0.0,0.0
+40,41,Jerk,j→,Change of acceleration per unit time: the third time derivative of position,m/s**3,L T−3,https://en.wikipedia.org/wiki/Jerk_(physics),1.0,0.0,-3.0,0.0,0.0,0.0,0.0
+41,42,Jounce (or snap),s→,Change of jerk per unit time: the fourth time derivative of position,m/s**4,L T−4,,1.0,0.0,-4.0,0.0,0.0,0.0,0.0
+42,43,Linear density,ρl,Mass per unit length,kg⋅m−1,M L−1,https://en.wikipedia.org/wiki/Linear_density,-1.0,1.0,0.0,0.0,0.0,0.0,0.0
+43,44,Luminous flux (or luminous power),F,Perceived power of a light source,lumen,J,,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+44,45,Mach number (or mach),M,Ratio of flow velocity to the local speed of sound,unitless,1,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+45,46,Magnetic field strength,H,Strength of a magnetic field,A/m,L−1 I,https://en.wikipedia.org/wiki/Magnetic_field_strength,-1.0,0.0,0.0,0.0,1.0,0.0,0.0
+46,47,Magnetic flux,Φ,"Measure of magnetism, taking account of the strength and the extent of a magnetic field",weber,M L2 T−2 I−1,https://en.wikipedia.org/wiki/Magnetic_flux,2.0,1.0,-2.0,0.0,-1.0,0.0,0.0
+47,48,Magnetic flux density,B,Measure for the strength of the magnetic field,tesla,M T−2 I−1,https://en.wikipedia.org/wiki/Magnetic_flux_density,0.0,1.0,-2.0,0.0,-1.0,0.0,0.0
+48,49,Magnetization,M,Amount of magnetic moment per unit volume,A/m,L−1 I,https://en.wikipedia.org/wiki/Magnetization,-1.0,0.0,0.0,0.0,1.0,0.0,0.0
+49,50,Mass fraction,x,Mass of a substance as a fraction of the total mass,kg/kg,1,https://en.wikipedia.org/wiki/Mass_fraction_(chemistry),0.0,0.0,0.0,0.0,0.0,0.0,0.0
+50,51,Density,ρ,Mass per unit volume,kg / m**3,M L−3,,-3.0,1.0,0.0,0.0,0.0,0.0,0.0
+51,52,Mean lifetime,τ,Average time for a particle of a substance to decay,s,T,https://en.wikipedia.org/wiki/Mean_lifetime,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+52,53,Molar concentration,C,Amount of substance per unit volume,mol⋅m−3,L−3 N,https://en.wikipedia.org/wiki/Molar_concentration,-3.0,0.0,0.0,0.0,0.0,1.0,0.0
+53,54,Molar energy,,Amount of energy present in a system per unit amount of substance,J/mol,M L2 T−2 N−1,https://en.wikipedia.org/wiki/Molar_energy,2.0,1.0,-2.0,0.0,0.0,-1.0,0.0
+54,55,Molar entropy,,Entropy per unit amount of substance,J/(K⋅mol),M L2 T−2 K−1 N−1,https://en.wikipedia.org/wiki/Molar_entropy,2.0,1.0,-2.0,-1.0,0.0,-1.0,0.0
+55,56,Molar heat capacity,c,Heat capacity of a material per unit amount of substance,J/(K⋅mol),M L2 T−2 K−1 N−1,https://en.wikipedia.org/wiki/Molar_heat_capacity,2.0,1.0,-2.0,-1.0,0.0,-1.0,0.0
+56,57,Moment of inertia,I,Inertia of an object with respect to angular acceleration,kg * m**2,M L2,https://en.wikipedia.org/wiki/Moment_of_inertia,2.0,1.0,0.0,0.0,0.0,0.0,0.0
+57,58,Momentum,p→,Product of an object's mass and velocity,kg⋅m/s,M L T−1,https://en.wikipedia.org/wiki/Momentum,1.0,1.0,-1.0,0.0,0.0,0.0,0.0
+58,59,Optical power,P,Measure of the effective curvature of a lens or curved mirror; inverse of focal length,dioptre,L−1,https://en.wikipedia.org/wiki/Optical_power,-1.0,0.0,0.0,0.0,0.0,0.0,0.0
+59,60,Permeability,μs,Measure for how the magnetization of material is affected by the application of an external magnetic field,H/m,M L T−2 I−2,https://en.wikipedia.org/wiki/Permeability_(electromagnetism),1.0,1.0,-2.0,0.0,-2.0,0.0,0.0
+60,61,Permittivity,εs,Measure for how the polarization of a material is affected by the application of an external electric field,F/m,M−1 L−3 T4 I2,https://en.wikipedia.org/wiki/Permittivity,-3.0,-1.0,4.0,0.0,2.0,0.0,0.0
+61,62,Plane angle,θ,Ratio of circular arc length to radius,radian,1,https://en.wikipedia.org/wiki/Plane_angle,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+62,63,Power,P,Rate of transfer of energy per unit time,W,M L2 T−3,https://en.wikipedia.org/wiki/Power_(physics),2.0,1.0,-3.0,0.0,0.0,0.0,0.0
+63,64,Pressure,p,Force per unit area,Pa,M L−1 T−2,https://en.wikipedia.org/wiki/Pressure,-1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+64,65,Pop,p→,Rate of change of crackle per unit time: the sixth time derivative of position,m/s**6,L T−6,https://en.wikipedia.org/wiki/Pop_(motion),1.0,0.0,-6.0,0.0,0.0,0.0,0.0
+65,66,(Radioactive) Activity,A,Number of particles decaying per unit time,becquerel,T−1,https://en.wikipedia.org/wiki/Activity_(radioactivity),0.0,0.0,-1.0,0.0,0.0,0.0,0.0
+66,67,(Radioactive) Dose,D,Ionizing radiation energy absorbed by biological tissue per unit mass,gray,L2 T−2,https://en.wikipedia.org/wiki/Absorbed_dose,2.0,0.0,-2.0,0.0,0.0,0.0,0.0
+67,68,Radiance,L,Power of emitted electromagnetic radiation per unit solid angle per emitting source area,W/(m2⋅sr),M T−3,https://en.wikipedia.org/wiki/Radiance,0.0,1.0,-3.0,0.0,0.0,0.0,0.0
+68,69,Radiant intensity,I,Power of emitted electromagnetic radiation per unit solid angle,W/sr,M L2 T−3,https://en.wikipedia.org/wiki/Radiant_intensity,2.0,1.0,-3.0,0.0,0.0,0.0,0.0
+69,70,Reaction rate,r,Rate of a chemical reaction for unit time,mol/(m3⋅s),L−3 T−1 N,https://en.wikipedia.org/wiki/Reaction_rate,-3.0,0.0,-1.0,0.0,0.0,1.0,0.0
+70,71,Refractive index,n,Factor by which the phase velocity of light is reduced in a medium,unitless,1,https://en.wikipedia.org/wiki/Refractive_index,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+71,72,Reluctance,,resistance to the flow of magnetic flux,H−1,M−1 L−2 T2 I2,https://en.wikipedia.org/wiki/Magnetic_reluctance,-2.0,-1.0,2.0,0.0,2.0,0.0,0.0
+72,73,Solid angle,Ω,Ratio of area on a sphere to its radius squared,steradian,1,https://en.wikipedia.org/wiki/Solid_angle,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+73,74,Specific energy,,Energy density per unit mass,J⋅kg−1,L2 T−2,https://en.wikipedia.org/wiki/Specific_energy,2.0,0.0,-2.0,0.0,0.0,0.0,0.0
+74,75,Specific heat capacity,c,Heat capacity per unit mass,J / (kg * K),L2 T−2 K−1,https://en.wikipedia.org/wiki/Specific_heat_capacity,2.0,0.0,-2.0,-1.0,0.0,0.0,0.0
+75,76,Specific volume,v,Volume per unit mass (reciprocal of density),m3⋅kg−1,M−1 L3,https://en.wikipedia.org/wiki/Specific_volume,3.0,-1.0,0.0,0.0,0.0,0.0,0.0
+76,77,Spin,S,Quantum-mechanically defined angular momentum of a particle,kg⋅m2⋅s−1,M L2 T−1,https://en.wikipedia.org/wiki/Spin_(physics),2.0,1.0,-1.0,0.0,0.0,0.0,0.0
+77,78,Strain,ε,Extension per unit length,unitless,1,https://en.wikipedia.org/wiki/Deformation_(mechanics)#Strain,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+78,79,Stress,σ,Force per unit oriented surface area,Pa,M L−1 T−2,https://en.wikipedia.org/wiki/Stress_(physics),-1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+79,80,Surface tension,γ,Energy change per unit change in surface area,N/m,M T−2,https://en.wikipedia.org/wiki/Surface_tension,0.0,1.0,-2.0,0.0,0.0,0.0,0.0
+80,81,Temperature gradient,,steepest rate of temperature change at a particular location,K/m,K L−1,https://en.wikipedia.org/wiki/Temperature_gradient,-1.0,0.0,0.0,1.0,0.0,0.0,0.0
+81,82,Thermal conductance,,Measure for the ease with which an object conducts heat,W/K,M L2 T−3 K−1,,2.0,1.0,-3.0,-1.0,0.0,0.0,0.0
+82,83,Thermal conductivity,λ,Measure for the ease with which a material conducts heat,W/(m⋅K),M L T−3 K−1,https://en.wikipedia.org/wiki/Thermal_conductivity,1.0,1.0,-3.0,-1.0,0.0,0.0,0.0
+83,84,Thermal resistance,R,Measure for the ease with which an object resists conduction of heat,K/W,M−1 L−2 T3 K,,-2.0,-1.0,3.0,1.0,0.0,0.0,0.0
+84,85,Thermal resistivity,Rλ,Measure for the ease with which a material resists conduction of heat,K⋅m/W,M−1 L−1 T3 K,,-1.0,-1.0,3.0,1.0,0.0,0.0,0.0
+85,86,Torque,τ,Product of a force and the perpendicular distance of the force from the point about which it is exerted,N*m,M L2 T−2,https://en.wikipedia.org/wiki/Torque,2.0,1.0,-2.0,0.0,0.0,0.0,0.0
+86,87,Velocity,v→,Moved distance per unit time: the first time derivative of position,m/s,L T−1,https://en.wikipedia.org/wiki/Velocity,1.0,0.0,-1.0,0.0,0.0,0.0,0.0
+87,88,Volume,V,Three dimensional extent of an object,m**3,L3,https://en.wikipedia.org/wiki/Volume,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+88,89,Volumetric flow rate,Q,Rate of change of volume with respect to time,m ** 3 / s,L3 T−1,https://en.wikipedia.org/wiki/Volumetric_flow_rate,3.0,0.0,-1.0,0.0,0.0,0.0,0.0
+89,90,Wavelength,λ,Perpendicular distance between repeating units of a wave,m,L,https://en.wikipedia.org/wiki/Wavelength,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+90,91,Wavenumber,k,Repetency or spatial frequency: the number of cycles per unit distance,m−1,L−1,https://en.wikipedia.org/wiki/Wavenumber,-1.0,0.0,0.0,0.0,0.0,0.0,0.0
+91,92,Wavevector,k→,Repetency or spatial frequency vector: the number of cycles per unit distance,m−1,L−1,https://en.wikipedia.org/wiki/Wavevector,-1.0,0.0,0.0,0.0,0.0,0.0,0.0
+92,93,Weight,w,Gravitational force on an object,N,M L T−2,https://en.wikipedia.org/wiki/Weight,1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+93,94,Work,W,Transferred energy,J,M L2 T−2,https://en.wikipedia.org/wiki/Mechanical_work,2.0,1.0,-2.0,0.0,0.0,0.0,0.0
+94,95,Young's modulus,E,Ratio of stress to strain,Pa,M L−1 T−2,https://en.wikipedia.org/wiki/Young%27s_modulus,-1.0,1.0,-2.0,0.0,0.0,0.0,0.0
+95,96,Length,l,The one-dimensional extent of an object,m,L,https://en.wikipedia.org/wiki/Length,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+96,97,Mass,m,A measure of resistance to acceleration,kg,M,https://en.wikipedia.org/wiki/Mass,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+97,98,Time,t,The duration of an event,s,T,https://en.wikipedia.org/wiki/Time,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+98,99,Electric Current,I,Rate of flow of electrical charge per unit time,A,I,https://en.wikipedia.org/wiki/Electric_Current,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+99,100,Temperature,T,Average kinetic energy per degree of freedom of a system,K,K,https://en.wikipedia.org/wiki/Temperature,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+100,101,Amount of substance,n,"The quantity proportional to the number of particles in a sample, with the Avogadro constant as the proportionality constant",mol,N,https://en.wikipedia.org/wiki/Amount_of_substance,0.0,0.0,0.0,0.0,0.0,1.0,0.0
+101,102,Luminous intensity,Iv,Wavelength-weighted power of emitted light per unit solid angle,cd,J,https://en.wikipedia.org/wiki/Luminous_intensity,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+102,103,Dimensionless,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+103,104,Mass Flow Rate,ṁ,Flowrate of mass over time,kg / s,M T-1,https://en.wikipedia.org/wiki/Mass_flow_rate,0.0,1.0,-1.0,0.0,0.0,0.0,0.0
+104,105,Cuolomb Constant,K,Proportionality constant in electrostatics equations - 8.9875517923×109,kg * m ** 3 / (s ** 2 C ** 2),M L3 T-2 I-2,https://en.wikipedia.org/wiki/Coulomb_constant,3.0,1.0,-2.0,0.0,-2.0,0.0,0.0
+105,106,Gravitational Constant,G,"In Newtons law, it is the proportionality constant connecting the gravitational force between two bodies with the product of their masses and the inverse square of their distance.",(6.674×10−11) * m ** 3 / (kg * s ** 2),L3 M-1 T-2,https://en.wikipedia.org/wiki/Gravitational_constant,3.0,-1.0,-2.0,0.0,0.0,0.0,0.0
+106,107,Heat Transfer Coefficientt,h,Proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat,W / (m ** 2 * K),M T-4,https://en.wikipedia.org/wiki/Heat_transfer_coefficient,0.0,1.0,-4.0,0.0,0.0,0.0,0.0
+107,108,Heat Transfer Coefficient,h,Proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat,W / (m ** 2 * K),M T-4,https://en.wikipedia.org/wiki/Heat_transfer_coefficient,0.0,1.0,-4.0,0.0,0.0,0.0,0.0
+108,109,Money,$,Value of currency,$,,https://en.wikipedia.org/wiki/Money,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+109,110,Interest Rate,%,"An interest rate is the amount of interest due per period, as a proportion of the amount lent, deposited, or borrowed.",%,,https://en.wikipedia.org/wiki/Interest_rate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+110,111,Area moment of inertia,I,"The second moment of area, also known as area moment of inertia, is a geometrical property of an area which reflects how its points are distributed with regard to an arbitrary axis.",L**4,L4,https://en.wikipedia.org/wiki/List_of_second_moments_of_area,4.0,0.0,0.0,0.0,0.0,0.0,0.0
