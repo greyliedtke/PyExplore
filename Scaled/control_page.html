@@ -88,42 +88,99 @@
         <div class="card">
             <div class="container">
                 <h4><b>Safeties</b></h4>
+                <button class="btn btn-primary" onclick="sendSafeties()">Send</button>
+
                 <table class="table">
                     <tr>
+                        <td>Control Mode:</td>
+                        <td><input type="number" value="100" id="cv_control_mode"></td>
+                        <td>100: Engine Test, 101: Checkout Mode</td>
+                    </tr>
+                    <tr>
                         <td>N1 Max:</td>
-                        <td><input type="number" value="100" id="n1_max"></td>
-                        <td>kRPM</td>
+                        <td><input type="number" value="100" id="cv_n1_max"></td>
                     </tr>
                     <tr>
                         <td>N2 Max:</td>
-                        <td><input type="number" value="25" id="n2_max"></td>
-                        <td>kRPM</td>
+                        <td><input type="number" value="25" id="cv_n2_max"></td>
                     </tr>
                     <tr>
                         <td>Voltage Max:</td>
-                        <td><input type="number" value="90" id="v_max"></td>
-                        <td>Volts</td>
+                        <td><input type="number" value="90" id="cv_v_max"></td>
                     </tr>
                 </table>
-                <button class="btn btn-primary" onclick="sendSafeties()">Send Safeties</button>
             </div>
         </div>
         <hr>
         <div class="card">
             <div class="container">
-                <h4><b>Control Settings</b></h4>
+                <h4><b>Controls</b></h4>
                 <table class="table">
                     <tr>
-                        <td>Control Mode:</td>
-                        <td><input type="number" value="100" id="control_mode"></td>
-                        <td>100: Engine Test, 101: Checkout Mode</td>
+                        <td>N2 Setpoint (krpm):</td>
+                        <td><input type="number" value="100" id="cv_n2"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_n2)">Send</button></td>
                     </tr>
                     <tr>
-                        <td>Intitial Fuel %:</td>
-                        <td><input type="number" value="55" id="init_ao"></td>
+                        <td>Fuel AO (%) :</td>
+                        <td><input type="number" value="0" id="cv_fuel_ao"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_fuel_ao)">Send</button></td>
+                    </tr>
+                    <tr>
+                        <td>Load Level:</td>
+                        <td><input type="number" value="1" id="cv_ll"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_ll)">Send</button></td>
                     </tr>
                 </table>
-                <button class="btn btn-primary" onclick="sendSafeties()">Send Control</button>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="container">
+                <h4><b>Sequence Buttons</b></h4>
+                <table class="table">
+                    <tr>
+                        <td>Off:</td>
+                        <td><button class="btn btn-primary" onclick="cv_stage_cmd(0)">OFF</button></td>
+                    </tr>
+                    <tr>
+                        <td>Standbye:</td>
+                        <td><button class="btn btn-primary" onclick="cv_stage_cmd(10)">Standbye</button></td>
+                    </tr>
+                    <tr>
+                        <td>Start Sequencing:</td>
+                        <td><button class="btn btn-primary" onclick="cv_stage_cmd(20)">Start Sequencing</button></td>
+                    </tr>
+                    <tr>
+                        <td>Enable PID Control:</td>
+                        <td><button class="btn btn-primary" onclick="cv_stage_cmd(60)">Enable PID</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="container">
+                <h4><b>DriveTek Controls</b></h4>
+                <table class="table">
+                    <tr>
+                        <td><input type="number" value="0" id="cv_dt_reset"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_dt_reset)">Reset</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="0" id="cv_dt_pwm"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_dt_pwm)">Enable PWM</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="0" id="cv_dt_krpm"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_dt_krpm)">kRPM CMD</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="0" id="cv_dt_torque"></td>
+                        <td><button class="btn btn-primary" onclick="generic_send(cv_dt_torque)">Torque CMD</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <hr>
@@ -133,18 +190,18 @@
                 <table class="table">
                     <tr>
                         <td>P: </td>
-                        <td><input type="number" value="10" id="control_mode"></td>
+                        <td><input type="number" value="10" id="cv_pid_p"></td>
                     </tr>
                     <tr>
                         <td>I:</td>
-                        <td><input type="number" value="1" id="control_mode"></td>
+                        <td><input type="number" value="1" id="cv_pid_i"></td>
                     </tr>
                     <tr>
                         <td>D:</td>
-                        <td><input type="number" value="0" id="control_mode"></td>
+                        <td><input type="number" value="0" id="cv_pid_d"></td>
                     </tr>
                 </table>
-                <button class="btn btn-primary" onclick="sendSafeties()">Send PID</button>
+                <button class="btn btn-primary" onclick="update_pid()">Send PID</button>
             </div>
         </div>
         <hr>
@@ -168,24 +225,34 @@
             </div>
         </div>
     </div>
-    <p onload="check_mode()"></p>
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
         // Functions to send socket signals that post to redis db -------------------------------
         var socket = io();
 
+        function cv_stage_cmd(stage) {
+            // Generic send id and value of clicked button
+            console.log("cv_stage_cmd", stage);
+        }
+
+        function update_pid() {
+            // Generic send id and value of clicked button
+            console.log(document.getElementById('cv_pid_p').value, document.getElementById('cv_pid_i').value, document.getElementById('cv_pid_d').value);
+        }
+
+        function generic_send(clicked_id) {
+            // Generic send id and value of clicked button
+            console.log(clicked_id.id, clicked_id.value);
+        }
+
         // control calls -------------------------------
         function sendSafeties() {
-            var control_mode = document.getElementById('control_mode').value;
-            var n1_max = document.getElementById('n1_max').value;
-            var n2_max = document.getElementById('n2_max').value;
-            var v_max = document.getElementById('v_max').value;
             socket.emit("js_pub", {
-                'cc_control_mode': control_mode,
-                'cc_n1_max': n1_max,
-                'cc_n2_max': n2_max,
-                'cc_v_max': v_max
+                'cv_control_mode': document.getElementById('cv_control_mode').value,
+                'cv_n1_max': document.getElementById('cv_n1_max').value,
+                'cv_n2_max': document.getElementById('cv_n2_max').value,
+                'cv_v_max': document.getElementById('cv_v_max').value
             });
         }
         socket.on('refresh', function (msg) {

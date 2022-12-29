@@ -2,29 +2,34 @@
 
 ## Things to work on
 
+- [x] control page updates
 
-- [x] PID page for engine
-    - save vars in redis
-    - simulator?
-  
-- pcb for common mode choke
-- instrumentation list strategy
-- managing tests wiki
+- [ ] sheet for part no's
+- [ ] Calfire instrumentation order
+   - [x] Thermoboard
+   - [ ] Pressure Sensors
+- [x] Drivetek node guarding email
+- [ ] Common mode choke
+  - [x] NGC questions email
+  - [ ] figure out greg's equations
+  - [ ] independent research
 
 
-## talking points
+## PI Thermocouple board
 
-- PID improvements
-  - very cool
-  - try on ngc trailer
-- commmon mode choke
-  - high amperage pcb trouble
-  - 3d print fixture to hold all in place
-- greg choke sizing spreadsheet
-  - making sense of everything
-  - conclusion ---> may not be possible with 
-  - OCC rectifier not able to correct for PF
-  - choke reduces voltage seen at terminals, that is why NGC rewired in series
-  - calculating power 
-- fiber ethernet
-- 
+[ThermoBoard](https://pi-plates.com/thermoplate-users-guide/)
+- 8 channels, k type, PI attachment
+
+Planned code
+
+        # imports
+        import piplates.THERMOplate as THERMO
+
+        # defaults to k type thermocouples
+        THERMO.getTEMP(0,1) # board adress and temp input
+
+        # loop through temps and print out
+        tc_s = [0, 1, 2, 3, 4, 5, 6, 7]
+        temps = []
+        for t in tc_s:
+            temps.append(THERMO.getTEMP(0,1))
