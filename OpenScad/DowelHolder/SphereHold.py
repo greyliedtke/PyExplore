@@ -68,4 +68,4 @@ def sphere_holder(fname, sphere_d):
         outfile=f"OpenScad/DowelHolder/STL/{fname}.stl",
     )
 
-sphere_holder('sphere_hold', 30)
+sphere_holder('58mm_sphere', 58)
