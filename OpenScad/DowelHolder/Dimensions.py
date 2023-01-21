@@ -12,7 +12,7 @@ def tube(od, id, height):
 
 # dimensions
 thick = 2  # standard wall thickness
-dowel_d = 13  # 1/2 in dowel best fit
+dowel_d = 13.5  # 1/2 in dowel best fit. 13 snug
 in_to_mm = 25.4  # in to mm conversion
 screw_od = 3.5
 

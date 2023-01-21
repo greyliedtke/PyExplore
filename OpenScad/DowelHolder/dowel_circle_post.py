@@ -51,7 +51,14 @@ def cc_holder(d1, d2, ext=0):
     c2 -= x_sect
     c2 = rotate([0,0,180])(c2)
 
+    # adding vertical ledge
+    c2 += rotate([0,0,45])(rotate_extrude(angle = 30)(square(100)))
+
+
     c2 = translate([d2/2+d1/2+ext,0,0])(c2)
+
+    # vertical support on second circle
+    
     return c1+c2
 
 
@@ -60,5 +67,5 @@ part = cc_holder(dowel_d, 25, 3)
 r.render(
     part,
     file_header="$fa=.01;\n $fs=0.01",
-    outfile=f"OpenScad/DowelHolder/STL/c2.stl",
+    outfile=f"OpenScad/DowelHolder/STL/dcp.stl",
 )
