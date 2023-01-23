@@ -54,5 +54,5 @@ part = base + arm + hook - x_sect - screw
 stl_file = r.render(
     part,
     file_header="$fa=.01;\n $fs=0.01",
-    outfile="OpenScad/DowelHolder/STL/ArmHook.stl",
+    outfile="OpenScad/DowelHolder/ArmHook/ArmHook.stl",
 )

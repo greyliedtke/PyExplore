@@ -2,6 +2,7 @@
 circular dowel hook ...
 """
 
+
 from solid import (
     circle,
     cylinder,
@@ -9,14 +10,16 @@ from solid import (
     cube,
     rotate,
     rotate_extrude,
-    square,
-    polygon,
-    sphere, 
-    intersection
+    square
 )
-import viewscad
-from Dimensions import tube, dowel_d, screw_od
-r = viewscad.Renderer()
+
+import sys
+print(sys.path)
+sys.path.append('C:Users/greyl/VScodeProjects/PyExplore/PyExplore/OpenScad/DowelHolder')
+
+from ../.. import Dimensions
+# tube, dowel_d, screw_od, f_creator
+
 
 height = 10
 thick = 2
@@ -58,14 +61,12 @@ def cc_holder(d1, d2, ext=0):
     c2 = translate([d2/2+d1/2+ext,0,0])(c2)
 
     # vertical support on second circle
-    
     return c1+c2
 
 
 # dowel_d, 50.2, 20 - hacynth holder
 part = cc_holder(dowel_d, 25, 3)
-r.render(
-    part,
-    file_header="$fa=.01;\n $fs=0.01",
-    outfile=f"OpenScad/DowelHolder/STL/dcp.stl",
-)
+
+f_creator(part, 'yahmon')
+
+
