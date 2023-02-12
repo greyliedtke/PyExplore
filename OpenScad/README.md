@@ -8,6 +8,15 @@ OpenSCAD [Cheatsheat](https://openscad.org/cheatsheet/)
   - file_header = '$fa = 0.1;\n$fs = 0.1;',
   - Yet to do anything significant
 
+## Dimensions
+
+- thick = 2  # standard wall thickness
+- dowel_d = 13.5  # 1/2 in dowel best fit. 13 snug
+- dowel_d = 7.36  # 1/4 in dowel in mm
+- in_to_mm = 25.4  # in to mm conversion
+- screw_od = 3.5
+
+
 ## Creations
 
 ### Fillets
