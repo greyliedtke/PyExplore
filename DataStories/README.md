@@ -16,3 +16,7 @@ Country comparisons...
   - disproprortionate
 - [Citizenship](https://www.cia.gov/the-world-factbook/field/citizenship)
   - comparisons
+
+### Plotting tools
+
+- [Maps](https://stackoverflow.com/questions/39742305/how-to-use-basemap-python-to-plot-us-with-50-states)
