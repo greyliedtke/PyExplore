@@ -1,0 +1,4 @@
+From,To,From_N,To_N,Note,Type
+PB_1,PB_2,loves,loves,,dash
+PB_1,PB_3,loves,loves,Ethernet,dash
+PB_1,PB_1,,,same,
