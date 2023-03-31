@@ -4,7 +4,7 @@ from time import sleep
 # pins...
 
 
-motor = Motor(forward=4, backward=14)
+motor = Motor(forward=20, backward=21)
 
 def motor_cmd(dir, speed):
     if dir == "FWD":

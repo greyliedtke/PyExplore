@@ -31,7 +31,7 @@ def read_theta():
     accel_z = read_word_2c(0x3F)
     theta =  -1 * (180 / 3.14159) * math.atan2(accel_x, math.sqrt(accel_y**2 + accel_z**2))
     gyro_x = read_word_2c(0x43)
-    return theta
+    return theta, gyro_x
 
     
 # while True:

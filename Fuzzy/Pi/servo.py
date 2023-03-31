@@ -1,18 +1,18 @@
 import RPi.GPIO as GPIO
 import time
 
-ledpin = 12				# PWM pin connected to LED
-servo_pin = 12
-servo_freq = 50
-# GPIO.setmode(GPIO.BOARD)		#set pin numbering system
-GPIO.setup(servo_pin,GPIO.OUT)
-pi_pwm = GPIO.PWM(servo_pin,servo_freq)		#create PWM instance with frequency
-pi_pwm.start(50)				#start PWM of required Duty Cycle 
-# while True:
-#     for duty in range(0,101,1):
-#         pi_pwm.ChangeDutyCycle(duty) #provide duty cycle in the range 0-100
-#         sleep(0.01)
+from gpiozero import Servo
+from time import sleep
 
+servo = Servo(21)
+
+while True:
+    servo.min()
+    sleep(1)
+    servo.mid()
+    sleep(1)
+    servo.max()
+    sleep(1)
 
 # set pins
 
