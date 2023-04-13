@@ -1,0 +1,411 @@
+English,Thai,Unit,Category
+woman,puu-ying,3,Family
+I am,chan bpen,3,Family
+man,puu-chaai,3,Family
+you are,kun-bpen,3,Family
+girl,dek-puu-ying,3,Family
+she,tee,3,Family
+boy,puu-chaai,3,Family
+he,kao,3,Family
+I,chan,3,Family
+from,Jaak,3,Family
+english,ang-grit,5,Activity
+speak,puut,5,Activity
+sleep,noon,5,Activity
+shop,suu-kong,5,Activity
+go,bpai,5,Activity
+watch movie,duu-nang,5,Activity
+run,wing,5,Activity
+book,nang-suu,5,Activity
+food,aa-han,5,Activity
+coffee,gaa-fee,5,Activity
+hot,roon,5,Activity
+newspaper,nang-suu-pim,5,Activity
+to have,mii,5,Activity
+to learn,riian,5,Activity
+to eat,taan,5,Activity
+to read,aan,5,Activity
+to drink,duum,5,Activity
+to buy,suu,5,Activity
+rice,kaao,9,Eating
+soup,sup,9,Eating
+bread,ka-nom-bpang,9,Eating
+magazine,nit-dta-ya-saan,9,Eating
+water,nam,9,Eating
+cost,raa-kaa,9,Eating
+apple,eep-peen,9,Eating
+a glass,geeo,9,Eating
+family,kroop-kruua,3,Family
+father,poo,3,Family
+mother,mee,3,Family
+son,luk-chaai,3,Family
+daughter,luuk-saao,3,Family
+older sister,pi-saao,3,Family
+older brother,pii-chaai,3,Family
+younger sister,nong-saao,3,Family
+to live,aa-sai,4,Numbers
+floor,chan,4,Numbers
+house number,baan-lek-tii,4,Numbers
+to weigh,nak,4,Numbers
+kilogram,gi-loo-gram,4,Numbers
+tall,suung,4,Numbers
+centimeter,sen-dti-met,4,Numbers
+student,nak-riian,4,Numbers
+thousand,nung-pan,4,Numbers
+ten thousand,nung-muun,4,Numbers
+hundred thousand,nung-seen,4,Numbers
+a million,nung-laan,4,Numbers
+song,pleeng,5,Activity
+listen,fang,5,Activity
+sing,roong,5,Activity
+dance,dten,5,Activity
+draw,waat,5,Activity
+to like,choop,5,Activity
+and,le,5,Activity
+music,don-dtrii,5,Activity
+want,dtoong-gaan,5,Activity
+yoga,yoo-ka,5,Activity
+play,len,5,Activity
+basketball,bat-sa-get-boon,5,Activity
+swimming,waai-nam,5,Activity
+favorite,bproot,5,Activity
+sport,gii-laa,5,Activity
+soccer,fut-bon,5,Activity
+roomate,puuan-ruuam-hong,5,Activity
+parents,poo-mee,5,Activity
+classmate,puuan-ruuam-chan,5,Activity
+friends,puuan,5,Activity
+tv,tii-wii,5,Activity
+breakfast,aa-haan chao,9,Eating
+lunch,aa-haan-glang-wan,9,Eating
+dinner,aa-haan-yen,9,Eating
+fried egg,kai-daao,9,Eating
+sausage,sai-grook,9,Eating
+fried rice,kao-pat,9,Eating
+seafood,aa-haan-ta-lee,9,Eating
+meat,nuua-sat,9,Eating
+pork,nuua-muu,9,Eating
+chicken,nuua-gai,9,Eating
+fish,bplaa,9,Eating
+tofu,dtao-huu,9,Eating
+sweet,waan,9,Eating
+salty,kem,9,Eating
+sour,briiao,9,Eating
+bitter,kom,9,Eating
+spicy,pet,9,Eating
+delicious,a-rooi,9,Eating
+to put,sai,9,Eating
+sugar,nam-dtaan,9,Eating
+salt,gluua,9,Eating
+pepper,prik-tai,9,Eating
+sauce,soot,9,Eating
+to think,kit,9,Eating
+vegetables,pak,9,Eating
+carrot,kee-root,9,Eating
+potato,man-fa-rang,9,Eating
+tomato,ma-kuua-tet,9,Eating
+mushroom,het,9,Eating
+can,dai,9,Eating
+I can do it,chan tam dai,9,Eating
+chili,prik,9,Eating
+garlics,gra-tiiam,9,Eating
+mint,sa-ra-nee,9,Eating
+coriander,paak-chii,9,Eating
+fruit,pon-la-mai,9,Eating
+peach,luuk-piit,9,Eating
+pear,luuk-pee,9,Eating
+strawberry,sa-dtroo-bee-ri,9,Eating
+watermelon,dteeng-moo,9,Eating
+orange,som,9,Eating
+frozen,chee-keeng,9,Eating
+fresh,sot,9,Eating
+dry,ob-heeng,9,Eating
+box,gloong,9,Eating
+can,gra-bpoong,9,Eating
+fruit juice,nam-pon-la-mai,9,Eating
+soda,nam-at-lom,9,Eating
+small,lek,9,Eating
+to take,ao,9,Eating
+pot,ga,9,Eating
+hot,roon,9,Eating
+cold,yen,9,Eating
+smoothie,bpan,9,Eating
+ice,nam-keng,9,Eating
+big,yai,9,Eating
+medium,glaang,9,Eating
+beer,biia,9,Eating
+red wine,wai-deeng,9,Eating
+white wine,wai-kaao,9,Eating
+alcohol,eel-goo-hoo,9,Eating
+bottle,kuat,9,Eating
+without,bpraat-sa-jaak,9,Eating
+little,nooi,9,Eating
+very,maak,9,Eating
+lemon tea,chaa ma-naao,9,Eating
+green tea,chaa-kiiao,9,Eating
+milk,nom,9,Eating
+to come in,kao,9,Eating
+to sit,nang,9,Eating
+order,sang,9,Eating
+to wait,roo,9,Eating
+a meal,muu-aa-haan,9,Eating
+menu,mee-nuu,9,Eating
+hungry,hio,9,Eating
+full,im,9,Eating
+alergic,pee,9,Eating
+vegetarian,mang-sa-wi-rat,9,Eating
+be on a diet,lot-kwaam-uaan,9,Eating
+more,peem,9,Eating
+a snack,kong-taan-len,9,Eating
+dessert,kong-waan,9,Eating
+beverage,kruuang-duum,9,Eating
+ice cream,ai-sa-kriim,9,Eating
+pay,jaai,9,Eating
+credit card,bat-kree-dit,9,Eating
+recommend,ne-nam,9,Eating
+to bring,ao maa-hai,9,Eating
+a bill,bin,9,Eating
+receipt,bai-set,9,Eating
+under,dtai,10,Where
+room,hoong,10,Where
+table,dto,10,Where
+on,bon,10,Where
+dictionary,pot-ja-naa-nu-grom,10,Where
+chair,gao-ii,10,Where
+between,ra-waang,10,Where
+pen,bpaak-gaa,10,Where
+classroom,hoong-riian,10,Where
+teacher,kruu,10,Where
+outside,kaang-nook,10,Where
+inside,kaang-nai,10,Where
+at,tii,10,Where
+school,roong-riian,10,Where
+canteen,roong-aa-haan,10,Where
+here,tii-nii,10,Where
+there,tii-nan,10,Where
+book store,raan-nang-suu,10,Where
+a park,suuan-saa-taa-ra-na,10,Where
+at the corner,huua-mum,10,Where
+opposite to,dtrong-kaam-gap,10,Where
+near,gly,10,Where
+far,glai,10,Where
+toilet,hong naam,10,Where
+ to go         ,bpai             ,11,Place and location
+ a zoo         ,suuan-sat        ,11,Place and location
+ a beach       ,chaai-haat       ,11,Place and location
+ a restaurant  ,raan-aa-haan     ,11,Place and location
+ a market      ,dta-laat         ,11,Place and location
+ a museum      ,pi-pit-ta-pan    ,11,Place and location
+ children      ,dek              ,11,Place and location
+ library       ,hoong-sa-mut     ,11,Place and location
+ swimming pool ,sa-waai-nam      ,11,Place and location
+ home          ,baan             ,11,Place and location
+ a supermarket ,su-pee-maa-ket   ,11,Place and location
+ a coffee shop ,raan-gaa-fee     ,11,Place and location
+ between       ,ra-waang         ,11,Place and location
+ in front of   ,daan-naa         ,11,Place and location
+ behind        ,daan lang        ,11,Place and location
+ on the left   ,daan sai         ,11,Place and location
+ on the right  ,daan kwaa        ,11,Place and location
+ north         ,tit-nuua         ,11,Place and location
+ south         ,tit-dtai         ,11,Place and location
+ east          ,tit-dta-wan-ook  ,11,Place and location
+ west          ,tit-dta-wan-dtok ,11,Place and location
+ a car              ,rot-yon          ,12,Navigation
+ motorcycle         ,moo-dtee-sai     ,12,Navigation
+ bicycle            ,jak-gra-yan      ,12,Navigation
+ bus                ,rot-bat          ,12,Navigation
+ taxi               ,teek-sii         ,12,Navigation
+ a subway           ,rot-fai-dtai-din ,12,Navigation
+ to walk            ,deen-bpai        ,12,Navigation
+ to get on the bus  ,kun-rot-bat      ,12,Navigation
+ to get off the bus ,long-rot-bat     ,12,Navigation
+ bus stop           ,bpai-rot-bat     ,12,Navigation
+ next               ,naa              ,12,Navigation
+ road               ,ta-non           ,12,Navigation
+ from               ,jaak             ,12,Navigation
+ to                 ,tung             ,12,Navigation
+ intersection       ,sii-yeek         ,12,Navigation
+ away from          ,haang-jaak       ,12,Navigation
+ to cross           ,kaam             ,12,Navigation
+ bridge             ,sa-paan          ,12,Navigation
+ to turn left       ,liiao-saai       ,12,Navigation
+ to turn right      ,liiao-kwaa       ,12,Navigation
+ to go straight     ,bpai dtrong-bpai ,12,Navigation
+ stop               ,yut              ,12,Navigation
+ a traffic light    ,fai-ja-raa-joon  ,12,Navigation
+ slow               ,chaa             ,12,Navigation
+ to work        ,tam-ngaan               ,13,Occupations
+ lawyer         ,ta-naai-kwaam           ,13,Occupations
+ engineer       ,wit-sa-wa-goon          ,13,Occupations
+ soldier        ,ta-haan                 ,13,Occupations
+ police officer ,dtam-ruat               ,13,Occupations
+ to teach       ,soon                    ,13,Occupations
+ university     ,ma-haa-wit-ta-yaa-lai   ,13,Occupations
+ professor      ,aa-jaan                 ,13,Occupations
+ student        ,nak-suk-saa             ,13,Occupations
+ unemployed     ,dtok-ngaan              ,13,Occupations
+ to be famous   ,mi-chuu-siiang          ,13,Occupations
+ actor          ,nak-sa-deeng            ,13,Occupations
+ artist         ,sin-la-bpin             ,13,Occupations
+ to meet        ,pop                     ,13,Occupations
+ journalist     ,nak-kaao                ,13,Occupations
+ photographer   ,chaag-taai-paap         ,13,Occupations
+ company        ,boo-ri-sat              ,13,Occupations
+ businessman    ,nak-tu-ra-git           ,13,Occupations
+ office worker  ,pa-nak-ngaan-boo-ri-sat ,13,Occupations
+ secretary      ,lee-kaa-nu-gaan         ,13,Occupations
+ manager        ,puu-jat-gaan            ,13,Occupations
+ family         ,kroop-kruua         ,14,Family and moods
+ relatives      ,yaa                 ,14,Family and moods
+ grandparents   ,bpuu-yaa-dtaa-yaai  ,14,Family and moods
+ grandchildren  ,laan                ,14,Family and moods
+ cousin         ,luuk-pii-luuk-noong ,14,Family and moods
+ husband        ,saa-mii             ,14,Family and moods
+ wife           ,pan-ra-yaa          ,14,Family and moods
+ nephew         ,laan-chai           ,14,Family and moods
+ niece          ,laan-saao           ,14,Family and moods
+ to be kind     ,jai-dii             ,14,Family and moods
+ aunt           ,bpaa                ,14,Family and moods
+ to be strict   ,du                  ,14,Family and moods
+ uncle          ,lung                ,14,Family and moods
+ to be calm     ,jai-yen             ,14,Family and moods
+ to be friendly ,bpen-mit            ,14,Family and moods
+ to feel        ,ruu-suk             ,14,Family and moods
+ to be happy    ,kwaam-suk           ,14,Family and moods
+ to be sad      ,sao                 ,14,Family and moods
+ to be sorry    ,siia-jai            ,14,Family and moods
+ to be glad     ,dii-jai             ,14,Family and moods
+to draw,waat,15,"Shapes, Colors"
+circle,ruup-wong-glom,15,"Shapes, Colors"
+rectangle,rup-sii-liiam,15,"Shapes, Colors"
+paper,gra-daat,15,"Shapes, Colors"
+white,siu-kaao,15,"Shapes, Colors"
+black,sii-dam,15,"Shapes, Colors"
+football,luk-fut-boon,15,"Shapes, Colors"
+sphere,rupup-song-glom,15,"Shapes, Colors"
+green,si-kiiao,15,"Shapes, Colors"
+table,dto,15,"Shapes, Colors"
+cube,luuk-baat,15,"Shapes, Colors"
+tall,suung,15,"Shapes, Colors"
+short,dtiia,15,"Shapes, Colors"
+cat,meeo,15,"Shapes, Colors"
+fat,uaan,15,"Shapes, Colors"
+thin,poom,15,"Shapes, Colors"
+good shape,hun-dii,15,"Shapes, Colors"
+smooth,riiab,15,"Shapes, Colors"
+rough,kru-kra,15,"Shapes, Colors"
+soft,nim/num,15,"Shapes, Colors"
+hard,keeng,15,"Shapes, Colors"
+red,sii-deeng,15,"Shapes, Colors"
+clothes,suua-paa,16,Clothing
+shirt,suua-cheet,16,Clothing
+to put on,sai,16,Clothing
+to take off,toht,16,Clothing
+short sleeves,suua-keen-san,16,Clothing
+long sleeves,suua-keen-yao,16,Clothing
+size,ka-naat(sai),16,Clothing
+to try,loong,16,Clothing
+pants,gaang-geng,16,Clothing
+skirt,gra-broong,16,Clothing
+long,yaao,16,Clothing
+short,san,16,Clothing
+dress,chut-gra-bproong,16,Clothing
+old,gao,16,Clothing
+new,mai,16,Clothing
+expensive,peeng,16,Clothing
+to discount,lot-raa-kaa,16,Clothing
+cheap,tuuk,16,Clothing
+coat,suua-gan-naao,16,Clothing
+raincoat,suua-gan-fon,16,Clothing
+jacket,jeek-get,16,Clothing
+jeans,gaang-geng-yiin,16,Clothing
+to fit,poo-dii,16,Clothing
+to be beautiful,suuai,16,Clothing
+to see,duu,17,Accessories
+necklace,sooi-kah,17,Accessories
+bracelet,gam-lai,17,Accessories
+ring,wehn,17,Accessories
+earrings,dtum-huu,17,Accessories
+brooch,kem-glat,17,Accessories
+watch,naa-li-gaa-koo-muu,17,Accessories
+hat,muuak,17,Accessories
+sunglasses,ween-gan-deet,17,Accessories
+scarf,paa-pan-koo,17,Accessories
+bag,gra-bpaao,17,Accessories
+wallet,grap-bpaao-ngen,17,Accessories
+jadestone,yok,17,Accessories
+pearl,kai-muk,17,Accessories
+diamond,pet,17,Accessories
+gem,plooi,17,Accessories
+gold,toong,17,Accessories
+silk,paa-mai,17,Accessories
+to give,hai,17,Accessories
+necktie,nek-tai,17,Accessories
+leather,nang,17,Accessories
+belt,kem-kat,17,Accessories
+glove,tung-muu,17,Accessories
+socks,tung-tao,17,Accessories
+shoes,roong-tao,18,Footwear
+sneakers,roong-tao-paa-bai,18,Footwear
+sandals,roong-tao-dte,18,Footwear
+high heels,roong-tao-son-suung,18,Footwear
+shoe shops,raan-roong-tao,18,Footwear
+to sell,kaai,18,Footwear
+leather shoes,roong-tao-nang,18,Footwear
+shoe repair store,raan-soom-roong-tao,18,Footwear
+to repair,soom,18,Footwear
+shoe sole,puun-roong-tao,18,Footwear
+rubber,yaang,18,Footwear
+shoelace,chuuak-roong-tao,18,Footwear
+sport shoes,rong-tao-gii-laa,18,Footwear
+to fit,poo-dii,18,Footwear
+loose,luuam,18,Footwear
+tight,kap,18,Footwear
+big,yai,18,Footwear
+small,lek,18,Footwear
+foot,taao,18,Footwear
+Monday,wan-jan,19,Date
+Saturday,wan-sao,19,Date
+weekend,wan-sao-aa-tit,19,Date
+evening,dtoon-yen,19,Date
+month,duuan,19,Date
+every day,tuk-wan,19,Date
+Thursday,wan-pa-ru-hat-sa-boo-dii,19,Date
+Sunday,wan-aa-tit,19,Date
+afternoon,dtoon-baai,19,Date
+morning,dtoon-chao,19,Date
+appointment,nat,19,Date
+today,wan-nii,19,Date
+weekday,wan-tam-ngaan,19,Date
+holiday,wan-yut,19,Date
+january,duuan-mak-ga-raa-kom,19,Date
+next month,duuan-naa,19,Date
+tomorrow,prung-nii,19,Date
+new years day,wan-bpii-mai,19,Date
+january 1st,nung mak-ga-raa-kom,19,Date
+valentines day,wan-waa-len-tai,19,Date
+february 14th,sip-see gum-pa-pan,19,Date
+christmas,wan-krit-sa-mat,19,Date
+december 25th,yii-sip-haa tan-waa-kom,19,Date
+7:00 AM,jet moong,20,Time
+quarter to,iik sip-haa naa-tii ja,20,Time
+half,krung,20,Time
+quarter past,sip-ha naa-tii,20,Time
+now,dtoon-nii,20,Time
+to open,bpuht,20,Time
+to close,bpit,20,Time
+until,tung,20,Time
+from,dtang-dtee,20,Time
+before,goon,20,Time
+after,lang,20,Time
+to get up,dtuun-noon,20,Time
+to work,tam-ngaan               ,20,Time
+to start,ruhm,20,Time
+to finish,luhk,20,Time
+a break,pak,20,Time
+a minute,naa-tii,20,Time
+about,bpra-maan,20,Time
+a second,wi-naa-tii,20,Time
+an hour,chuua-moong,20,Time
+to tak,chai-wee-laa,20,Time
