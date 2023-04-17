@@ -7,6 +7,7 @@ from nicegui import ui
 
 real=False
 if real:
+    import neopixel
     pass
 
 lights = {
