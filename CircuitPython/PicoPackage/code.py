@@ -28,14 +28,41 @@ enc_push.pull = Pull.UP
 
 # setting up neopixel strip
 # led strip
+colors = {
+    "red":[255, 0, 0], 
+    "green": [0, 255, 0], 
+    "blue": [0, 0, 255], 
+    "white": [255, 255, 255]
+}
+color_a = list(colors.values())
+colors_l= list(colors.keys())
+color_i = 0
+
 len_pixels = 300
 np = neopixel.NeoPixel(board.GP0, len_pixels, auto_write=False)
-np[55] = [255, 0, 0]
-np.show()
 
+def set_pixels(color_i):
+    brightness = abs(enc.position/100)
+    color_setting = [int(c * brightness) for c in color_a[color_i]]
+    print(color_setting)
+    for p in range(len_pixels):
+        np[p] = color_setting
+    np.show()
+
+print('Running Loop')
 while True:
-    for x in range(1000):
-        oled_2_line(oled_display, f"count: {x}", f"encoder: {enc.position}")
-        time.sleep(.1)
+
+    time.sleep(.1)
+    oled_2_line(oled_display, f"color: {colors_l[color_i]}", f"brightness: {enc.position}")
+
+    if enc_push.value == False:
+        print(f"okay")
+        set_pixels(color_i)
+        time.sleep(1)
+        if enc_push.value == False:
+            print(f"dobulet ok")
+            color_i +=1
+            set_pixels(color_i)
+            
 
 
