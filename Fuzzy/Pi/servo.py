@@ -1,18 +1,15 @@
-import RPi.GPIO as GPIO
-import time
+"""
+Script for controlling servo and with pi
+"""
 
-from gpiozero import Servo
+# imports
+from gpiozero import AngularServo
 from time import sleep
 
-servo = Servo(21)
+servo = AngularServo(12, min_angle=0, max_angle=180)
 
-while True:
-    servo.min()
-    sleep(1)
-    servo.mid()
-    sleep(1)
-    servo.max()
-    sleep(1)
+# 
+
 
 # set pins
 
@@ -24,13 +21,11 @@ while True:
 
 
 def send_servo_angle(theta):
-    # duty = (theta/180) * 100 * (1/10) + 10
-    duty = int(theta/10 + 10)
-    # print(duty)
-    pi_pwm.ChangeDutyCycle(duty)
+    # send pi servo to angle theta between 0 and 180
+    servo.angle = theta
     # pi.set_PWM_frequency(servo_pin, freq)
 
-for a in range(0,100):
-    send_servo_angle(a)
-    time.sleep(.05)
+# for a in range(0,100):
+#     send_servo_angle(a)
+#     time.sleep(.05)
 
