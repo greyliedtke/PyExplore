@@ -32,17 +32,34 @@ enc_push.pull = Pull.UP
 servo_pwm = pwmio.PWMOut(board.GP16, frequency=50, duty_cycle=0)
 
 def send_angle(theta):
-    
+    # turn angle from 0-180 into pwm duty cycle...
+    # duty range from .5 to 2.5 ms. since 50 hz... duty = pulse_width/period = 
+    # 50hz = 20ms
+    norm = theta/180
+
+    duty = norm*2+.5
+
+
+    pico_norm = duty*65535/100
+    servo_pwm.duty_cycle = int(pico_norm)
+    enc.position = theta
+
+
 
 
 print('Running Loop')
 while True:
 
     time.sleep(.1)
-    oled_2_line(oled_display, f"encoder:{enc.position}", f"encoder:{enc.position}")
+    oled_2_line(oled_display, f"encoder:{enc.position}", f"angle:{enc.position}")
+    send_angle(enc.position)
 
     if enc_push.value == False:
-        oled_2_line(oled_display, f"encoder:{enc.position}", f"encoder:{enc.position}")
+        if enc.position < 180:
+            send_angle(180)
+        else:
+            send_angle(0)
+        oled_2_line(oled_display, f"encoder:{enc.position}", f"angle:{enc.position}")
         print(f"okay")
 
             
