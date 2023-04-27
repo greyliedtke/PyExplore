@@ -35,16 +35,14 @@ def send_angle(theta):
     # turn angle from 0-180 into pwm duty cycle...
     # duty range from .5 to 2.5 ms. since 50 hz... duty = pulse_width/period = 
     # 50hz = 20ms
-    norm = theta/180
+    norm = (theta/180)*100
 
-    duty = norm*2+.5
+    duty = norm*.1+.025
 
 
     pico_norm = duty*65535/100
     servo_pwm.duty_cycle = int(pico_norm)
     enc.position = theta
-
-
 
 
 print('Running Loop')
