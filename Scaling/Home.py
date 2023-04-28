@@ -22,3 +22,17 @@ load_profile = {
     "duration(Min)": [5, 5, 5, 5, 10, 10, 10, 20, 20, 20, 25]
 }
 st.dataframe(load_profile)
+
+# test sequencer
+st.markdown("""
+- Initialize test
+- lightoff
+- Idle
+- If PR > 1.5
+- If N2 > 5
+
+- Enter power --> calculate target N2
+- pay attention to Turbine exit, temperatures, stability
+
+
+""")
