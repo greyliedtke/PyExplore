@@ -1,0 +1,16 @@
+{
+    "system_name": "40kW Recuperated Engine",
+    "system_description": "Sensor configurations",
+    "sensors": {
+        "SSCDANN060PGAA5": {
+            "NI": {
+                "Scale": 15,
+                "Offset": 7.5
+            },
+            "PLC": {
+                "Scale": 15,
+                "Offset": 7.5
+            }
+        }
+    }
+}
