@@ -1,0 +1,31 @@
+{
+    "Bellmouth_Temperature": {
+        "sensors": [
+            "T_Bellmouth_1",
+            "T_Bellmouth_2"
+        ],
+        "range": "[20,40]"
+    },
+    "Bellmouth_Pressure": {
+        "sensors": [
+            "P_Bellmouth_1",
+            "P_Bellmouth_2"
+        ],
+        "range": "[0,5]"
+    },
+    "Inlet_Pressure": {
+        "sensors": [
+            "P_Inlet_1",
+            "P_Inlet_2",
+            "P_Inlet_3"
+        ],
+        "range": "[0,10]"
+    },
+    "N2_Control": {
+        "sensors": [
+            "cv_n2_setpoint",
+            "N_N2"
+        ],
+        "range": "[0,50]"
+    }
+}
