@@ -39,4 +39,4 @@ for r in range(rotates):
 
 part = p_center+p_balls
 
-part.save_as_stl("OpenScad/Art/ball_circle.stl")
+part.save_as_stl("OpenScad/SP2/Ballmount/ball_circle.stl")

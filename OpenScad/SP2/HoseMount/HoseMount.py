@@ -6,7 +6,7 @@ script to create holder for hoses and mount to slot-hardware
 # imports
 import solid2 as ps
 
-stl_dir = "OpenScad/HoseMount/STL/"
+stl_dir = "OpenScad/SP2/HoseMount"
 
 # main dimensions
 hose = {
@@ -49,5 +49,5 @@ p_hose_tube = p_hose_tube.up(offset)
 p_base += p_hose_tube
 
 
-p_base.save_as_scad(f"{stl_dir}pico.scad")
+p_base.save_as_stl(f"{stl_dir}/HoseMount.stl")
 print('created')

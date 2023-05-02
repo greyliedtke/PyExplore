@@ -11,6 +11,16 @@
                 "Scale": 15,
                 "Offset": 7.5
             }
+        },
+        "SSCDANN05PGAA5": {
+            "NI": {
+                "Scale": 5,
+                "Offset": 1.5
+            },
+            "PLC": {
+                "Scale": 1,
+                "Offset": 1.5
+            }
         }
     }
 }
