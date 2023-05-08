@@ -4,7 +4,7 @@ Create hive hex bins
 
 import solid2 as sp
 
-thick = 10
+thick = 50
 side_l = 60
 side_w = 3.5
 
