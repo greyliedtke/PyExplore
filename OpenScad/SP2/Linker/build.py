@@ -57,16 +57,14 @@ sup_mount_h = 12
 sup_mount_offset = bear_offset * 2
 sup_mount_x = sup_mount_offset - d_12 / 2
 d_mount = tube(d_12 + 2 * thick, d_12, sup_mount_h)
-d_mount_arm = (
-    ps.cube([sup_mount_x, sup_mount_h, sup_mount_h], center=True)
-    .left(sup_mount_x/2 +d_12/2)
-    .up(sup_mount_h / 2)
-)
+d_mount -= ps.cylinder(d=screw_od, h=30).rotateX(90).up(sup_mount_h/2)
 
 d_mount_br = (tube(bearing["idr"], screw_od, sup_mount_x)+ tube(bearing["id"], screw_od, bearing["h"] / 2).up(bearing["h"]/4) )# .up(thick)
-d_mount_br = d_mount_br.rotateY(270).left(sup_mount_x/2).forward(d_12/2).up(sup_mount_h/2)
+d_mount_br = d_mount_br.rotateY(270).right(d_12/2+thick).forward(d_12/2+bearing["idr"]/2).up(sup_mount_h/2)
 
-p_dmount = d_mount + d_mount_arm + d_mount_br
+d_mount_cnxn = ps.cube([thick, d_12/2+bearing["idr"], bearing["idr"]], center=True).up(bearing["idr"]/2).forward((d_12/2+bearing["idr"])/2).right(d_12/2+thick/2)
+
+p_dmount = d_mount + d_mount_br + d_mount_cnxn
 p_dmount.save_as_scad("OpenScad/SP2/Linker/dmount.scad")
 
 # ------------------- saving -----------------------------------------

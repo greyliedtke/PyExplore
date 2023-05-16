@@ -8,15 +8,15 @@ union() {
 		translate(v = [0, 0, -6.0000000000]) {
 			cylinder(d = 13.5000000000, h = 24);
 		}
-	}
-	translate(v = [0, 0, 6.0000000000]) {
-		translate(v = [-28.3750000000, 0, 0]) {
-			cube(center = true, size = [43.2500000000, 12, 12]);
+		translate(v = [0, 0, 6.0000000000]) {
+			rotate(a = [90, 0, 0]) {
+				cylinder(d = 3.5000000000, h = 30);
+			}
 		}
 	}
 	translate(v = [0, 0, 6.0000000000]) {
-		translate(v = [0, 6.7500000000, 0]) {
-			translate(v = [-21.6250000000, 0, 0]) {
+		translate(v = [0, 12.5000000000, 0]) {
+			translate(v = [8.7500000000, 0, 0]) {
 				rotate(a = [0, 270, 0]) {
 					union() {
 						difference() {
@@ -35,6 +35,13 @@ union() {
 						}
 					}
 				}
+			}
+		}
+	}
+	translate(v = [7.7500000000, 0, 0]) {
+		translate(v = [0, 9.1250000000, 0]) {
+			translate(v = [0, 0, 5.7500000000]) {
+				cube(center = true, size = [2, 18.2500000000, 11.5000000000]);
 			}
 		}
 	}
