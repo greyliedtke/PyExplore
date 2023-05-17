@@ -1,0 +1,6 @@
+Fluid,Density,cp,Viscosity,Conductivity,,Re,Pr,Nu,Dean,Nu_dean,Fr,H_factor,DeltaT,Necessary Area,PressureDrop,Q_20
+Water,997 kg/m^3,4 kJ/(kg*K),.00089 N*s/m^2,.609 W/(m*K),,,,,,,fr_calc,h_calc,dt_calc,area_calc,pd_calc,calc
+SAE-20,816.67 kg/m^3,1.8 kJ/(kg*K),.013 N*s/m^2,.15 W/(m*K),,,,,,,,,,,,
+Kerosene,810 kg/m^3,2.01 kJ/(kg*K),0.00164 N*s/m^2,.145 W/(m*K),,,,,,,,,,,,
+PAO,719 kg/m^3,,0.0161 N*s/m^2,,,,,,,,,,,,,
+Eth Glyc,,,.0028 N*s/m^2,,,,,,,,,,,,,

@@ -2,5 +2,5 @@ virtual_env/
 .venv
 .vscode/
 __pycache__
-DataStories/Investigating/datasets/
+Data/Investigating/datasets/
 **shhh.py

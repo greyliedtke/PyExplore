@@ -1,0 +1,5 @@
+Fluid,Density,cp,Viscosity,Conductivity,,Re,Pr,Nu,Dean,Nu_dean,Fr,H_factor,DeltaT,Necessary Area,PressureDrop
+Water,997 kg/m^3,4 kJ/(kg*K),.0005465 N*s/m^2,.609 W/(m*K),,,,,,,fr_calc,h_calc,dt_calc,area_calc,pd_calc
+SAE-20,816.67 kg/m^3,1.8 kJ/(kg*K),.013 N*s/m^2,.15 W/(m*K),,,,,,,,,,,
+Turbine Oil,.82 kg/liter,2.15 kJ/(kg*K),4.35 millinewton * second / meter^2,.128 W/(m*K),,,,,,,,,,,
+Aeroshell-12,922.3 kg/m^3,2.15 kJ/(kg*K),7.562245 millinewton * second / meter^2,.128 W/(m*K),,,,,,,,,,,
