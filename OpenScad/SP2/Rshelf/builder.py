@@ -1,60 +1,48 @@
 import solid2 as sp
 
 
-# ------------------- initialze variables -----------------------------------------
-import dim as d
+# standard lib
+import sys
+
+sys.path.append("OpenScad/SP2/Glib")
+import gal
 
 fdir = "OpenScad/SP2/Rshelf/Files"
 
+# assembly level dimensions
+screw_od = 3
+thick = 2
 
-# ------------------- helper functions -----------------------------------------
-def tube(od, id, h):
-    return sp.cylinder(d=od, h=h) - sp.cylinder(d=id, h=2 * h).down(h / 2)
-
-
-# ------------------- bottom support below bearing -----------------------------------------
+# -------------------1. bottom support below bearing -----------------------------------------
 p_bch = 10
-p_bc = tube(d.d_od + d.a_thick * 2, d.d_od, p_bch)
-p_bc -= sp.cylinder(d=d.s_od, h=d.s_h, center=True).rotateY(90).up(p_bch / 2)
-p_bc += tube(d.b_id, d.d_od, h=d.b_h).up(p_bch)
-# screw hole
-# butt up to below bearing
-p_bc.save_as_scad(f"{fdir}/bottom_cylinder.scad")
+p1 = gal.bearing_inner_support(10, gal.dowel_14["od"])
+p1 -= sp.cylinder(d=screw_od, h=30).rotateX(90).up(10 / 2)
+p1.save_as_scad(f"{fdir}/1_bottom_cylinder.scad")
 
 
-# ------------------- top support piece -----------------------------------------
-p_ts = tube(d.b_od + d.a_thick, d.b_odr, 3)
+# ------------------- 2. top support piece -----------------------------------------
+# sit on top of bearing and have arms extend down for screw mounting beneath
+p2_bt = gal.BearingContainer(2, screw_od)
 
-ttl = 40
-mate_d = d.b_od + d.a_thick
-mate = 3.5
-p_tt = tube(d.b_od + 2 * d.a_thick, d.b_od, ttl)  # top tube connect top to base
-p_t_h = sp.cylinder(d=d.s_od, h=10).forward(mate_d / 2)
-p_t_h = p_t_h + p_t_h.rotateZ(120) + p_t_h.rotateZ(240)
+p2_ms = gal.tube(45, p2_bt.odd, thick)
 
-p_top = p_ts + p_tt - p_t_h.up(ttl - 10)
-p_top.save_as_scad(f"{fdir}/top_support.scad")
+p2 = p2_bt.p + p2_ms
+p2.save_as_scad(f"{fdir}/2_top_support.scad")
 
 
-# ------------------- piece to connect to top -----------------------------------------
+# 3. The real deal...
+p3_bt = gal.BearingContainer(3, screw_od)
 
-p_t_b = tube(mate_d + 20, mate_d - 2*d.a_thick, d.a_thick)
-p_t_b -= p_t_h
+ball_rim = 30
+ball_od = 50
+ball_thick = 5
 
-c_off = 22
+p3_bs = gal.tube(ball_rim, p2_bt.odd, ball_thick)
 
-c_o_od = 2 * (d.c_od + c_off)
+ball_circ_0 = gal.tube(ball_od+2*thick, ball_od, ball_thick).forward(ball_od/2+ball_rim/2)
+ball_circs = ball_circ_0
+for b in range(3):
+    ball_circs+=ball_circ_0.rotateZ(360/3*b)
 
-coaster_tube = tube(d.c_od + d.a_thick, d.c_od - d.a_thick, h=d.a_thick)
-coaster_tube += tube(d.c_od + d.a_thick, d.c_od, h=d.c_h).up(d.a_thick)
-coaster_tube = coaster_tube.forward(d.c_od / 2 + c_off)
-coaster_tube += (
-    coaster_tube.rotateZ(90) + coaster_tube.rotateZ(180) + coaster_tube.rotateZ(270)
-)
-
-# p_t_b += tube(c_o_od + d.a_thick, c_o_od, d.a_thick)
-
-p_t_b += coaster_tube
-p_t_b.save_as_scad(f"{fdir}/bot_c.scad")
-
-print("parts created!")
+p3 = p3_bt.p + p3_bs + ball_circs
+p3.save_as_scad(f"{fdir}/3_balls.scad")
