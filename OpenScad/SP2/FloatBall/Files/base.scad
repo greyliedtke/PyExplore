@@ -14,7 +14,7 @@ difference() {
 		sphere(d = sphereD);
 	}
 	translate(v = [0, 0, (-BaseHeight)]) {
-		cylinder(d = 7, h = (BaseHeight * 2));
+		cylinder(d = 6, h = (BaseHeight * 2));
 	}
 	union() {
 		translate(v = [0, 0, 7.5000000000]) {

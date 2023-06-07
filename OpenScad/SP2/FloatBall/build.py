@@ -17,7 +17,6 @@ base_cube_l = ps.CustomizerSliderVariable("BaseLength", 50)
 base_cube_h = ps.CustomizerSliderVariable("BaseHeight", 20)
 sphere_d = ps.CustomizerSliderVariable("sphereD", 75)
 sphere_offset = ps.CustomizerSliderVariable("SphereOffset", 25)
-d_hole = 7
 
 # bottom base
 p_base = ps.cube([base_cube_l, base_cube_l, base_cube_h], center=True).up(
@@ -28,7 +27,7 @@ p_base = ps.cube([base_cube_l, base_cube_l, base_cube_h], center=True).up(
 n_sphere = ps.sphere(d=sphere_d).up(sphere_offset + base_cube_h)
 
 # center hole through
-hole_center = ps.cylinder(d=7, h=base_cube_h * 2).down(base_cube_h)
+hole_center = ps.cylinder(d=6, h=base_cube_h * 2).down(base_cube_h)
 
 # dowel holes for mounting
 d_od = 7.5
