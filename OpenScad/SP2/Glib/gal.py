@@ -70,6 +70,22 @@ def dowel_tube(d_od, thick, screw_od, height):
     d_mount -= ps.cylinder(d=screw_od, h=30).rotateX(90).up(height/2)
     return d_mount
 
+
+# ------------------- hollow rectangle -----------------------------------------
+# creating rect in rect instead...
+def hollow_rect(rect_x, rect_y, thick, height):
+    inside = ps.cube([rect_x, rect_y, height * 2], center=True)
+    outside = ps.cube([rect_x + 2 * thick, rect_y + 2 * thick, height], center=True)
+    rect = (outside - inside).up(height / 2)
+    return rect
+
+# ------------------- rectangle with hole -----------------------------------------
+def c_rect(x_side, y_side, height, hole):
+    hr = ps.cube([x_side, y_side, height], center=True).up(height / 2) - ps.cylinder(
+        d=hole, h=height * 2
+    ).down(height / 2)
+    return hr
+
 # Testing purposes
 if __name__ == "__main__":
     print("ok")
