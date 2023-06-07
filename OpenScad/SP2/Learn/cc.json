@@ -1,0 +1,10 @@
+{
+    "parameterSets": {
+        "somt": {
+            "X": "8",
+            "Y": "21",
+            "Z": "12"
+        }
+    },
+    "fileFormatVersion": "1"
+}
