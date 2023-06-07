@@ -1,6 +1,9 @@
 
 
-
+ball_od = 50;
+ball_offset = 50;
+thick = 3;
+height = 10;
 
 difference() {
 	union() {
