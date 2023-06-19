@@ -30,6 +30,11 @@ dowel_12 = {
     "h":900
     }
 
+# rect_mount("Pico", 48, 11.4, 2, 10)
+# rect_mount("v_conv", 25, 35)
+# rect_mount("Zero", 23, 58)
+# rect_mount("RelayBoard", 45, 20, 3, 10)
+
 # ------------------- helper functions -----------------------------------------
 def tube(od, id, height):
     return ps.cylinder(d=od, h=height) - ps.cylinder(d=id, h=2 * height).down(
