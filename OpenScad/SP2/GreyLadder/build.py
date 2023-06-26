@@ -7,11 +7,11 @@ dir_s = os.path.dirname(os.path.abspath(__file__))
 
 # ball_od = sp.CustomizerSpinnerVariable("ball_od", 50)
 p_height = 10
-post_d = 8
+post_d = 10
 cord_hole = 6
 screw_hole = 2.5
-x_dist, y_dist = 11, 42
-thick = 2
+x_dist, y_dist = 15, 55
+thick = 3
 rim = 3
 
 p_post = sp.cylinder(d=post_d, h = p_height)
@@ -20,12 +20,13 @@ post_h2 = sp.cylinder(d=cord_hole, h=10, center=True).rotateY(90).up(p_height/2)
 
 post = p_post - post_h1 - post_h2
 post = post.rotateZ(90)
+post = post - sp.cylinder(d=3, h=10).rotateY(90).up(p_height/2)
 
-posts = post + post.right(x_dist) + post.right(x_dist*2)
+posts = post + post.up(p_height) + post.up(p_height*2)
 posts += posts.forward(y_dist)
 
-base = sp.cube(2*x_dist+rim, y_dist+rim, thick) - sp.cube(2*x_dist-rim, y_dist-rim, thick).right(rim).forward(rim)
-base = base.left(rim/2).back(rim/2)
+base = sp.cube(post_d, y_dist+post_d, thick)
+base = base.left(post_d/2).back(post_d/2)
 
 part = posts + base
 # PART Creation
