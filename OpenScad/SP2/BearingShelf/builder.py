@@ -22,10 +22,13 @@ ball_offset = sp.CustomizerSpinnerVariable("ball_offset", 50)
 screw_od = 3
 thick = sp.CustomizerSpinnerVariable("thick", 3)
 ball_height = sp.CustomizerSpinnerVariable("height", 10)
-balls = 5
+balls = 3
+d_od = 7.5
+
+def tube(od, id, height): return sp.cylinder(d=od, h=height) - sp.cylinder(d=id, h=2 * height).down(height/2)
 
 # -------------------1. bottom support below bearing -----------------------------------------
-p1 = gal.bearing_inner_support(10, gal.dowel_14["od"])
+p1 = gal.bearing_inner_support(10, d_od)
 p1 -= sp.cylinder(d=screw_od, h=30).rotateX(90).up(10 / 2)
 p1.save_as_scad(f"{fdir}/1_bottom_cylinder.scad")
 
@@ -48,3 +51,12 @@ for b in range(balls):
 # combine and save
 p3 = p3_bt.p + ball_circs
 p3.save_as_scad(f"{fdir}/3_balls.scad")
+
+# ------------------- base piece -----------------------------------------
+p_tb = tube(d_od+2*thick, d_od, ball_height)
+
+p_screwb = tube(screw_od+3*thick, screw_od, ball_height).forward(arm_l)
+p_screwb_arm = sp.cube([thick, arm_l, ball_height], center=True).up(ball_height/2).forward(arm_l/2-thick/2)
+
+p_bb = p_tb+p_screwb+p_screwb_arm
+p_bb.save_as_scad(f"{fdir}/base_o.scad")

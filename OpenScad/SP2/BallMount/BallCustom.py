@@ -20,8 +20,7 @@ support_odd = support_od+2*thick
 ball_odd = ball_od+2*thick
 
 # ------------------- helper functions ---------------------------------
-def tube(od, id, height):
-    return ps.cylinder(d=od, h=height) - ps.cylinder(d=id, h=2 * height).down(height/2)
+def tube(od, id, height): return ps.cylinder(d=od, h=height) - ps.cylinder(d=id, h=2 * height).down(height/2)
 
 
 # ------------------- Base rectangle ------------------------------------

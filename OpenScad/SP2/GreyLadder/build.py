@@ -4,33 +4,60 @@ import os
 dir_s = os.path.dirname(os.path.abspath(__file__))
 
 # OPENSCAD Dimensions
+screw_hole = 4  # 3.5 is threaded
+x_dist = 60
+y_width = 4
+cyl_d = 7
 
-# ball_od = sp.CustomizerSpinnerVariable("ball_od", 50)
-p_height = 10
-post_d = 10
-cord_hole = 6
-screw_hole = 2.5
-x_dist, y_dist = 15, 55
+ladder_space = 10
+
 thick = 3
-rim = 3
+arc_d = 13
 
-p_post = sp.cylinder(d=post_d, h = p_height)
-post_h1 = sp.cylinder(d=screw_hole, h=5).up(p_height - 3)
-post_h2 = sp.cylinder(d=cord_hole, h=10, center=True).rotateY(90).up(p_height/2)
+# ------------------- global func/var -----------------------------------------
+def tube(od, id, height): return sp.cylinder(d=od, h=height) - sp.cylinder(d=id, h=height*2).down(height/2)
 
-post = p_post - post_h1 - post_h2
-post = post.rotateZ(90)
-post = post - sp.cylinder(d=3, h=10).rotateY(90).up(p_height/2)
+def d_hole():
+    outer_cyl = sp.cylinder(d=10, h=thick)
+    inner_cyl = sp.cylinder(d=7, h= thick)
+    arc_remove = sp.square([2.5,25]).right(90)
+    arc = arc_remove.rotate_extrude(15, _fn=180)
+    d_snap = outer_cyl - inner_cyl - arc
+    return d_snap
 
-posts = post + post.up(p_height) + post.up(p_height*2)
-posts += posts.forward(y_dist)
+# 1. Base
+# ------------------- base -----------------------------------------
+base_cube = sp.cube([x_dist / 2, y_width, thick]).back(y_width / 2)
+base_cyl = tube(cyl_d, screw_hole, thick).right(x_dist / 2)
+base_hole = sp.cylinder(d=screw_hole, h=thick).right(x_dist / 2)
 
-base = sp.cube(post_d, y_dist+post_d, thick)
-base = base.left(post_d/2).back(post_d/2)
+# 2. Ladder attachment
+# ------------------- creating ladder layouts -----------------------------------------
+sq_x = (x_dist+ladder_space)/2
+arc_x = sq_x-ladder_space
+base_cube_sq = sp.cube([sq_x, y_width, thick]).back(y_width / 2)
+base_cyl_sq = d_hole().right(sq_x)
+base_hole_sq = sp.cylinder(d=screw_hole, h=thick).right(sq_x)
 
-part = posts + base
-# PART Creation
-# part = sp.cylinder(d=3, h=3)
+# ------------------- arc hole -----------------------------------------
+arc_rim = sp.cylinder(d=arc_d, h=thick).right(arc_x)
+
+arc_hole = sp.cylinder(d=9, h=thick).right(arc_x)
+arc_cut = sp.cube([arc_d / 2 + arc_x, arc_d, thick]).back(arc_d + y_width / 2)
+
+part = base_cube_sq + base_cyl_sq + arc_rim - arc_hole - arc_cut - base_hole_sq
+
+part = part + part.rotateZ(180)
+
+# ------------------- base -----------------------------------------
+base_part = base_cube+base_cyl-base_hole
+base_part = base_part + base_part.rotateZ(180)
+ass = base_part+part.back(20)
+
+
 
 # SAVING
 part.save_as_scad(f"{dir_s}/SCAD/part.scad")
+base_part.save_as_scad(f"{dir_s}/SCAD/base_part.scad")
+ass.save_as_scad(f"{dir_s}/SCAD/ass.scad")
+

@@ -57,7 +57,7 @@ union() {
 			}
 		}
 	}
-	rotate(a = [0, 0, 72.0000000000]) {
+	rotate(a = [0, 0, 120.0000000000]) {
 		union() {
 			translate(v = [0, ((((ball_offset - ((ball_od / 2) + 14.5)) / 2) + 14.5) - (thick / 2)), 0]) {
 				translate(v = [0, 0, (height / 2)]) {
@@ -74,41 +74,7 @@ union() {
 			}
 		}
 	}
-	rotate(a = [0, 0, 144.0000000000]) {
-		union() {
-			translate(v = [0, ((((ball_offset - ((ball_od / 2) + 14.5)) / 2) + 14.5) - (thick / 2)), 0]) {
-				translate(v = [0, 0, (height / 2)]) {
-					cube(center = true, size = [thick, (ball_offset - ((ball_od / 2) + 14.5)), height]);
-				}
-			}
-			translate(v = [0, ball_offset, 0]) {
-				difference() {
-					cylinder(d = (ball_od + (2 * thick)), h = height);
-					translate(v = [0, 0, (-(height / 2))]) {
-						cylinder(d = ball_od, h = (2 * height));
-					}
-				}
-			}
-		}
-	}
-	rotate(a = [0, 0, 216.0000000000]) {
-		union() {
-			translate(v = [0, ((((ball_offset - ((ball_od / 2) + 14.5)) / 2) + 14.5) - (thick / 2)), 0]) {
-				translate(v = [0, 0, (height / 2)]) {
-					cube(center = true, size = [thick, (ball_offset - ((ball_od / 2) + 14.5)), height]);
-				}
-			}
-			translate(v = [0, ball_offset, 0]) {
-				difference() {
-					cylinder(d = (ball_od + (2 * thick)), h = height);
-					translate(v = [0, 0, (-(height / 2))]) {
-						cylinder(d = ball_od, h = (2 * height));
-					}
-				}
-			}
-		}
-	}
-	rotate(a = [0, 0, 288.0000000000]) {
+	rotate(a = [0, 0, 240.0000000000]) {
 		union() {
 			translate(v = [0, ((((ball_offset - ((ball_od / 2) + 14.5)) / 2) + 14.5) - (thick / 2)), 0]) {
 				translate(v = [0, 0, (height / 2)]) {
