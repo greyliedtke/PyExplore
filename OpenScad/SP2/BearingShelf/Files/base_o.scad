@@ -7,9 +7,9 @@ height = 10;
 
 union() {
 	difference() {
-		cylinder(d = (7.5 + (2 * thick)), h = height);
+		cylinder(d = (7.2 + (2 * thick)), h = height);
 		translate(v = [0, 0, (-(height / 2))]) {
-			cylinder(d = 7.5000000000, h = (2 * height));
+			cylinder(d = 7.2000000000, h = (2 * height));
 		}
 	}
 	translate(v = [0, (ball_offset - ((ball_od / 2) + 14.5)), 0]) {
