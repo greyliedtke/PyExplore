@@ -23,7 +23,7 @@ screw_od = 3
 thick = sp.CustomizerSpinnerVariable("thick", 3)
 ball_height = sp.CustomizerSpinnerVariable("height", 10)
 balls = 3
-d_od = 7.5
+d_od = 7.2
 
 def tube(od, id, height): return sp.cylinder(d=od, h=height) - sp.cylinder(d=id, h=2 * height).down(height/2)
 
