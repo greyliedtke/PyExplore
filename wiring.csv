@@ -1,9 +1,0 @@
-Label, device, bus
-gnd, pico, gnd
-gnd, pwr, gnd
-5v, pwr, 5v
-p18, pico, sig
-d, strip, sig
-gnd, strip, gnd
-v+, strip, 5v
-

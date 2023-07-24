@@ -19,5 +19,10 @@
     "Screw 4-40":{
         "Clear_od": 3.5,
         "Thread_od": 2.5
+    },
+    "Disc Magnet":{
+        "id": 17,
+        "od": 34,
+        "h": 5
     }
 }
