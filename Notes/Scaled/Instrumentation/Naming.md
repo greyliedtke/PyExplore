@@ -1,5 +1,14 @@
 # Naming Standard
 
+
+## Creating list to determine everything...
+- Load bank
+- Generator voltage
+- current
+- Igniter - voltage!!!
+- PT pressure
+
+
 ## Tests
 (yymmdd)_(runx)
 

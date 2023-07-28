@@ -1,2 +1,0 @@
-import neopixels as pix
-
