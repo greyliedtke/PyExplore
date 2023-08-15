@@ -28,3 +28,13 @@ Pin	Signal
 
 ## Standard Tubing
 - Firm [3/8 OD tubing](https://www.mcmaster.com/5648K71/)
+- Pressure board tubing
+- Thing DP tubing
+
+## Flow Sensors
+[flow sensors](https://www.eptsensor.com/flow-sensor/hall-flow-sensor/fm-hl2218-liquid-flow-meter-working-principle.html)
+- 15 pulses / mil/min
+
+![Alt text](image.png)
+
+![Alt text](image-1.png)

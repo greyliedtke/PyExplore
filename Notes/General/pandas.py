@@ -45,3 +45,4 @@ df["_time"] = pd.to_datetime(df["_time"])
 df["elapsed_sec"] = (df["_time"] - df["_time"].iloc[0]).dt.total_seconds()
 df = df.set_index("_time")
 df = df.interpolate()
+
