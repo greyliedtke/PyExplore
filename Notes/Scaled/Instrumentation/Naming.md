@@ -1,6 +1,18 @@
 # Naming Standard
 
 
+## Wiring Guidelines
+Pin	Signal
+1 - GND
+2 - Power/GND
+3 - Sensor 6
+4 - Sensor 5
+5 - Sensor 4
+6 - Sensor 3
+7 - Sensor 2
+8 - Sensor 1
+
+
 ## Creating list to determine everything...
 - Load bank
 - Generator voltage

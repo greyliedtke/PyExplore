@@ -35,6 +35,8 @@ Clipboard
 
 ### Navigating Directories
 
+    # change directory to current script path
+    os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
 
     def nav_dir(do_this):
         current_dir = os.getcwd()

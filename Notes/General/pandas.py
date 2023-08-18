@@ -4,6 +4,8 @@
 import pandas as pd
 df = pd.Dataframe()
 
+# zero and filter a column
+
 # converting to and replace commas...
 df['column'] = pd.to_numeric(df['column'].str.replace(',', ''), errors='coerce')
 cols = list(df.columns)
