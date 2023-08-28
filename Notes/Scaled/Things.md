@@ -1,15 +1,10 @@
 # Instrumentation and Hardware Notes
 
 
-## New Load cell
-- [Amplifier manual](https://www.ato.com/Content/doc/ATO-load-cell-amplifier-user-manual-ATO-LCTR-OAR.pdf)
-- [Amplifier](https://www.google.com/url?q=https://www.amazon.com/gp/product/B08CMF1VDG/ref%3Dppx_yo_dt_b_search_asin_title?ie%3DUTF8%26psc%3D1&source=gmail&ust=1690416005383000&usg=AOvVaw0OwkifFDTYfMN1AWltyKEb)
-- [Load Cell](https://www.amazon.com/gp/product/B0785MXVYK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-
 ## Pressure Sensors
-- PCB [Series](https://media.digikey.com/pdf/Data%20Sheets/Honeywell%20PDFs/ssc_series_DS.pdf)
-- 1/8 ID Barb. [Tubing](https://www.mcmaster.com/5233K52/)
-- DP barb. [Tubing](https://www.mcmaster.com/6516T62/)
+- PCB [Series]()
+- 1/8 ID Barb. [Tubing]()
+- DP barb. [Tubing]()
 
 | Inventory |                                   | New | Refurbished | McGyverable |
 | --------- | --------------------------------- | --- | ----------- | ----------- |
@@ -18,21 +13,20 @@
 | 100MDAA5  | 100 mbar differential - 1.45 psi  |     | 1           |             |
 | 005PDAA5  | 5 PSI differential                |     |             | 4           |
 
-## Thermocouples
-- [barb to 10-32](https://www.mcmaster.com/5454K61/)
-- then to 1/8 NPT
 
 ## Standard Tubing
 - Firm [3/8 OD tubing](https://www.mcmaster.com/5648K71/)
 - Pressure board tubing
 - Thing DP tubing
+- 1/4 ID, 3/8 OD tube
+    - https://www.mcmaster.com/5648k71/
+- 3/8 ID, 9/16 OD tube
+    - https://www.mcmaster.com/5648K72/
+- 5/8 id, 7/8 OD tube
+    - https://www.mcmaster.com/5632K35/
 
+
+10 AN to 5/8 [barbs](https://www.amazon.com/gp/product/B0C27VB4ZP/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 ## Flow Sensors
 [flow sensors](https://www.eptsensor.com/flow-sensor/hall-flow-sensor/fm-hl2218-liquid-flow-meter-working-principle.html)
 - 15 pulses / mil/min
-
-## CAN Devices
-
-https://github.com/INNO-MAKER/usb2can
-https://github.com/Dani-W/Python-Interface_InnoMaker_USB2CAN
-https://stackoverflow.com/questions/47913079/python-attributeerror-module-object-has-no-attribute-addreference
