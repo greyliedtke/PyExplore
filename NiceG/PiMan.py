@@ -56,3 +56,21 @@ with ui.right_drawer(fixed=False).style('background-color: #ebf1fa').props('bord
 
 # running the page
 ui.run(title="PiControl", port=2999, binding_refresh_interval=0.5)
+
+
+"""
+ui.notify("Created file ...")
+
+ui.button("collect data", on_click=lambda:collect_data())
+ui.label("Hold q to stop")
+
+ui.run(title="DispSensor", port=2999, binding_refresh_interval=0.5)
+
+line_plot = ui.line_plot(n=1, limit=20, figsize=(3, 2), update_every=1)
+
+# IMPROVEMENTS
+i = 0
+i+=1
+                line_plot.push([i], [data])
+
+"""
