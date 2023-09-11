@@ -35,6 +35,7 @@ def update_word(letter):
 def create_b(letter):
     ui.button(letter, on_click=lambda: update_word(letter))
 
+
 def submit_word():
     resp = check_word(word.text)
     with ui.row():
@@ -42,6 +43,9 @@ def submit_word():
             ui.markdown(f"{resp[1]}")
     word.text = ""
     words[word.text] = resp[1]
+    # add link
+    # improve formatting
+    
 
 with ui.row():
     for v in vowels:
