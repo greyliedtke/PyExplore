@@ -37,13 +37,17 @@ def word_page():
     def create_b(letter):
         ui.button(letter, on_click=lambda: update_word(letter))
 
-    def submit_word():
-        resp = check_word(word.text)
-        with ui.row():
-            with ui.expansion(f"{resp[0]}: {word.text}"):
-                ui.markdown(f"{resp[1]}")
-        word.text = ""
-        words[word.text] = resp[1]
+
+def submit_word():
+    resp = check_word(word.text)
+    with ui.row():
+        with ui.expansion(f"{resp[0]}: {word.text}"):
+            ui.markdown(f"{resp[1]}")
+    word.text = ""
+    words[word.text] = resp[1]
+    # add link
+    # improve formatting
+    
 
     with ui.row():
         for v in vowels:
