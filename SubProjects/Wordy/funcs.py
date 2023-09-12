@@ -35,8 +35,6 @@ def check_word(word):
         points = 0
         print(f"NOT A WORD: {word}")
     
-    print(points, def_dict)
-
     return points, def_dict
 
 
