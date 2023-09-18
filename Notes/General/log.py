@@ -1,6 +1,4 @@
-import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    filename="Yessir.log")
-logging.info("First Log")
-logging.warn("f this")
+from csv_logger import CsvLogger
+
+csvlogger = CsvLogger(filename="log.csv")
+csvlogger.log(1, ["cool"])
