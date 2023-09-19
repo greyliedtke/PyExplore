@@ -4,11 +4,15 @@
 
 # IMPORTS
 from nicegui import ui, app
-from funcs import generate_letters, check_word, guess_parser, guess_inc
+from funcs import check_word, guess_parser, guess_inc
 from wordbank import vows_consonsants
-from datetime import datetime
 from ui import format_page, cc
+from datetime import datetime
 
+
+def clear_storage():
+    app.storage.clear()
+    print("cleared storage")
 
 # Wordy Page -----------------------------------------------------
 @ui.page("/")
@@ -44,6 +48,11 @@ def index():
             guesses[typed_word] = definition
             app.storage.user["guesses_i"] = guesses
 
+        uid = app.storage.browser['id']
+        tn = datetime.now()
+        tn = tn.strftime("%Y-%m-%d %H:%M:%S")
+        print(f"LOG:{uid}, {points}, {typed_word}, {tn}")
+
         # clear responses
         word.value = ""
         update_page()
@@ -77,8 +86,6 @@ def index():
 
         p_button.set_text(points)
 
-        stat_container.clear()
-
     with ui.row():
         with cc():
             # game card
@@ -100,6 +107,12 @@ def index():
             with ui.dialog() as points_diag, ui.card():
                 ui.markdown(
                     """
+                ### Instructions
+                - create as many words as you can from
+                - 3 vowels
+                - 4 consonants
+                
+                ### Points
                 - 1 letter = 1 points
                 - use all letters = 3 points
                             """
@@ -109,15 +122,14 @@ def index():
 
             with ui.button("Points", on_click=lambda: points_diag):
                 p_button = ui.badge(0, color="green").props("floating")
-            stat_container = ui.column()
 
             guess_cont = ui.element()
 
     update_page()
-    ui.button("Clear", on_click=lambda: clear_guesses())
+    ui.button("Clear", on_click=lambda: clear_storage())
 
 
 # running the page
-ui.run(title="Wordy", port=2999, binding_refresh_interval=0.5, storage_secret="xxx")
+ui.run(title="Lexidef", port=2999, binding_refresh_interval=0.5, storage_secret="xxx")
 
 # ------------------------------------------------------

@@ -1,25 +1,8 @@
 # imports
-import random
+
 from PyDictionary import PyDictionary
 dictionary=PyDictionary()
 
-# Define a list of vowels and consonants
-vowels = ['A', 'E', 'I', 'O', 'U']
-consonants = [chr(x) for x in range(ord('A'), ord('Z') + 1) if chr(x) not in vowels]
-
-
-def generate_letters():
-    # Generate 2 random vowels and 4 random consonants
-    pv = random.sample(vowels, k=3) 
-    pc = random.sample(consonants, k=4)
-
-    pv = sorted(pv)
-    pc = sorted(pc)
-
-    return pv, pc
-
-
-# score the words created
 # each letter is 1 word. using all letters is 3 points
 def check_word(word):
     points = 0 
@@ -35,7 +18,6 @@ def check_word(word):
         points = 0
 
     return points, def_dict
-
 
 
 # parse guessed words and link to google
