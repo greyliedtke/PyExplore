@@ -11,11 +11,9 @@ from ui import format_page, cc
 
 
 # Wordy Page -----------------------------------------------------
-@ui.page('/')
+@ui.page("/")
 def index():
-
     format_page()
-
 
     def del_letter():
         prev_word = word.value
@@ -33,14 +31,13 @@ def index():
         app.storage.user["guesses_i"] = {}
         update_page()
 
-
-    def submit_word(typed_word:str):
+    def submit_word(typed_word: str):
         typed_word = typed_word.lower()
         points, definition = check_word(typed_word)
 
         if points > 0:
             guesses = app.storage.user.get("guesses", {})
-            guesses[typed_word] = {"def": definition, "points":points}
+            guesses[typed_word] = {"def": definition, "points": points}
             app.storage.user["guesses"] = guesses
         else:
             guesses = app.storage.user.get("guesses_i", {})
@@ -55,37 +52,38 @@ def index():
         # update page
         guess_cont.clear()
         with guess_cont:
-            with ui.column():
+            with ui.expansion("Definitions", icon="done"):
                 guess_md, points = guess_parser(app.storage.user.get("guesses", {}))
-                ui.markdown("**Guesses**")
-                ui.markdown(f"""
-                            {guess_md}
-                            """)
-            with ui.column():
-                ui.markdown("**Wrong**")
+                with ui.scroll_area():
+                    ui.markdown(
+                        f"""
+                                {guess_md}
+                                """
+                    )
+            with ui.expansion("incorrect", icon="thumb_down").classes("w-full"):
                 guess_md_i = guess_inc(app.storage.user.get("guesses_i", {}))
-                ui.markdown(f"""
+                ui.markdown(
+                    f"""
                             {guess_md_i}
-                            """)
-            
-        stat_container.clear()
-        with stat_container:
-            max_p = 22
-            avg_p = 14
-            guess_md = guess_parser(app.storage.user.get("guesses", {}))
-            ui.markdown()
-            ui.markdown(f"""
-                        **Points**: {points}
+                            """
+                )
+            with ui.expansion("Leaderboard", icon="emoji_events"):
+                ui.markdown(
+                    f"""
+                            - Average: {17}
+                            - Max: {20}
+                    """
+                    )
 
-                        - Average: {avg_p}
-                        - Max: {max_p}
-                        """)
-        
+        p_button.set_text(points)
+
+        stat_container.clear()
+
     with ui.row():
         with cc():
             # game card
             vowels, consonants = vows_consonsants()
-            word = ui.textarea("Entry")
+            word = ui.input("Word")
             with ui.row():
                 for v in vowels:
                     create_b(v)
@@ -94,16 +92,30 @@ def index():
                     create_b(c)
 
             with ui.row():
-                ui.button("<-- del", on_click=lambda: del_letter(), color='orange')
-                ui.button("Submit", on_click=lambda: submit_word(word.value), color='green')
+                ui.button("<-- del", on_click=lambda: del_letter(), color="orange")
+                ui.button(
+                    "Submit", on_click=lambda: submit_word(word.value), color="green"
+                )
         with cc():
+            with ui.dialog() as points_diag, ui.card():
+                ui.markdown(
+                    """
+                - 1 letter = 1 points
+                - use all letters = 3 points
+                            """
+                )
+
+                ui.button("Close", on_click=points_diag.close)
+
+            with ui.button("Points", on_click=lambda: points_diag):
+                p_button = ui.badge(0, color="green").props("floating")
             stat_container = ui.column()
 
-    with cc():
-        guess_cont = ui.element()
-    
+            guess_cont = ui.element()
+
     update_page()
-    ui.button("Clear", on_click=lambda:clear_guesses())
+    ui.button("Clear", on_click=lambda: clear_guesses())
+
 
 # running the page
 ui.run(title="Wordy", port=2999, binding_refresh_interval=0.5, storage_secret="xxx")

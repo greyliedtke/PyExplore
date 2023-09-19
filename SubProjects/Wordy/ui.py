@@ -12,24 +12,18 @@ def format_page():
 
     # RIGHT SIDE
     with ui.right_drawer(fixed=False).style('background-color: #ebf1fa').props('bordered') as right_drawer:
-        ui.link("Google", "https://www.google.com/")
+        ui.link("Feedback Form", "https://www.google.com/")
 
         ui.markdown(
             """
-        ### Instructions
-        - Points:
-            - 1 letter = 1 points
-            - use all letters = 3 points
-        - After 3 submissions, see the best submissions of day
-        - See stats of how you did compared to others
-
         ### TODO
-        - POINTS
+        - Improvements
+            - faster button respons
         - Stats
-            - avg total points
-            - largest points
-            
-
+            - average person score
+            - max score
+        - Points
+            - based on how rare?
             """
         )
 
