@@ -18,9 +18,8 @@ def generate_letters():
 
     return pv, pc
 
-
-
 def vows_consonsants():
+
     day = datetime.now().day
 
     if day == 19:

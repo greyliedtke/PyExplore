@@ -10,9 +10,28 @@ from ui import format_page, cc
 from datetime import datetime
 
 
-def clear_storage():
-    app.storage.clear()
-    print("cleared storage")
+class LexiState:
+    def __init__(self):
+        self.day = 0
+        self.vowels = "A, E, I"
+        self.consonsants = "B, C, D, E"
+    
+    def check_day(self):
+        day = datetime.now().day
+        if day != self.day:
+            self.day = day
+            print("new day. clear storage and get new words")
+            self.clear()
+
+    def get_letters(self):
+        self.check_day()
+        return self.vowels, self.consonsants
+    
+    def clear(self):
+        app.storage.clear()
+        print("cleared storage")
+
+lexis = LexiState()
 
 # Wordy Page -----------------------------------------------------
 @ui.page("/")
@@ -89,7 +108,7 @@ def index():
     with ui.row():
         with cc():
             # game card
-            vowels, consonants = vows_consonsants()
+            vowels, consonants = lexis.get_letters()
             word = ui.input("Word")
             with ui.row():
                 for v in vowels:
@@ -126,10 +145,11 @@ def index():
             guess_cont = ui.element()
 
     update_page()
-    ui.button("Clear", on_click=lambda: clear_storage())
+    ui.button("Clear user", on_click=lambda: clear_guesses())
+    ui.button("Clear ALL", on_click=lambda: lexis.clear())
 
 
 # running the page
-ui.run(title="Lexidef", port=2999, binding_refresh_interval=0.5, storage_secret="xxx")
+ui.run(title="Lexography", port=2999, binding_refresh_interval=0.1, storage_secret="xxx")
 
 # ------------------------------------------------------
