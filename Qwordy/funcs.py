@@ -3,22 +3,6 @@
 from PyDictionary import PyDictionary
 dictionary=PyDictionary()
 
-# each letter is 1 word. using all letters is 3 points
-def check_word(word):
-    points = 0 
-
-    points = len(word)
-
-    u_letters = set(word)
-    if u_letters == 6:
-        points+=3
-
-    def_dict = dictionary.meaning(word)
-    if def_dict is None:
-        points = 0
-
-    return points, def_dict
-
 
 # parse guessed words and link to google
 def guess_parser(guess_dict:dict):

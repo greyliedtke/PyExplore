@@ -4,34 +4,86 @@
 
 # IMPORTS
 from nicegui import ui, app
-from funcs import check_word, guess_parser, guess_inc
+from funcs import dictionary, guess_parser, guess_inc
 from wordbank import vows_consonsants
 from ui import format_page, cc
 from datetime import datetime
+import random
 
-
-class LexiState:
+class QwState:
     def __init__(self):
-        self.day = 0
-        self.vowels = "A, E, I"
-        self.consonsants = "B, C, D, E"
+        self.day = 20
+        self.vowels = ["A", "E", "I"]
+        self.consonsants = ["B", "C", "D", "F"]
+        self.word_dict = {}
     
-    def check_day(self):
+    def get_letters(self):
         day = datetime.now().day
         if day != self.day:
             self.day = day
+            self.vowels, self.consonsants = vows_consonsants()
             print("new day. clear storage and get new words")
             self.clear()
-
-    def get_letters(self):
-        self.check_day()
         return self.vowels, self.consonsants
     
     def clear(self):
         app.storage.clear()
         print("cleared storage")
 
-lexis = LexiState()
+    def score_word(self, word):
+        points = len(word)
+        unique_letters = set(word)
+        if unique_letters == 6:
+            points+=3
+        return points
+
+    def check_word(self, word):
+
+        # word already logged
+        if word in self.word_dict:
+            print("present")
+            points = self.score_word(word)
+            def_dict = self.word_dict[word]
+
+        else:
+
+            def_dict = dictionary.meaning(word)
+            # not a word
+            if def_dict is None:
+                points = 0
+            # new word
+            else:
+                points = self.score_word(word)
+                self.word_dict[word] = def_dict
+
+        return points, def_dict
+
+    
+    def get_hint(self):
+        # missing words = []
+        u_keys = dict(app.storage.user.get("guesses", {}))
+        print(set(u_keys.keys()))
+        
+        print(len(self.word_dict))
+        wd_set = set(self.word_dict.keys())
+        print(wd_set)
+
+        hint = "none"
+
+        random.shuffle(wd_set)
+        for w in wd_set:
+            if w not in u_keys:
+                hint = self.word_dict[w]
+                hint = list(dict(hint).values())
+                print(hint)
+        # pick random from words
+        # provide hint
+        synonym = "greyman"
+        ui.notify(f"Hint: {hint[0]}")
+        
+        pass
+
+qw = QwState()
 
 # Wordy Page -----------------------------------------------------
 @ui.page("/")
@@ -56,7 +108,7 @@ def index():
 
     def submit_word(typed_word: str):
         typed_word = typed_word.lower()
-        points, definition = check_word(typed_word)
+        points, definition = qw.check_word(typed_word)
 
         if points > 0:
             guesses = app.storage.user.get("guesses", {})
@@ -108,7 +160,7 @@ def index():
     with ui.row():
         with cc():
             # game card
-            vowels, consonants = lexis.get_letters()
+            vowels, consonants = qw.get_letters()
             word = ui.input("Word")
             with ui.row():
                 for v in vowels:
@@ -145,11 +197,12 @@ def index():
             guess_cont = ui.element()
 
     update_page()
+    ui.button("Hint", on_click=lambda: qw.get_hint())
     ui.button("Clear user", on_click=lambda: clear_guesses())
-    ui.button("Clear ALL", on_click=lambda: lexis.clear())
+    ui.button("Clear ALL", on_click=lambda: qw.clear())
 
 
 # running the page
-ui.run(title="Lexography", port=2999, binding_refresh_interval=0.1, storage_secret="xxx")
+ui.run(title="Qwordy", port=2999, binding_refresh_interval=0.1, storage_secret="xxx")
 
 # ------------------------------------------------------

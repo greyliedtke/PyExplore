@@ -6,7 +6,7 @@ def format_page():
     with ui.header(elevated=True).style('background-color: #3874c8').classes('items-center justify-between'):
         with ui.row():
             # time_display()
-            ui.label('Lexography')
+            ui.label('Qwordy')
 
         ui.button(on_click=lambda: right_drawer.toggle(), icon='menu').props('flat color=white')
 
