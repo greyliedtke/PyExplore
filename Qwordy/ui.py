@@ -12,18 +12,10 @@ def format_page():
 
     # RIGHT SIDE
     with ui.right_drawer(fixed=False).style('background-color: #ebf1fa').props('bordered') as right_drawer:
-        ui.link("Feedback Form", "https://www.google.com/")
+        ui.link("Feedback Form", "https://forms.gle/rfsDrWb5Bq65TYjU8")
 
         ui.markdown(
             """
-        ### TODO
-        - Improvements
-            - faster button respons
-        - Stats
-            - average person score
-            - max score
-        - Points
-            - based on how rare?
             """
         )
 

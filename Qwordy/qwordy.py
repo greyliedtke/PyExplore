@@ -9,19 +9,20 @@ from wordbank import vows_consonsants
 from ui import format_page, cc
 from datetime import datetime
 import random
+import json
+from sq import insert_guess, insert_word, get_day_words, get_max_points
 
 class QwState:
     def __init__(self):
-        self.day = 20
-        self.vowels = ["A", "E", "I"]
-        self.consonsants = ["B", "C", "D", "F"]
-        self.word_dict = {}
+        self.day = 21
+        self.vowels, self.consonsants = vows_consonsants()
+        self.word_dict = dict(get_day_words())
     
     def get_letters(self):
         day = datetime.now().day
         if day != self.day:
             self.day = day
-            self.vowels, self.consonsants = vows_consonsants()
+            
             print("new day. clear storage and get new words")
             self.clear()
         return self.vowels, self.consonsants
@@ -41,7 +42,6 @@ class QwState:
 
         # word already logged
         if word in self.word_dict:
-            print("present")
             points = self.score_word(word)
             def_dict = self.word_dict[word]
 
@@ -51,9 +51,12 @@ class QwState:
             # not a word
             if def_dict is None:
                 points = 0
-            # new word
+
             else:
+                ui.notify("New Word!")
                 points = self.score_word(word)
+                tn = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                insert_word([word, str(def_dict), tn, points])
                 self.word_dict[word] = def_dict
 
         return points, def_dict
@@ -62,26 +65,28 @@ class QwState:
     def get_hint(self):
         # missing words = []
         u_keys = dict(app.storage.user.get("guesses", {}))
-        print(set(u_keys.keys()))
-        
-        print(len(self.word_dict))
-        wd_set = set(self.word_dict.keys())
-        print(wd_set)
+
+
+        wd_set = list(set(self.word_dict.keys()))
 
         hint = "none"
 
         random.shuffle(wd_set)
-        for w in wd_set:
-            if w not in u_keys:
-                hint = self.word_dict[w]
-                hint = list(dict(hint).values())
-                print(hint)
-        # pick random from words
-        # provide hint
-        synonym = "greyman"
-        ui.notify(f"Hint: {hint[0]}")
-        
-        pass
+
+        if len(u_keys) == 0:
+            hint = self.word_dict[wd_set[0]]
+
+        else:
+            for w in wd_set:
+                if w not in u_keys:
+                    hint = self.word_dict[w]
+
+        fv = eval(hint['def'])
+        for v in fv:
+            h = fv[v][0]
+            continue
+        ui.notify(f"Hint: {h}")
+
 
 qw = QwState()
 
@@ -122,7 +127,8 @@ def index():
         uid = app.storage.browser['id']
         tn = datetime.now()
         tn = tn.strftime("%Y-%m-%d %H:%M:%S")
-        print(f"LOG:{uid}, {points}, {typed_word}, {tn}")
+        
+        insert_guess([typed_word, uid, tn, points])
 
         # clear responses
         word.value = ""
@@ -133,7 +139,7 @@ def index():
         guess_cont.clear()
         with guess_cont:
             with ui.expansion("Definitions", icon="done"):
-                guess_md, points = guess_parser(app.storage.user.get("guesses", {}))
+                guess_md, points, words = guess_parser(app.storage.user.get("guesses", {}))
                 with ui.scroll_area():
                     ui.markdown(
                         f"""
@@ -148,10 +154,12 @@ def index():
                             """
                 )
             with ui.expansion("Leaderboard", icon="emoji_events"):
+                max_p, max_w = get_max_points()
+                ui.linear_progress(points/max_p, show_value=False)
                 ui.markdown(
                     f"""
-                            - Average: {17}
-                            - Max: {20}
+                            - Points: {points} / {max_p}
+                            - Words: {words} / {max_w}
                     """
                     )
 
@@ -200,6 +208,7 @@ def index():
     ui.button("Hint", on_click=lambda: qw.get_hint())
     ui.button("Clear user", on_click=lambda: clear_guesses())
     ui.button("Clear ALL", on_click=lambda: qw.clear())
+    ui.button("Day words", on_click=lambda: get_day_words())
 
 
 # running the page
