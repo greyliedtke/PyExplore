@@ -45,7 +45,6 @@ def insert_word(data):
     cursor.execute(insert_query, data)
     conn.commit()
 
-
 def get_day_words():
     conn = sqlite3.connect(db_path)
     day = datetime.now().date()
