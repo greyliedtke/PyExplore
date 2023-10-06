@@ -62,6 +62,7 @@ Clipboard
 
 ## Environments
 
+- python3 -m venv v_env
 - sudo apt-get install python3-venv
 - source .venv/bin/activate
 - pip install
