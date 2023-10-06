@@ -26,8 +26,8 @@ while True:
         ax.set_ylim([-2,2])
         ax.set_xlim([-8,8])
 
-        ax.scatter(pdf["x"], pdf["y"])  # Plot the data
-        ax.scatter(pdf["x"], pdf["y2"])  # Plot the data
+        ax.plot(pdf["x"], pdf["y"])  # Plot the data
+        ax.plot(pdf["x"], pdf["y2"])  # Plot the data
         plt.pause(0.05)  # Pause to display the plot for 0.1 seconds
 
 # Display the final plot
