@@ -11,14 +11,6 @@ from digitalio import DigitalInOut, Direction, Pull
 # INITIALIZE PIXELS
 s1_len = 60
 s1 = neopixel.NeoPixel(board.GP0, s1_len, auto_write=False)
-s2_len = 300
-s2 = neopixel.NeoPixel(board.GP2, s2_len, auto_write=False)
-
-# ROTARY ENCODER
-enc = rotaryio.IncrementalEncoder(board.GP19, board.GP18)
-enc_push = DigitalInOut(board.GP20)
-enc_push.direction = Direction.INPUT
-enc_push.pull = Pull.UP
 
 # COLORS
 d_colors = {
@@ -49,25 +41,16 @@ def next_color(i_color):
 # SEND STRIP
 def send_color(a_rgb):
     s1.fill(a_rgb)
-    s2.fill(a_rgb)
     s1.show()
-    s2.show()
 
 
 # ---
 # Globals
 v_color = 0
 v_bright = 2
-enc.position = v_bright
 v_color_a = d_colors[colors[v_color]]
 # ---
 
-# ---
-# Bound encoder
-def enc_bound():
-    if enc.position < 0: enc.position=0
-    if enc.position > 5: enc.position=5
-# ---
 
 # LOOP LOGIC
 while True:

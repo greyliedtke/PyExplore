@@ -408,4 +408,119 @@ a minute,naa-tii,20,Time
 about,bpra-maan,20,Time
 a second,wi-naa-tii,20,Time
 an hour,chuua-moong,20,Time
-to tak,chai-wee-laa,20,Time
+to take,chai-wee-laa,20,Time
+a train,rot-fai,21,Travel
+Train station,sa-tao-nii-rot-fai,21,Travel
+train ticket,dtuua-rot-fai,21,Travel
+depart,ook,21,Travel
+arrive,tung,21,Travel
+schedule,dtaa-raang-wee-la,21,Travel
+airplane,kruang-bin,21,Travel
+airport,sa-naam-bin,21,Travel
+ticket,dtuaa,21,Travel
+boarding,kun-kruuang,21,Travel
+to land,long-joot,21,Travel
+a flight,tiiao-bin,21,Travel
+a passenger,puu-dooi-saan,21,Travel
+ticketseller,kon-kaai-dtuua,21,Travel
+first,reek,21,Travel
+a driver,on-kap-rot,21,Travel
+line,saai,21,Travel
+harbor,taa-ruua,21,Travel
+ferry,ruua-kaam-faak,21,Travel
+get off,long,21,Travel
+get on,kun,21,Travel
+last,sut-taai,21,Travel
+try,pa-yaa-yaam,22,Classroom
+to know,ruu,22,Classroom
+progress,gaao-naa,22,Classroom
+essay,bot-kwaam,22,Classroom
+to wait,roo,22,Classroom
+to teach,soon                    ,22,Classroom
+finish class,leek-rian,22,Classroom
+to give,hai,22,Classroom
+future,a-naa-kot,22,Classroom
+to forget,luum,22,Classroom
+to come,maak,22,Classroom
+to ask,maa,22,Classroom
+exam,koo-soop,22,Classroom
+alphabet,dtuua-ak-soon,22,Classroom
+to write,kiian,22,Classroom
+listen,fang,22,Classroom
+homework,gaan-baan,22,Classroom
+turn off/on phone,bpit/bpet too-ra-sap-muu-tuu,22,Classroom
+ready,proom,22,Classroom
+finish,set,22,Classroom
+start,reem,22,Classroom
+class,kaap-riian,22,Classroom
+type of music,neeo-pleeng,23,Music
+pop,pleeng-bpoop,23,Music
+rock,pleeng-rook,23,Music
+jazz,pleeng-jeet,23,Music
+classic,pleeng-klaat-sik,23,Music
+country,pleen-luuk-tuung,23,Music
+sing,nak-roong,23,Music
+band,wong-don-dtrii,23,Music
+musician,nak-don-dtrii,23,Music
+guess,taai,23,Music
+voice,siiang,23,Music
+can,bpen,23,Music
+guitar,gii-dtaa,23,Music
+piano,bpiaa-noo,23,Music
+violin,wai-oo-lin,23,Music
+easy,ngai,23,Music
+difficult,yaak,23,Music
+practice,fuuk,23,Music
+own,duuai-dtuua-eng,23,Music
+music lesson,chuua-moong-don-dtrii,23,Music
+to teach,soon                    ,23,Music
+instruments,kruung-don-dtri,23,Music
+per,dto,24,Post Bank
+coin,riian,24,Post Bank
+bank note,ta-na-baat,24,Post Bank
+currency,sa-gun-ngeen,24,Post Bank
+exchange,leek,24,Post Bank
+exchange rate,at-dtraa-leek-bpliian,24,Post Bank
+transfer,oon,24,Post Bank
+toon,withdraw,24,Post Bank
+deposit,faak,24,Post Bank
+money,ngeen,24,Post Bank
+bank account,ban-chii-ta-naa-kaan,24,Post Bank
+register,long-ta-biian,24,Post Bank
+souvenir,koong-tii-ra-luk,24,Post Bank
+package,pat-sa-du,24,Post Bank
+postcard,bpot-sa-gaat,24,Post Bank
+stamp,sa-dteem,24,Post Bank
+send,song,24,Post Bank
+letter,jot-maai,24,Post Bank
+post office,bprai-sa-nii,24,Post Bank
+last year,bpii-tee-leeo,25,Sightseeing
+last month,duuan-tii-leeo,25,Sightseeing
+visit,yiiam-chom,25,Sightseeing
+travel,toong-tiiao,25,Sightseeing
+alone,kon-diiao,25,Sightseeing
+yesterday,muua-waan,25,Sightseeing
+abroad,dtaang-bpra-tet,25,Sightseeing
+plan,waang-peen,25,Sightseeing
+decide,dtat-sin-jai,25,Sightseeing
+vacation,wan-yut,25,Sightseeing
+trip,gaan-deen-taang,25,Sightseeing
+to rent,chao,25,Sightseeing
+tourist,nak-toong-tiiao,25,Sightseeing
+place,st-taan-tii,25,Sightseeing
+choose,luuak,25,Sightseeing
+to miss,plaat,25,Sightseeing
+to start,rem,25,Sightseeing
+entrance fee,kao-kao,25,Sightseeing
+picture,ruup-paap,25,Sightseeing
+take photos,taai-ruup,25,Sightseeing
+allow,a-nu-yaat,25,Sightseeing
+enter,kao,25,Sightseeing
+to touch,jap-dtoong,25,Sightseeing
+guide,gai,25,Sightseeing
+guest,keek,26,Accomodation
+reception,kao-dtee-dtoon-rap,26,Accomodation
+check out,ook-jaak-tii-pak,26,Accomodation
+check in,kao-tii-pak,26,Accomodation
+to stay,pak,26,Accomodation
+hotel,roong-reem,26,Accomodation
