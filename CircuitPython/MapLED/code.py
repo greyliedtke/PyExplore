@@ -18,7 +18,6 @@ def lerp(start_color, end_color, t):
     b = int(start_color[2] + t * (end_color[2] - start_color[2]))
     return (r, g, b)
 
-
 # color controls
 # red, green, blue
 color_a = [[255, 0, 0], [0, 255, 0], [0, 0, 255]]
