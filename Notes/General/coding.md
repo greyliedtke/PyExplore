@@ -8,6 +8,7 @@
 - [Bashing](#bashing)
 - [Markdown](#markdown)
   - [Mermaid](#mermaid)
+- [Debugging](#debugging)
 
 
 ## Python
@@ -67,8 +68,7 @@ Clipboard
 - sudo apt-get install python3-venv
 - source .venv/bin/activate
 - pip install
-- enable spi
-- sudo raspi-config
+
 
 ## GIT
     
@@ -134,3 +134,9 @@ Clipboard
 - [Cheat Sheet](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/)
 - [Links](https://mermaid.js.org/#/flowchart?id=links-between-nodes)
 - [Examples](https://dompl.medium.com/produce-great-looking-flowcharts-in-seconds-7f3bea64f2e2)
+
+
+## Debugging
+
+- [Snippets](https://github.com/Microsoft/vscode/issues/28048)
+- [Local hosts](https://stackoverflow.com/questions/33524826/localhost-not-working-in-chrome-127-0-0-1-does-work)
