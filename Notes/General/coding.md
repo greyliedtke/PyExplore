@@ -2,6 +2,7 @@
   - [JSON](#json)
   - [Navigating Directories](#navigating-directories)
 - [Environments](#environments)
+- [GIT](#git)
   - [Requirements](#requirements)
 - [Cool Links](#cool-links)
 - [Bashing](#bashing)
@@ -68,6 +69,15 @@ Clipboard
 - source .venv/bin/activate
 - pip install
 
+
+## GIT
+    
+- git init
+- git add .
+- git commit -m "first commit"
+- git branch -M main
+- git remote add origin
+- credentials [manager](https://stackoverflow.com/questions/35942754/how-can-i-save-username-and-password-in-git)
 
 ### Requirements
 - install requirements…
