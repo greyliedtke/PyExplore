@@ -4,54 +4,34 @@ contorl lights and more eventually...
 
 from nicegui import ui
 from datetime import datetime
-from Tools.ClockMat import digits, segments
 
-pizero = True
-if pizero:
-    import neopixel
-    import board
-    strip_length = 255
-    s1 = neopixel.NeoPixel(board.D12, strip_length, auto_write=False)
+pi = False
+if pi:
+    import canvas_clock as cc
 
-# include brightness by rounding...
-ng_bright = ui.number("Brightness", value=3)
+def timer_loop():
+    if mode.value == "Clock":
+        if pi: cc.clock_set()
 
-def time_send(dplace, number):
-    # set everything to zero
+tt = ui.timer(1.0, lambda: timer_loop())
 
+with ui.card():
+    ui.markdown("## Clock Control")
+    mode = ui.toggle(
+        ["Clock", "Timer", "Art"], value="Clock", on_change=lambda value: print(value)
+    )
+    ng_bright = ui.number("Brightness", value=3)
 
-    p_mat = digits[dplace]  # pixel matrix to loop through
-    number_cmd = segments[number]
-
-    for i, row in enumerate(p_mat):
-        number_row = number_cmd[i]
-        for j, pixel in enumerate(row):
-            if number_row[j]:
-                if pizero:
-                    s1[pixel] = [0,0,10]
-                    s1.show()
-
-def clock_setting():
-    tn = datetime.now().strftime("%H:%M:%S")
-
-    tc = tn[0], tn[1], tn[3], tn[4]
-    for i, t in enumerate(tc):
-        time_send(i+1, int(t))
+with ui.card():
+    clock_color =  ui.color_input(label="Color", value="#ff0000")
+    outline_color =  ui.color_input(label="Color", value="#ff0000")
+    ui.button("Set Color", on_click=lambda: print("Set Color"))
 
 
-tt = ui.timer(1.0, lambda: clock_setting())
-
-def time_display():
-    print("Clock Mode")
-    print(int(ng_bright.value))
-    tt.activate()
-
-def stop_clock():
-    print("stop Mode")
-    tt.deactivate()
-
-ui.button("Clock Mode", on_click=lambda:clock_setting())
-ui.button("Stop Mode", on_click=lambda:stop_clock())
+with ui.expansion("Art"):
+    c1 = ui.color_input(label="Color", value="#ff0000")
+    c2 = ui.color_input(label="Color", value="#ff0000")
+    ui.button("Set Color", on_click=lambda: print("Set Color"))
 
 
 # running the page
