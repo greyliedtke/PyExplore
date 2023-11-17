@@ -1,0 +1,44 @@
+# Simple file for managing projects
+
+
+## Ideas
+- Wikipy Reference
+- NYT API
+- GPT cite references
+- Qwordy vocab builder
+  - database of words
+  - Vocab sources
+  - 
+- Plants
+- Microgrid
+- Batteries
+- Diagrams
+- Wiring
+- Books
+- Summaries
+- News
+- Lights
+- Pi
+  - Pico 
+  - raspberry
+  - zero
+- File structure
+- Book man 
+- Sports
+  - betting
+  - organizing games
+- Chess
+- Spotify
+- Poems
+- Money
+- Chat
+- Friends
+- Games 
+- Printing
+- coffee
+- Thai
+- Stories
+- Highlights
+- Photos
+- Plants
+  - Watering
