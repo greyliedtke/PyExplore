@@ -1,5 +1,6 @@
 - [Python](#python)
   - [JSON](#json)
+  - [Concepts](#concepts)
   - [Navigating Directories](#navigating-directories)
 - [Environments](#environments)
 - [GIT](#git)
@@ -34,6 +35,16 @@ Clipboard
 
     pt = str(xl_paste.split('\n')[1:-1])
     pyperclip.copy(pt)
+
+### Concepts
+- defaultdict
+- sort
+- zip
+- using sets instead of lists
+- any
+- tree orders
+- breadth first traversal
+- depth first search traversal
 
 ### Navigating Directories
 
