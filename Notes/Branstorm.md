@@ -42,3 +42,4 @@
 - Photos
 - Plants
   - Watering
+- [Drawio](https://drawio-app.com/blog/import-from-csv-to-drawio/)

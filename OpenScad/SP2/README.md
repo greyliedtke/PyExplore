@@ -1,4 +1,4 @@
-# Dimension file
+[cheatsheet](https://openscad.org/cheatsheet/)
 
 ### Dimension Reference
 
@@ -32,3 +32,4 @@
         "od_440": 3.5
     }
 }
+
