@@ -1,0 +1,1075 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.9/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.9/http/client.py", line 950, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xb5ea9a00>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?appid=3b3d6d2fe58311968a2bb7e862f5af7e&q=San%20Francisco&units=imperial (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5ea9a00>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/cottage/clock.py", line 57, in <module>
+    temp = get_temperature()
+  File "/home/pi/cottage/Tools/Temperature.py", line 13, in get_temperature
+    response = requests.get(complete_url)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?appid=3b3d6d2fe58311968a2bb7e862f5af7e&q=San%20Francisco&units=imperial (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5ea9a00>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Temp: 58
+0
+6
+5
+8
+Exception list index out of range
+Traceback (most recent call last):
+  File "/home/pi/cottage/clock.py", line 104, in <module>
+    clock_mode()
+  File "/home/pi/cottage/clock.py", line 59, in clock_mode
+    temp = get_temperature()
+  File "/home/pi/cottage/Tools/Temperature.py", line 13, in get_temperature
+    response = requests.get(complete_url)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.9/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.9/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.9/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+sudo: exec: command not found
+sudo: exec: command not found
+sudo: exec: command not found
+sudo: exec: command not found
+                              sudo: exec: command not found
+sudo: exec: command not found
+sudo: exec: command not found
