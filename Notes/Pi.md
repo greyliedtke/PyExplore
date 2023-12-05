@@ -10,13 +10,6 @@
 - [Numpy](https://stackoverflow.com/questions/53784520/numpy-import-error-python3-on-raspberry-pi)
   - sudo apt-get install libatlas-base-dev
 
-## PICO
-onboard led = gpio25
-[micropython](https://docs.micropython.org/en/v1.8.2/esp8266/esp8266/tutorial/filesystem.html)
-hold bootsel on power up
-flash with uf2 file
-*sudo chmod a+rw /dev/ttyACM0*
-
 ## Raspi Notes
 - [Headles Pi Zero Set up](https://desertbot.io/blog/ssh-into-pi-zero-over-usb)
 - raspi-config
