@@ -9,12 +9,37 @@
 # Past 
 
 ## Thailand
+- Manilla
+- Palawan
+- Phi-Phi
+- Kravi
+- Bangkok
 
 ## Japan
+- Drive to LA with Rahul
+  - Stay with family
+  - Cumin on eggs
+- Tokyo
+- Kyoto
+- Osaka
+- Hiroshima
+- 
 
 ## MN 
 
+## Colorado
+- Longmount
+- Denver
+- Keystone
+
+## Wyoming
+- Jackson hole  
+- Snake river 
+- Ski club
+- Family summer
+
 ## Joes cabin
+## Quetico
 
 ## SF 
 
