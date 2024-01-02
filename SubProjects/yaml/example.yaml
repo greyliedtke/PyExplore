@@ -1,0 +1,7 @@
+age: 30
+city: Example City
+name: John Doe
+skills:
+- Python
+- JavaScript
+- Data Science

@@ -1,3 +1,3 @@
 # PyExplore
 
-sudo pkill python
+
