@@ -12,7 +12,6 @@ import keyboard
 st_check = st.checkbox("Time Calller")
 
 
-
 def send_color(k):
     lc = st.session_state.get(k)
     print(lc)

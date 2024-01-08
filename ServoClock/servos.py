@@ -40,7 +40,7 @@ class ServoClass:
         self.target = target
         self.rate = (self.target - self.pos)/10
 
-s0 = ServoClass(board.GP16, 0, 1)
+s0 = ServoClass(board.GP0, 0, 1)
 s1 = ServoClass(board.GP17, 0, 1)
 s2 = ServoClass(board.GP18, 0, 1)
 s3 = ServoClass(board.GP19, 0, 1)
