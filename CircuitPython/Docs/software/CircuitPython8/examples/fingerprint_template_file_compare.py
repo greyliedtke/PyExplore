@@ -22,7 +22,7 @@ Implementation Notes
 """
 
 
-import serial
+import SubProjects.Serial.read_serial as read_serial
 import adafruit_fingerprint
 
 
@@ -30,7 +30,7 @@ import adafruit_fingerprint
 # uart = busio.UART(board.TX, board.RX, baudrate=57600)
 
 # If using with a computer such as Linux/RaspberryPi, Mac, Windows with USB/serial converter:
-uart = serial.Serial("COM6", baudrate=57600, timeout=1)
+uart = read_serial.Serial("COM6", baudrate=57600, timeout=1)
 
 # If using with Linux/Raspberry Pi and hardware UART:
 # uart = serial.Serial("/dev/ttyS0", baudrate=57600, timeout=1)

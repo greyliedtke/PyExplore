@@ -2,10 +2,10 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
 import numpy as np
-import serial
+import SubProjects.Serial.read_serial as read_serial
 
 #initialize serial port
-ser = serial.Serial('COM16', 9600)
+ser = read_serial.Serial('COM16', 9600)
 # ser.port = 'COM16' #Arduino serial port
 # ser.baudrate = 9600
 ser.timeout = 1 #specify timeout when using readline()

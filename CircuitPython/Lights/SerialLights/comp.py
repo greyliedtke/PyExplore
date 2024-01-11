@@ -3,10 +3,10 @@ file for writing commands over serial on computer
 sudo chmod a+rw /dev/ttyACM0
 """
 
-import serial
+import SubProjects.Serial.read_serial as read_serial
 import time
 
-ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)  # Change the serial port as necessary
+ser = read_serial.Serial('/dev/ttyACM0', 9600, timeout=1)  # Change the serial port as necessary
 
 while True:
     # Prompt the user to enter an RGB color
