@@ -14,10 +14,8 @@ import time
 game_l = 16
 wall_t = 3
 cave_w = 2 # size of cave hole
-runner_w = 2 # size of runner
-runner_c = 0 # runner center
-middle = 8  # middle of canvas
-og_cave = [middle, middle, middle, middle, middle, middle, middle, middle]
+middle = int(game_l/2)  # middle of canvas
+og_cave = [middle for i in range(game_l)]
 
 class Scene:
     def __init__(self):
@@ -25,6 +23,13 @@ class Scene:
         self.cave_top = middle
         self.target = middle
         self.playing = False
+        self.body = middle
+        self.cave_center_queue = deque(og_cave, maxlen=game_l)
+
+    def init_game(self):
+        self.rate = .25
+        self.cave_top = middle
+        self.target = middle
         self.body = middle
         self.cave_center_queue = deque(og_cave, maxlen=game_l)
 
@@ -67,20 +72,23 @@ class Scene:
         # creating image of cave
         cave_plot = self.cave_matrix()
 
+        # controlling game
         if keyboard.is_pressed('left'):
             self.body -= 1
         elif keyboard.is_pressed('right'):
             self.body += 1
 
-        if len(cave_plot[0]) > 1:
-            if self.body in cave_plot[0][1]:
-                self.playing = False
-                self.body = middle
+        # logic to end game if hits wall
+        if self.body in cave_plot[0][1]:
+            self.cave_center_queue = deque(og_cave, maxlen=game_l)
+            print(f'Game Over: xx')
+            self.init_game()
+            time.sleep(1.5)
 
-                self.cave_center_queue = deque(og_cave, maxlen=game_l)
-                print('Game Over')
-                time.sleep(.5)
+        cavex = [item for sublist in cave_plot[0] for item in sublist]
+        cavey = [item for sublist in cave_plot[1] for item in sublist]
+        cave_map = [cavex, cavey]
 
-        return cave_plot
+        return cave_map
 
 cm = Scene()
