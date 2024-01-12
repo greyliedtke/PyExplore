@@ -4,12 +4,12 @@ file for converting characters to matrixs
 char_offset = [
     [0, 11],
     [4, 11],
-    [9, 11],
-    [13, 11],
+    [8, 11],
+    [12, 11],
     [0, 0],
     [4, 0],
-    [9, 0],
-    [13, 0],
+    [4, 5],
+    [9, 5],
 ]
 
 char_dict = {

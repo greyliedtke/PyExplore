@@ -35,7 +35,7 @@ def update(frame):
     elif game_mode == "Clock":
         clock.loop()
         sc.set_offsets(clock.time_mat)
-        rd.set_offsets(clock.sec_mat)
+        rd.set_offsets(np.column_stack(clock.deg_mat))
 
     elif game_mode == "Char":
         mx, my = [], []

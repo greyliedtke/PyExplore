@@ -21,6 +21,7 @@ class Scene:
         self.time_mat = [[],[]]
         self.sec_mat = [[],[]]
         self.temp_mat = [[],[]]
+        self.deg_mat = [[7,7,7,7,8,8],[12,14,3,4,3,4]]
 
     def init_page(self):
         # slowly draw scene?
@@ -37,6 +38,7 @@ class Scene:
             sec_x.append(mx)
             sec_y.append(my)
         self.sec_mat = np.column_stack([sec_x, sec_y])
+
 
     def set_temp(self):
         # fetch temperature if time passed
@@ -68,11 +70,22 @@ class Scene:
             matrix = characters[i].char_matrix(int(t))
             mx += matrix[0]
             my += matrix[1]
+
+        for i, t in enumerate([2,3]):
+            matrix = characters[i+4].char_matrix(int(t))
+            mx += matrix[0]
+            my += matrix[1]
+
+        for i, t in enumerate([tn[6], tn[7]]):
+            matrix = characters[i+6].char_matrix(int(t))
+            mx += matrix[0]
+            my += matrix[1]
+
         self.time_mat = np.column_stack([mx, my])
         # self.set_temp()
         # determining seconds to send
-        secs = int(tn[6:8])
-        self.set_sec(secs)
+        # secs = int(tn[6:8])
+        # self.set_sec(secs)
 
     # def adjust_time(self):    # need for pico...
 
