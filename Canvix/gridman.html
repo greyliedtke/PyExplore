@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Grid</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
+
+        .color-box {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .grid-button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Color picker -->
+    <input type="color" id="colorPicker">
+
+    <!-- Color grid -->
+    <div id="colorGrid">
+        <!-- Buttons will be dynamically added here -->
+    </div>
+
+    <script>
+        // Function to apply selected color to the clicked button
+        function applyColor(button) {
+            const selectedColor = document.getElementById("colorPicker").value;
+            button.style.backgroundColor = selectedColor;
+        }
+
+        // Dynamically create a 16x16 grid of buttons
+        const colorGrid = document.getElementById("colorGrid");
+        for (let i = 0; i < 16; i++) {
+            const row = document.createElement("div")
+            // row.classList.add("grid-row")
+            for (let j = 0; j < 16; j++) {
+                const button = document.createElement("button");
+                button.classList.add("grid-button");
+                button.onclick = function() {
+                    applyColor(this);
+                };
+                colorGrid.appendChild(button);
+            }
+        }
+    </script>
+</body>
+</html>

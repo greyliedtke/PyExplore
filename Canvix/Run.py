@@ -5,6 +5,7 @@ from CaveMan import cm, game_l
 from PingMan import pm
 from ClockMan import clock
 from MatMap.Mat import characters
+from Juggle import jb
 
 # ------------------------------------------------------
 # Initialize the figure that would be led matrix
@@ -20,7 +21,7 @@ rd = ax.scatter(0, 8, color='red')
 # ------------------------------------------------------
 
 # game mode
-game_mode = "Clock"
+game_mode = "Juggle"
 
 # Function to update the scatter plot
 def update(frame):
@@ -43,11 +44,15 @@ def update(frame):
             matrix = characters[i].char_matrix(i)
             mx += matrix[0]
             my += matrix[1]
-
-        sc.set_offsets(np.column_stack([mx,my]))    
+        sc.set_offsets(np.column_stack([mx,my]))
+    elif game_mode == "Juggle":
+        mx, my = [], []
+        jb.loop()
+        bx, by = jb.b_coords[0][0], jb.b_coords[0][1]
+        sc.set_offsets([bx,by])     
 
 # Create the animation
-ani = FuncAnimation(fig, update, frames=range(100), interval=1000)
+ani = FuncAnimation(fig, update, frames=range(100), interval=100)
 
 # Show the plot
 plt.show()
