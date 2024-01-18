@@ -48,8 +48,14 @@ def update(frame):
     elif game_mode == "Juggle":
         mx, my = [], []
         jb.loop()
-        bx, by = jb.b_coords[0][0], jb.b_coords[0][1]
-        sc.set_offsets([bx,by])     
+        blue_ball = jb.balls[0].bb
+        sc.set_offsets(blue_ball)
+        red_ball = jb.balls[1].bb
+        rd.set_offsets(red_ball)
+
+        # bx, by = jb.b_coords[1][0], jb.b_coords[1][1]
+        # xs = [[bx[0],by[0]], [bx[1],by[1]], [bx[2],by[2]], [bx[3],by[3]]]
+        # rd.set_offsets(xs)     
 
 # Create the animation
 ani = FuncAnimation(fig, update, frames=range(100), interval=100)
