@@ -4,22 +4,25 @@ Main Cave logic
 
 # pygame tunnel run
 import numpy as np
-import random
 from collections import deque
-import keyboard
 import time
 import math
 
 
 # constants
-time_ref = .6
+# velocites in Pixels per second
+scale = 1
 game_l = 16
-grav = -.4*time_ref
-vyi = 4*time_ref
-vxi = .5*time_ref
+grav = -22
+vyi = 4*scale
+vxi = 2*scale
+
+t_air = 2
+vyi = -.5*grav*t_air
+vxi = (game_l-2)/t_air
 
 class Ball:
-    def __init__(self, start_pos = [8,8]):
+    def __init__(self, start_pos = [8,8], vxi = vxi, vyi = vyi):
         self.pos = start_pos
         self.bb = [[0,0,0,0],[0,0,0,0]]
         self.bound_box(self.pos[0],self.pos[1])
@@ -30,14 +33,7 @@ class Ball:
         self.top = self.bb[0][1]
         self.bottom = self.bb[1][1]
 
-    def collision(self):
-        # detect walls
-        # detect other balls
-        # change velocities
-        pass
-
-
-    def next_pos(self):
+    def next_pos(self, et):
 
         # horizontal bounds
         self.left = self.bb[0][0]
@@ -51,13 +47,13 @@ class Ball:
         elif (self.right >= 15 and self.vx>0):
             self.vx = -self.vx
             self.pos[0] = 15
-        self.vy = self.vy + grav
+        self.vy = self.vy + grav*et
         
         # vertical bounds lower box hits
         if self.bottom <= 1:
             self.vy = vyi
             self.pos[1] = 1
-        self.pos = [self.pos[0]+self.vx, self.pos[1]+self.vy]
+        self.pos = [self.pos[0]+self.vx*et, self.pos[1]+self.vy*et]
         self.bound_box(self.pos[0],self.pos[1])
         return self.bb
 
@@ -75,25 +71,27 @@ class Ball:
 
 class Scene:
     def __init__(self):
-        self.balls = [Ball([1,2]), Ball([14,2])]
+        self.balls = [Ball([1,1]), Ball([15,1], vxi=-vxi)]
+        self.balls = [Ball([1,1])]
         self.b_coords = [[]]
+        self.it = time.perf_counter()
+
+    def collision(self):
+        b1 = self.balls[0]
+        b2 = self.balls[1]
+        if abs(b1.pos[0]-b2.pos[0])<2:
+            if abs(b1.pos[1]-b2.pos[1])<2:
+                b1v = [b1.vx, b1.vy]
+                b2v = [b2.vx, b2.vy]
+                b2.vx, b2.vy = b1v[0], b1v[1]
+                b1.vx, b1.vy = b2v[0], b2v[1]
 
     def loop(self):
+        # self.collision()
+        time_now = time.perf_counter()
+        et = time.perf_counter()-self.it
+        self.it = time_now
 
-        b = self.balls[0]
-        ob = self.balls[1]
-
-        if b.left == ob.right or b.right == ob.left:
-            if b.top in [ob.top, ob.bottom] or b.bottom in [ob.top, ob.bottom]:
-                vx1, vx2 = b.vx, ob.vx
-
-                b.vx = vx2
-                b.pos[0] = b.pos[0]+b.vx
-                ob.vx = -vx1
-                ob.pos[0] = ob.pos[0]+ob.vx
-
-        for i,b in enumerate(self.balls):
-            b.next_pos()
-            # for j,ob in enumerate(self.balls):
-            #     if i == j: continue
+        for b in self.balls:
+            b.next_pos(et)
 jb = Scene()
