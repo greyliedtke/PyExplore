@@ -17,7 +17,8 @@ class FuzzyController:
         self.controller = ctrl.ControlSystemSimulation(control_rules)
 
     def compute(self, inputs):
-        self.controller.input[self.input] = inputs
+        self.controller.inputs(inputs)
+        # self.controller.inputs[self.input] = inputs
         self.controller.compute()
         output = self.controller.output[self.output]
         return output
