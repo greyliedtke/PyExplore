@@ -7,6 +7,7 @@ import lib.globe as g
 import lib.matop as mo
 from lib.CaveMan import cm as g_cave
 from lib.ClockMan import cm as m_clock
+from lib.CubeMan import cm as m_cube
 
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -15,7 +16,7 @@ import numpy as np
 # ------------------------------------------------------
 # Initialize the figure that would be led matrix
 # Create some random data
-mode = "clock"
+mode = "cube"
 x_data = range(0, g.pw)
 fig, ax = plt.subplots()
 ax.set_xlim(0, g.pw-1)
@@ -30,15 +31,17 @@ sc.set_offsets(mo.characters[0].char_matrix(4))
 def update(frame):
     if mode == "cm":
         m = g_cave.loop()
-        sc.set_offsets(np.column_stack(m[0]))
-        rd.set_offsets(np.column_stack(m[1]))
+        sc.set_offsets(m[0])
+        rd.set_offsets(m[1])
+    if mode == "cube":
+        m = m_cube.loop()
+        sc.set_offsets(m)
     else:
         # clock mode
         m = m_clock.loop()
         # xp = [[p[0] for p in m[0]], [p[1] for p in m[0]]]
         # print(xp)
         sc.set_offsets(m[0])
-        rd.set_offsets(np.column_stack(m[1]))
 
 
 # Create the animation
