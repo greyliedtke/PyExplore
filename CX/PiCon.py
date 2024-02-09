@@ -8,7 +8,7 @@ import time
 import serial.tools.list_ports
 
 # 1. List available and select devices
-# ------------------------------------------------------
+# --------------------------------------------2----------
 # Get a list of available serial ports
 available_ports = serial.tools.list_ports.comports()
 devs = {}
