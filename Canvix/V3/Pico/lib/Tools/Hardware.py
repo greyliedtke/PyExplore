@@ -1,6 +1,5 @@
 """
-main run file 
-...globals
+file for handling hardware
 """
 
 import time
@@ -10,6 +9,29 @@ import board
 import math
 import rotaryio
 from digitalio import DigitalInOut, Direction, Pull
+
+# ------------------------------------------------------
+# LED Strip
+class LED_Strip:
+    def __init__(self):
+        # bright = 0.025
+        bright = 1
+        self.strip = neopixel.NeoPixel(board.GP0, 256, auto_write=False, brightness=bright)
+
+    def flash(self):
+        self.strip.fill([0,170,221])
+        self.strip.show()
+
+    def wipe(self):
+        self.strip.fill([0,0,0])
+        self.strip.show()
+
+    def send_array(self, pixel_a):
+        self.strip.fill([0,0,0])
+        for p in pixel_a:
+            self.strip[p] = [0,170,221]
+        self.strip.show()
+led_strip = LED_Strip()
 
 
 # ------------------------------------------------------
@@ -46,12 +68,15 @@ class Encoder:
             print(f"{self.desc}: {self.enc.position}")
             self.value = self.enc.position
 
+    def read_delta(self):
+        t_delta = self.enc.position - self.value
+        self.value = self.enc.position
+        if t_delta>5 or t_delta<-5:
+            t_delta = t_delta*60
+        return t_delta
+
 enc_1 = Encoder('1', board.GP3, board.GP4, board.GP5)
 enc_2 = Encoder('2', board.GP6, board.GP7, board.GP8)
 
-while True:
-    enc_1.read()
-    enc_2.read()
-    if enc_1.held and enc_2.held:
-        print("both held")
-    time.sleep(.1)
+# neostrip
+# brightness

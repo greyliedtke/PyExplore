@@ -3,7 +3,6 @@ matrix operations for :
 x,y to array index
 characters
 
-
 """
 
 

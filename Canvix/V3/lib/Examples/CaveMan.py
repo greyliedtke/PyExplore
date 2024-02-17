@@ -8,14 +8,14 @@ import random
 from collections import deque
 import keyboard
 import time
-import lib.globe as g
+from lib.Tools.Variables import cube_l
 
 
 # constants
 wall_t = 3
 cave_w = 2 # size of cave hole
-middle = int(g.pw/2)  # middle of canvas
-og_cave = [middle for i in range(g.pw)]
+middle = int(cube_l/2)  # middle of canvas
+og_cave = [middle for i in range(cube_l)]
 
 class Scene:
     def __init__(self):
@@ -24,20 +24,20 @@ class Scene:
         self.target = middle
         self.playing = False
         self.body = middle
-        self.cave_center_queue = deque(og_cave, maxlen=g.pw)
+        self.cave_center_queue = deque(og_cave, maxlen=cube_l)
 
     def init_game(self):
         self.rate = .25
         self.cave_top = middle
         self.target = middle
         self.body = middle
-        self.cave_center_queue = deque(og_cave, maxlen=g.pw)
+        self.cave_center_queue = deque(og_cave, maxlen=cube_l)
 
     def cave_row(self, row, center):
         # thinner walls
         wl = max(0, center-cave_w-wall_t)
         cave_l = list(range(wl, center-cave_w))
-        wr = min(g.pw, center+cave_w+wall_t)
+        wr = min(cube_l, center+cave_w+wall_t)
         cave_r = list(range(center+cave_w, wr))
 
         cave_row = cave_l + cave_r
@@ -54,7 +54,7 @@ class Scene:
     def loop(self):
         # updating cave setpoint
         if self.cave_top == self.target:
-            self.target = random.randint(0,g.pw-1)
+            self.target = random.randint(0,cube_l-1)
 
         # rate limiting cave centerpoint
         else:
