@@ -37,23 +37,6 @@ with st.expander("Circle Function"):
     fig = plotter(pdata)
     st.pyplot(fig)
 
-with st.expander("Time Circle"):
-    h = 8
-    m = 32
-    s = 44
-    hf, mf, sf = h/12, m/60, s/60
-
-    tdc = (8, 15)
-    rdc = (15, 8)
-    p1 = [8,8]
-    p2 = [15,15]
-    l12 = p_to_p(p1, p2)
-    xr = np.linspace(p1[0], p1[0]+l12[2], 50)
-    y = l12[0]*(xr-p1[0]) + l12[1] + p1[1]
-    pdata = bound_box(zip(xr,y))
-    fig = plotter(pdata, matrix=True)
-    st.pyplot(fig)
-
 
 
 
