@@ -47,6 +47,7 @@ with st.expander("Circle Function"):
     fig = plotter(pdata)
     st.pyplot(fig)
 
+<<<<<<< HEAD
 with st.expander("Time Circle"):
     h = 8
     m = 32
@@ -63,3 +64,8 @@ with st.expander("Time Circle"):
     pdata = bound_box(zip(xr, y))
     fig = plotter(pdata, matrix=True)
     st.pyplot(fig)
+=======
+
+
+
+>>>>>>> 2d3377a12b6b5a789556bd540adf9b6ff110c9b1

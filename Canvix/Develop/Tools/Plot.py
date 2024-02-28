@@ -47,8 +47,8 @@ def plotter(data, data2=None, matrix=False):
         rd2.set_offsets(data2)
 
     if matrix:
-        ax.set_xlim(0, 16)
-        ax.set_ylim(0, 16)
+        ax.set_xlim(0, 15)
+        ax.set_ylim(0, 15)
     else:
         ax.set_xlim(-8, 8)
         ax.set_ylim(-8, 8)
