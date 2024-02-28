@@ -37,6 +37,8 @@
     - Time
   - Examples
     - Art
+      - For a in art:
+      - Art
       - Golden Gate bridge
       - Flowers
       - Make your own!
@@ -48,8 +50,14 @@
     - Clock
     - Animations
       - Sine wave
-      - Bouncing ball
+      - Bouncing ball - change velocity
       - Sparkling stars
+      - rgb colors
+      - juggling
+
+    - Pages
+    - Art
+    - 
   
 
 - while loop
