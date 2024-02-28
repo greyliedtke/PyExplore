@@ -35,14 +35,16 @@ def bound_box(data):
         bb_points = list(set([tuple(point) for point in bb_points]))
     return bb_points
 
-def plotter(data, matrix=False):
+def plotter(data, data2=None, matrix=False):
     # Create a figure and axis object
     fig, ax = plt.subplots()
 
-    # Plot the heart function
-    # ax.plot(data)
     rd = ax.scatter(0, 8, color='red')
     rd.set_offsets(data)
+
+    if data2:
+        rd2 = ax.scatter(0, 8, color='blue')
+        rd2.set_offsets(data2)
 
     if matrix:
         ax.set_xlim(0, 16)
