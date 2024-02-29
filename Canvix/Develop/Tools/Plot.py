@@ -35,6 +35,14 @@ def bound_box(data):
         bb_points = list(set([tuple(point) for point in bb_points]))
     return bb_points
 
+def perim(x,y):
+    bb_points = []
+    for r in [-1, 0, 1]:
+        for c in [-1, 0, 1]:
+            bb_points.append([x+r, y+c])
+    return bb_points
+
+
 def plotter(data, data2=None, matrix=False):
     # Create a figure and axis object
     fig, ax = plt.subplots()

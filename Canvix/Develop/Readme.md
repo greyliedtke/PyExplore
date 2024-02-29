@@ -32,62 +32,92 @@
         - detect button press
         - detect button hold
     - Matrix
-    - Colors 
+      - Creating characters from pixels
+      - Turning matrix into x,y coordinates
+    - Colors
+      - RGB 
     - Math
+      - Turning equations into pixels
+      - Interpolating lines
+      - Creating bounding boxes
     - Time
-  - Examples
+- Examples
+  - Pages
     - Art
-      - For a in art:
-      - Art
       - Golden Gate bridge
       - Flowers
       - Make your own!
-    - Games
-      - Tetris
-      - Snake
-      - Pong
-      - CaveRunner
-    - Clock
-    - Animations
-      - Sine wave
-      - Bouncing ball - change velocity
-      - Sparkling stars
-      - rgb colors
-      - juggling
+    - Tetris
+    - Pong
+    - CaveRunner
+    - Sine wave
+    - Bouncing ball
+    - Sparkling Colors 
+    - RGB
 
-    - Pages
-    - Art
-    - 
-  
+### Learn to code 
+- variables
+- loops
+- if statements
+- functions
+- libraries
+  - time
+  - board
+  - neopixel
+  - rotaryio
 
-- while loop
-  - if statements
-  - logic
-  - delay
-- - Import necessary modules:
-    - `datetime` module for handling dates and times.
-    - `pf` and `plot_comparison` functions from `Tools.plot`.
-    - `fft_krpm` and `get_rms` functions from `Tools.acc_processing`.
-    
-- Define function `am_test(t_id)`:
+### Code.py
 
-    ```python
-    def am_test(t_id):
-    ```
+'''
+import time
+'''
 
-- Read accelerometer data from CSV file:
-    
-    ```python
-    df_acc = pd.read_csv(
-        f"Lib/2402_AirSpinTesting/Processing/RunFiles/Good_Data/{t_id}/acc_raw.csv"
-    )
-    ```
+### Code.py
 
-- Read speed data from CSV file:
-    
-    ```python
-    df_speed = pd.read_csv(
-        f"Lib/2402_AirSpinTesting/Processing/RunFiles/Good_Data/{t_id}/speeds_p.csv"
-    )
-    ```
+```python
+# -------------------------------------------------
+# importing libraries to use
+import time
+import Tools.Hardware.LEDStrip as LEDStrip
+# -------------------------------------------------
+
+# -------------------------------------------------
+# Coding
+# '#': is a comment. This line is ignored by the computer
+loop_speed = 1 # This is a variable. The loop will run every 1 second
+MODE = []
+def cycle_colors():
+  for color in ['red', 'green', 'blue']: # This is a loop that will run 3 times
+    LEDStrip.set_color(colors)
+    time.sleep(loop_speed) # This will pause the code for 1 second
+# -------------------------------------------------
+
+# -------------------------------------------------
+while True: # This is a loop that will run forever
+
+  # -------------------------------------------------
+  # print("Hello") # Print hello every second
+  # time.sleep(loop_speed) # This will pause the code for 1 second
+  # -------------------------------------------------
+
+  # -------------------------------------------------
+  if MODE == 0: # Art loop
+  elif MODE == 1: # Clock display
+  elif MODE == 2: # Game
+  elif MODE == 3: # Animation
+  elif MODE == 4: # LED Controls
+
+  # -------------------------------------------------
+
+  # -------------------------------------------------
+  # LED Controls
+  #LEDStrip.set_color('red')
+  #LEDStrip.set_pixel(100, 'green')
+  #LEDStrip.set_matrix([4,8] 'blue')
+  # cycle_colors()
+  # -------------------------------------------------
+
+
+```
+
 
