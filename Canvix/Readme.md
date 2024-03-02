@@ -79,6 +79,9 @@ import time
 # importing libraries to use
 import time
 import Tools.Hardware.LEDStrip as LEDStrip
+import Tools.Hardware.Matrix as MAT
+import Tools.Hardware.RotaryEncoder as RE
+import Tools.Colors as Colors
 # -------------------------------------------------
 
 # -------------------------------------------------
@@ -106,7 +109,6 @@ while True: # This is a loop that will run forever
   elif MODE == 2: # Game
   elif MODE == 3: # Animation
   elif MODE == 4: # LED Controls
-
   # -------------------------------------------------
 
   # -------------------------------------------------
