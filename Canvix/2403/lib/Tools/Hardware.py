@@ -36,6 +36,12 @@ class LED_Strip:
         self.strip.fill([0, 0, 0])
         self.strip.show()
 
+    def send_matrix(self, matrix, color="Goldenrod", show=True):
+        for m in matrix:
+            p = mat.xy_to_i(m)
+            self.strip[p] = colors[color]
+
+
     def send_array(self, pixel_a, color="Goldenrod", show=True):
         for p in pixel_a:
             self.strip[p] = colors[color]

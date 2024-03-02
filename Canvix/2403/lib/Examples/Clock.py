@@ -52,7 +52,7 @@ class Scene:
 
     def loop(self):
 
-        if encoder_left.held():
+        if encoder_left.held:
             self.time_set = not self.time_set
             time.sleep(.5)
 

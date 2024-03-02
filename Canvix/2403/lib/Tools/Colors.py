@@ -5,7 +5,7 @@ script for storing color values
 import random
 
 
-rgb_colors = {
+colors = {
     "light_yellow": (255, 200, 100),
     "Sky_Blue": (135, 206, 235),
     "Mint_Green": (152, 255, 100),
@@ -18,7 +18,7 @@ rgb_colors = {
     "Red": (255, 0, 0),
     "off": (0, 0, 0)
 }
-colors = list(rgb_colors.keys())
+color_keys = list(colors.keys())
 
 
 def random_color():

@@ -151,7 +151,7 @@ led_matrix = [
 ]
 
 
-def xy_mat(x, y):
+def xy_to_i(x, y):
     row = led_matrix[-y - 1]
     val = row[x]
     return val
