@@ -15,29 +15,48 @@ cols = 16
 
 class Scene:
     def __init__(self):
-        self.rate = g.refr
-        # Rotating cube animation
-        self.angle = 0
+        self.rate = .1
+        self.v = [0, 0]
+        self.pos = [0,0]
+        self.t = time.time()
 
     def loop(self):
+        tn = time.time()
+        dt = tn - self.t
+        self.t = tn
 
-        cube_points = [
-            (-1, -1, -1),
-            (-1, -1, 1),
-            (-1, 1, -1),
-            (-1, 1, 1),
-            (1, -1, -1),
-            (1, -1, 1),
-            (1, 1, -1),
-            (1, 1, 1),
+        # read vx delta
+        self.v[0] = encoder_left.read_delta()
+        self.v[1] = encoder_right.read_delta()
+
+        p = [self.pos[0]+(self.v[0]*dt) + self.pos[1]+(self.v[1]*dt)]
+        p = [round(p[0],0), round(p[1], 0)]
+        p = [max(p[0],0), max(p[1], 0)]
+        p = [min(p[0],15), min(p[1], 15)]
+
+        # make perimeter matrix
+        pmat = [
+            [p[0]-1, p[1]+1], [p[0], p[1]+1], [p[0]+1, p[1]+1], 
+            [p[0]-1, p[1]], [p[0], p[1]], [p[0]+1, p[1]], 
+            [p[0]-1, p[1]-1], [p[0], p[1]-1], [p[0]+1, p[1]-1]
         ]
 
-        rotated_cube = [rotate_point(x, y, z, self.angle) for x, y, z in cube_points]
-        projected_cube = [project_point(x, y, z) for x, y, z in rotated_cube]
+        xs = [x[0] for x in pmat]
+        ys = [x[1] for x in pmat]
 
-        self.angle += 0.1  # Adjust the rotation speed
-        sq2 = [[p[0], p[1] + 4] for p in projected_cube]
-        projected_cube += sq2
+        # loop through and detect if hitting x or y
+        for x in xs:
+            if x in [0,16]:
+                self.v[0] = -self.v[0]
+        for y in ys:
+            if y in [0,16]:
+                self.v[1] = -self.v[1]
+
+        led_strip.wipe()
+        pa = mat.
+        led_strip.send_array()
+        
+            
         return projected_cube
 
 
