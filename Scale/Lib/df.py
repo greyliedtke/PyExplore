@@ -24,7 +24,7 @@ def average(df):
 def interpolate(df):
     df = df.interpolate(method="linear", limit_direction="both")
 # ------------------------------------------------------
-    
+
 # ------------------------------------------------------
 # Creating Linear trendline
 def create_trend(df, x_col, y_col, title, x_label, y_label):
