@@ -1,0 +1,60 @@
+{% extends "SiteBaseGrid.html" %}
+
+{% block big %} {{cradle.ds}} {% endblock %}
+{% block big_ex %} {{cradle.ds_type}} {% endblock %}
+
+{% block table %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"> # </th>
+        {% for x in cradle.columns %}
+            <th scope="col">{{x}}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tr>
+        {% for x in cradle.current %}
+            <td>{{x}}</td>
+        {% endfor %}
+    </tr>
+</table>
+
+
+{% if cradle.change == 'Edit' %}
+    {% set item_butt =  'Commit Edit' %}
+    {% set item_key =  'Commit_Edit' %}
+    {% set item_5 =  'hidden' %}
+{% elif cradle.change == 'New' %}
+    {% set item_butt =  'Add' %}
+    {% set item_key =  'Add_Item' %}
+    {% set item_5 =  'text' %}
+{% endif %}
+
+
+    <p> edit project, programmer, notes... </p>
+    <form action="CradleEdit" method="post">
+        <input type="hidden" id="change" name="{{item_key}}" value="{{cradle.ds}}">
+        <label for="in1">{{cradle.current[0]}}</label>
+        <label for="in2">{{cradle.current[1]}}</label>
+        <input type="hidden" id="id_key" name="id_key" value="{{cradle.current[0]}}">
+        <input type="hidden" id="col_key" name="col_key" value="rowid">
+        <input type="text" id="in0" name="in0" value="{{cradle.current[1]}}">
+        <input type="text" id="in1" name="in1" value="{{cradle.current[2]}}">
+        <input type="text" id="in2" name="in2" value="{{cradle.current[3]}}">
+        <input type="text" id="in3" name="in3" value="{{cradle.current[4]}}">
+
+        <input type="submit" value="{{item_butt}}">
+    </form>
+
+
+{% if cradle.change == 'Edit' %}
+<form action="CradleEdit" method="post">
+    <input type="hidden" id="del_item_ds" name="del_cp" value="{{cradle.ds}}">
+    <input type="hidden" id="del_item_key" name="del_cp_key" value="{{cradle.current[0]}}">
+    <input type="hidden" id="del_item_key_c" name="del_cp_key_c" value="{{cradle.columns[0]}}">
+    <input type="submit" value="Delete Item">
+</form>
+{% endif %}
+
+{% endblock %}

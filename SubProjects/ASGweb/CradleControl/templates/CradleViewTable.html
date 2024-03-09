@@ -1,0 +1,46 @@
+{% extends "SiteBaseGrid.html" %}
+
+{% block big %} CradlePoints {% endblock %}
+{% block big_ex %} Refreshes daily{% endblock %}
+
+{% block table %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"> # </th>
+        {% for x in cradles.columns %}
+            <th scope="col">{{x[1]}}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    {% for x in cradles.cradle_points %}
+    <tr>
+        {% for y in x %}
+            <td>{{y}}</td>
+        {% endfor %}
+        <td>
+            <form action="CradleView" method="post">
+                <input type="hidden" id="cradle_ping" name="cradle_ping" value="{{x[0]}}">
+                <input type="submit" class="btn btn-outline-secondary" value="Ping">
+            </form>
+        </td>
+        <td>
+            <form action="CradleEdit" method="post">
+                <input type="hidden" id="edit_cradle" name="edit_cradle" value="{{x[0]}}">
+                <input type="submit" class="btn btn-outline-secondary" value="Edit Info">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+<form action="CradleEdit" method="post">
+    <input type="hidden" id="new_cradle" name="new_cradle">
+    <input type="submit" class="btn btn-outline-secondary" value="New Cradle">
+</form>
+
+<form action="CradleView" method="post">
+    <input type="hidden" id="ping_all" name="ping_all">
+    <input type="submit" class="btn btn-outline-secondary" value="Mass Ping">
+</form>
+{% endblock %}
