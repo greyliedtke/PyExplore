@@ -1,0 +1,32 @@
+{% extends "SiteBootBaseLinks.html" %}
+{% block head %}
+<head>
+</head>
+{% endblock %}
+{% block body %}
+
+<body>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">{% block big %} {% endblock %}</h1>
+    <p>{% block big_ex %} {% endblock %}</p>
+    <p>{% block big_but %} {% endblock %}</p>
+  </div>
+</div>
+<div class="container">
+  <h1></h1>
+  <h1> {% block b_head %} {% endblock %} </h1>
+  <p class="lead"> {% block b_head_ex %} {% endblock %} </p>
+
+  <h3> {% block b_head2 %} {% endblock %} </h3>
+  <p> {% block b_head2_ex %} {% endblock %} </p>
+
+{% block grid %} {% endblock %}
+{% block table %} {% endblock %}
+</div> <!-- /container -->
+</body>
+{% endblock %}
+{% block script %} {% endblock %}
+
+
+

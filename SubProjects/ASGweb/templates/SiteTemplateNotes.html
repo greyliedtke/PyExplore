@@ -1,0 +1,58 @@
+
+
+SiteBaseGrid.html
+copy for body references!
+{% block b_head %} {% endblock %}
+{% block b_head_ex %} {% endblock %}
+{% block b_head2 %} {% endblock %}
+{% block b_head2_ex %} {% endblock %}
+{% block grid %} {% endblock %}
+{% block table %} {% endblock %}
+
+
+      <div class="row">
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+      </div>
+
+Delete all this...
+        {% for x in q_param[{{question}}]["qx"] %}
+        <form action="q_test" method="post">
+            <input type="hidden" id="ds" name="ds" value="{{ds}}">
+            <input type="hidden" id="question" name="question" value="{{question}}">
+            <input type="hidden" id="test_info" name="test_info" value={test_info}>
+            <input type="submit" class="btn btn-outline-secondary" value="{{x}}">
+        </form>
+        <p></p>
+        {% endfor %}
+
+
+<script>
+            <button type="button" class="btn btn-outline-secondary"
+                onclick="q_ans('{{x}}', '{{q_param[question].ans}}', '{{question}}', '{{q_param}}')">{{x}}</button>
+        <label id="hahachoice"> this should do stuff </label><br>
+        <label id="helpme"> this should change!!! </label><br>
+class TestSet {
+    constructor(dataset, q_queue, question) {
+        this.ds = dataset;
+        this.q_queue = q_queue;
+        this.question = question;
+    }
+}
+
+function q_ans(choice, ans, q, set) {
+    if (choice == ans){
+        document.getElementById("hahachoice").innerHTML =  'Correct!';
+        document.getElementById("helpme").innerHTML =  set;
+    }
+    else{
+        document.getElementById("hahachoice").innerHTML =  'Wrong';
+    }
+}
+
+function q_ans2(){
+    document.getElementById("helpme").innerHTML =  "nice";
+    }
+
+</script>

@@ -1,0 +1,40 @@
+{% extends "SiteBaseGrid.html" %}
+<!-- Comment -->
+## ---------------------------------------------------------------------------------------------------------------------
+
+<form action="user_test" method="post">
+    <input type="hidden" id="test_q" name="test_q" value="{{question}}">
+    <input type="hidden" id="q_sel" name="q_sel" value="{{a}}">
+    <input type="password" id="inputPassword" name="Password" class="form-control" placeholder="Password" required>
+    <input type="submit" class="btn btn-secondary btn-lg btn-block" value="{{a}}">
+    <input type="text" id="item_search" name="item_search">
+</form>
+
+## For Loops
+## ---------------------------------------------------------------------------------------------------------------------
+{% for a in q_xs %}
+{% endfor %}
+
+## If Statements
+## ---------------------------------------------------------------------------------------------------------------------
+    {% if current_user.name is defined %}
+      {% set sign_text =  'Sign Out' %}
+      {% set sign_link = "UserLogout" %}
+    {% else %}
+      {% set sign_text =  'Sign In' %}
+      {% set sign_link = "UserLogin" %}
+    {% endif %}
+
+## Javascript
+## ---------------------------------------------------------------------------------------------------------------------
+
+<!--    document.getElementById("prompt").innerHTML =  "{{test.question_set[question]['prompt']}}";-->
+<!--    document.getElementById("button_a").innerHTML =  "{{test.question_set[question]['qx'][0]}}";-->
+<!--    document.getElementById("button_a").onclick =  "answer('{{test.question_set[question]['qx'][0]}}')";-->
+<!--    document.getElementById("button_b").innerHTML =  "{{test.question_set[question]['qx'][1]}}";-->
+<!--    document.getElementById("button_c").innerHTML =  "{{test.question_set[question]['qx'][2]}}";-->
+
+document.getElementById("button_a").onclick =  answer(question_set[q]["qx"][0]);
+        document.getElementById("button_b").onclick =  answer(question_set[q]["qx"][1]);
+        document.getElementById("button_c").onclick =  answer(question_set[q]["qx"][2]);
+        document.getElementById("button_d").onclick =  answer(question_set[q]["qx"][3]);
