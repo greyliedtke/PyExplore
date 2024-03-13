@@ -18,16 +18,17 @@ for i, port in enumerate(available_ports):
 for key, value in devs.items():
     print(f"{key}: {value}")
 p = input("Enter port number from : ")
-print(f"Selected port: {devs[int(p)]}")
+device = devs[int(p)]
+print(f"Selected port: {device}")
 
 # 2. Open the selected port
 # ------------------------------------------------------
-ser = serial.Serial(port.device, 115200, xonxoff=True)
+ser = serial.Serial(device.device, 115200, xonxoff=True)
 ser.timeout = 1 #specify timeout when using readline()
 ser.close()
 ser.open()
 if ser.is_open==True:
-	print("Listening on port: ", port)
+	print(f"Listening on: {device}")
 
 while True:
     d = ser.readline()

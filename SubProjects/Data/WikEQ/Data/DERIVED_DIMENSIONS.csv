@@ -1,0 +1,112 @@
+DD_id,Base_quantity,Symbol,Description,SI_base_unit,Dimension,WIKI_LINK
+1,Absement,A,Measure of sustained displacement: the first integral with respect to time of displacement,m⋅s,L T,https://en.wikipedia.org/wiki/Absement
+2,Absorbed dose rate,,Absorbed dose received per unit of time,Gy/s,L2 T−3,https://en.wikipedia.org/wiki/Absorbed_dose_rate
+3,Acceleration,a→,Rate of change of velocity per unit time: the second time derivative of position,m / s**2,L T−2,https://en.wikipedia.org/wiki/Acceleration
+4,Angular acceleration,ωa,Change in angular velocity per unit time,rad / s ** 2,T−2,https://en.wikipedia.org/wiki/Angular_acceleration
+5,Angular momentum,L,Measure of the extent and direction of an object rotates about a reference point,kg * m ** 2 / s,M L2 T−1,https://en.wikipedia.org/wiki/Angular_momentum
+6,Angular velocity,ω,The angle incremented in a plane by a segment connecting an object and a reference point per unit time,rad/s,T−1,https://en.wikipedia.org/wiki/Angular_velocity
+7,Area,A,Extent of a surface,m**2,L2,https://en.wikipedia.org/wiki/Area
+8,Area density,ρA,Mass per unit area,kg/m**2,M L−2,https://en.wikipedia.org/wiki/Area_density
+9,Capacitance,C,Stored charge per unit electric potential,farad,M−1 L−2 T4 I2,https://en.wikipedia.org/wiki/Capacitance
+10,Catalytic activity concentration,,Change in reaction rate due to presence of a catalyst per unit volume of the system,kat⋅m−3,L−3 T−1 N,https://en.wikipedia.org/wiki/Catalytic_activity_concentration
+11,Centrifugal force,Fc,Inertial force that appears to act on all objects when viewed in a rotating frame of reference,N⋅rad,M L T−2,https://en.wikipedia.org/wiki/Centrifugal_force
+12,Chemical potential,μ,Energy per unit change in amount of substance,J/mol,M L2 T−2 N−1,https://en.wikipedia.org/wiki/Chemical_potential
+13,Crackle,c→,Change of jounce per unit time: the fifth time derivative of position,m/s**5,L T−5,https://en.wikipedia.org/wiki/Crackle_(physics)
+14,Current density,J →,Electric current per unit cross-section area,A/m**2,L−2 I,https://en.wikipedia.org/wiki/Current_density
+15,Dose equivalent,H,Received radiation adjusted for the effect on biological tissue,m2/s2,L2 T−2,https://en.wikipedia.org/wiki/Dose_equivalent
+16,Dynamic viscosity,v,Measure for the resistance of an incompressible fluid to stress,Pa⋅s,M L−1 T−1,https://en.wikipedia.org/wiki/Dynamic_viscosity
+17,Electric charge,Q,The force per unit electric field strength,kg * m ** 3 / s ** 2 * C ** 2,T I,https://en.wikipedia.org/wiki/Electric_charge
+18,Electric charge density,ρQ,Electric charge per unit volume,C/m**3,L−3 T I,https://en.wikipedia.org/wiki/Electric_charge_density
+19,Electric displacement field,D→,Strength of the electric displacement,C/m**2,L−2 T I,https://en.wikipedia.org/wiki/Electric_displacement_field
+20,Electric field strength,E→,Strength of the electric field,V/m,M L T−3 I−1,https://en.wikipedia.org/wiki/Electric_field_strength
+21,Electrical conductance,G,Measure for how easily current flows through a material,siemens,M−1 L−2 T3 I2,https://en.wikipedia.org/wiki/Electrical_conductance
+22,Electrical conductivity,σ,Measure of a material's ability to conduct an electric current,S/m,M−1 L−3 T3 I2,https://en.wikipedia.org/wiki/Electrical_conductivity
+23,Electric potential,φ,Energy required to move a unit charge through an electric field from a reference point,V,M L2 T−3 I−1,https://en.wikipedia.org/wiki/Electric_potential
+24,Electrical resistance,R,Electric potential per unit electric current,ohm,M L2 T−3 I−2,https://en.wikipedia.org/wiki/Electrical_resistance
+25,Electrical resistivity,ρe,Bulk property equivalent of electrical resistance,ohm*m,M L3 T−3 I−2,https://en.wikipedia.org/wiki/Electrical_resistivity
+26,Energy,E,Energy,J,M L2 T−2,https://en.wikipedia.org/wiki/Energy
+27,Energy density,ρE,Energy per unit volume,J/m**3,M L−1 T−2,https://en.wikipedia.org/wiki/Energy_density
+28,Entropy,S,Logarithmic measure of the number of available states of a system,J/K,M L2 T−2 K−1,https://en.wikipedia.org/wiki/Entropy
+29,Force,F→,Transfer of momentum per unit time,N,M L T−2,https://en.wikipedia.org/wiki/Force
+30,Frequency,f,Number of (periodic) occurrences per unit time,hertz,T−1,https://en.wikipedia.org/wiki/Frequency
+31,Half-life,t1/2,Time for a quantity to decay to half its initial value,s,T,https://en.wikipedia.org/wiki/Half-life
+32,Heat,Q,Thermal energy,J,M L2 T−2,https://en.wikipedia.org/wiki/Heat
+33,Heat capacity,Cp,Energy per unit temperature change,J/K,M L2 T−2 K−1,https://en.wikipedia.org/wiki/Heat_capacity
+34,Heat flux density,ϕQ,Heat flow per unit time per unit surface area,W/m2,M T−3,https://en.wikipedia.org/wiki/Heat_flux
+35,Illuminance,Ev,Luminous flux per unit surface area,lux,L−2 J,https://en.wikipedia.org/wiki/Illuminance
+36,Impedance,Z,"Resistance to an alternating current of a given frequency, including effect on phase",ohm,M L2 T−3 I−2,https://en.wikipedia.org/wiki/Electrical_impedance
+37,Impulse,J,Transferred momentum,N⋅s,M L T−1,https://en.wikipedia.org/wiki/Impulse_(physics)
+38,Inductance,L,Magnetic flux generated per unit current through a circuit,henry,M L2 T−2 I−2,https://en.wikipedia.org/wiki/Inductance
+39,Irradiance,E,Electromagnetic radiation power per unit surface area,W/m2,M T−3,https://en.wikipedia.org/wiki/Irradiance
+40,Intensity,I,Power per unit cross sectional area,W/m2,M T−3,https://en.wikipedia.org/wiki/Intensity_(physics)
+41,Jerk,j→,Change of acceleration per unit time: the third time derivative of position,m/s**3,L T−3,https://en.wikipedia.org/wiki/Jerk_(physics)
+42,Jounce (or snap),s→,Change of jerk per unit time: the fourth time derivative of position,m/s**4,L T−4,
+43,Linear density,ρl,Mass per unit length,kg⋅m−1,M L−1,https://en.wikipedia.org/wiki/Linear_density
+44,Luminous flux (or luminous power),F,Perceived power of a light source,lumen,J,
+45,Mach number (or mach),M,Ratio of flow velocity to the local speed of sound,unitless,1,
+46,Magnetic field strength,H,Strength of a magnetic field,A/m,L−1 I,https://en.wikipedia.org/wiki/Magnetic_field_strength
+47,Magnetic flux,Φ,"Measure of magnetism, taking account of the strength and the extent of a magnetic field",weber,M L2 T−2 I−1,https://en.wikipedia.org/wiki/Magnetic_flux
+48,Magnetic flux density,B,Measure for the strength of the magnetic field,tesla,M T−2 I−1,https://en.wikipedia.org/wiki/Magnetic_flux_density
+49,Magnetization,M,Amount of magnetic moment per unit volume,A/m,L−1 I,https://en.wikipedia.org/wiki/Magnetization
+50,Mass fraction,x,Mass of a substance as a fraction of the total mass,kg/kg,1,https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)
+51,Density,ρ,Mass per unit volume,kg / m**3,M L−3,
+52,Mean lifetime,τ,Average time for a particle of a substance to decay,s,T,https://en.wikipedia.org/wiki/Mean_lifetime
+53,Molar concentration,C,Amount of substance per unit volume,mol⋅m−3,L−3 N,https://en.wikipedia.org/wiki/Molar_concentration
+54,Molar energy,,Amount of energy present in a system per unit amount of substance,J/mol,M L2 T−2 N−1,https://en.wikipedia.org/wiki/Molar_energy
+55,Molar entropy,,Entropy per unit amount of substance,J/(K⋅mol),M L2 T−2 K−1 N−1,https://en.wikipedia.org/wiki/Molar_entropy
+56,Molar heat capacity,c,Heat capacity of a material per unit amount of substance,J/(K⋅mol),M L2 T−2 K−1 N−1,https://en.wikipedia.org/wiki/Molar_heat_capacity
+57,Moment of inertia,I,Inertia of an object with respect to angular acceleration,kg * m**2,M L2,https://en.wikipedia.org/wiki/Moment_of_inertia
+58,Momentum,p→,Product of an object's mass and velocity,kg⋅m/s,M L T−1,https://en.wikipedia.org/wiki/Momentum
+59,Optical power,P,Measure of the effective curvature of a lens or curved mirror; inverse of focal length,dioptre,L−1,https://en.wikipedia.org/wiki/Optical_power
+60,Permeability,μs,Measure for how the magnetization of material is affected by the application of an external magnetic field,H/m,M L T−2 I−2,https://en.wikipedia.org/wiki/Permeability_(electromagnetism)
+61,Permittivity,εs,Measure for how the polarization of a material is affected by the application of an external electric field,F/m,M−1 L−3 T4 I2,https://en.wikipedia.org/wiki/Permittivity
+62,Plane angle,θ,Ratio of circular arc length to radius,radian,1,https://en.wikipedia.org/wiki/Plane_angle
+63,Power,P,Rate of transfer of energy per unit time,W,M L2 T−3,https://en.wikipedia.org/wiki/Power_(physics)
+64,Pressure,p,Force per unit area,Pa,M L−1 T−2,https://en.wikipedia.org/wiki/Pressure
+65,Pop,p→,Rate of change of crackle per unit time: the sixth time derivative of position,m/s**6,L T−6,https://en.wikipedia.org/wiki/Pop_(motion)
+66,(Radioactive) Activity,A,Number of particles decaying per unit time,becquerel,T−1,https://en.wikipedia.org/wiki/Activity_(radioactivity)
+67,(Radioactive) Dose,D,Ionizing radiation energy absorbed by biological tissue per unit mass,gray,L2 T−2,https://en.wikipedia.org/wiki/Absorbed_dose
+68,Radiance,L,Power of emitted electromagnetic radiation per unit solid angle per emitting source area,W/(m2⋅sr),M T−3,https://en.wikipedia.org/wiki/Radiance
+69,Radiant intensity,I,Power of emitted electromagnetic radiation per unit solid angle,W/sr,M L2 T−3,https://en.wikipedia.org/wiki/Radiant_intensity
+70,Reaction rate,r,Rate of a chemical reaction for unit time,mol/(m3⋅s),L−3 T−1 N,https://en.wikipedia.org/wiki/Reaction_rate
+71,Refractive index,n,Factor by which the phase velocity of light is reduced in a medium,unitless,1,https://en.wikipedia.org/wiki/Refractive_index
+72,Reluctance,,resistance to the flow of magnetic flux,H−1,M−1 L−2 T2 I2,https://en.wikipedia.org/wiki/Magnetic_reluctance
+73,Solid angle,Ω,Ratio of area on a sphere to its radius squared,steradian,1,https://en.wikipedia.org/wiki/Solid_angle
+74,Specific energy,,Energy density per unit mass,J⋅kg−1,L2 T−2,https://en.wikipedia.org/wiki/Specific_energy
+75,Specific heat capacity,c,Heat capacity per unit mass,J / (kg * K),L2 T−2 K−1,https://en.wikipedia.org/wiki/Specific_heat_capacity
+76,Specific volume,v,Volume per unit mass (reciprocal of density),m3⋅kg−1,M−1 L3,https://en.wikipedia.org/wiki/Specific_volume
+77,Spin,S,Quantum-mechanically defined angular momentum of a particle,kg⋅m2⋅s−1,M L2 T−1,https://en.wikipedia.org/wiki/Spin_(physics)
+78,Strain,ε,Extension per unit length,unitless,1,https://en.wikipedia.org/wiki/Deformation_(mechanics)#Strain
+79,Stress,σ,Force per unit oriented surface area,Pa,M L−1 T−2,https://en.wikipedia.org/wiki/Stress_(physics)
+80,Surface tension,γ,Energy change per unit change in surface area,N/m,M T−2,https://en.wikipedia.org/wiki/Surface_tension
+81,Temperature gradient,,steepest rate of temperature change at a particular location,K/m,K L−1,https://en.wikipedia.org/wiki/Temperature_gradient
+82,Thermal conductance,,Measure for the ease with which an object conducts heat,W/K,M L2 T−3 K−1,
+83,Thermal conductivity,λ,Measure for the ease with which a material conducts heat,W/(m⋅K),M L T−3 K−1,https://en.wikipedia.org/wiki/Thermal_conductivity
+84,Thermal resistance,R,Measure for the ease with which an object resists conduction of heat,K/W,M−1 L−2 T3 K,
+85,Thermal resistivity,Rλ,Measure for the ease with which a material resists conduction of heat,K⋅m/W,M−1 L−1 T3 K,
+86,Torque,τ,Product of a force and the perpendicular distance of the force from the point about which it is exerted,N*m,M L2 T−2,https://en.wikipedia.org/wiki/Torque
+87,Velocity,v→,Moved distance per unit time: the first time derivative of position,m/s,L T−1,https://en.wikipedia.org/wiki/Velocity
+88,Volume,V,Three dimensional extent of an object,m**3,L3,https://en.wikipedia.org/wiki/Volume
+89,Volumetric flow rate,Q,Rate of change of volume with respect to time,m ** 3 / s,L3 T−1,https://en.wikipedia.org/wiki/Volumetric_flow_rate
+90,Wavelength,λ,Perpendicular distance between repeating units of a wave,m,L,https://en.wikipedia.org/wiki/Wavelength
+91,Wavenumber,k,Repetency or spatial frequency: the number of cycles per unit distance,m−1,L−1,https://en.wikipedia.org/wiki/Wavenumber
+92,Wavevector,k→,Repetency or spatial frequency vector: the number of cycles per unit distance,m−1,L−1,https://en.wikipedia.org/wiki/Wavevector
+93,Weight,w,Gravitational force on an object,N,M L T−2,https://en.wikipedia.org/wiki/Weight
+94,Work,W,Transferred energy,J,M L2 T−2,https://en.wikipedia.org/wiki/Mechanical_work
+95,Young's modulus,E,Ratio of stress to strain,Pa,M L−1 T−2,https://en.wikipedia.org/wiki/Young%27s_modulus
+96,Length,l,The one-dimensional extent of an object,m,L,https://en.wikipedia.org/wiki/Length
+97,Mass,m,A measure of resistance to acceleration,kg,M,https://en.wikipedia.org/wiki/Mass
+98,Time,t,The duration of an event,s,T,https://en.wikipedia.org/wiki/Time
+99,Electric Current,I,Rate of flow of electrical charge per unit time,A,I,https://en.wikipedia.org/wiki/Electric_Current
+100,Temperature,T,Average kinetic energy per degree of freedom of a system,K,K,https://en.wikipedia.org/wiki/Temperature
+101,Amount of substance,n,"The quantity proportional to the number of particles in a sample, with the Avogadro constant as the proportionality constant",mol,N,https://en.wikipedia.org/wiki/Amount_of_substance
+102,Luminous intensity,Iv,Wavelength-weighted power of emitted light per unit solid angle,cd,J,https://en.wikipedia.org/wiki/Luminous_intensity
+103,Dimensionless,,,,,
+104,Mass Flow Rate,ṁ,Flowrate of mass over time,kg / s,M T-1,https://en.wikipedia.org/wiki/Mass_flow_rate
+105,Cuolomb Constant,K,Proportionality constant in electrostatics equations - 8.9875517923×109,kg * m ** 3 / (s ** 2 C ** 2),M L3 T-2 I-2,https://en.wikipedia.org/wiki/Coulomb_constant
+106,Gravitational Constant,G,"In Newtons law, it is the proportionality constant connecting the gravitational force between two bodies with the product of their masses and the inverse square of their distance.",(6.674×10−11) * m ** 3 / (kg * s ** 2),L3 M-1 T-2,https://en.wikipedia.org/wiki/Gravitational_constant
+107,Heat Transfer Coefficientt,h,Proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat,W / (m ** 2 * K),M T-4,https://en.wikipedia.org/wiki/Heat_transfer_coefficient
+108,Heat Transfer Coefficient,h,Proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat,W / (m ** 2 * K),M T-4,https://en.wikipedia.org/wiki/Heat_transfer_coefficient
+109,Money,$,Value of currency,$,,https://en.wikipedia.org/wiki/Money
+110,Interest Rate,%,"An interest rate is the amount of interest due per period, as a proportion of the amount lent, deposited, or borrowed.",%,,https://en.wikipedia.org/wiki/Interest_rate
+111,Area moment of inertia,I,"The second moment of area, also known as area moment of inertia, is a geometrical property of an area which reflects how its points are distributed with regard to an arbitrary axis.",L**4,L4,https://en.wikipedia.org/wiki/List_of_second_moments_of_area

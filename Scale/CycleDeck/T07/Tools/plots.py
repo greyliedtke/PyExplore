@@ -12,7 +12,6 @@ def pf(df, x_col, y_cols, x_title="", y_title="", title="", x_lim=None, y_lim=No
         ax.plot(df[x_col], df[y])
 
     if y_lim != 0:
-        print(y_lim)
         ax.set_ylim(eval(y_lim))
     if x_lim != [0, 0]:
         ax.set_xlim(x_lim)
