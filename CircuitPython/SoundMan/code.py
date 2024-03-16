@@ -40,7 +40,7 @@ def sound_detect():
 
         max_s = max(sound_v, max_s)
         min_s = min(sound_v, min_s)
-    delta = min_s - max_s
+    delta = max_s - min_s
     # print(delta)
     av = get_voltage()
     sound_to_color(delta)
