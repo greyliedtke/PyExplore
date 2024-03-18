@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="container">
+
+        <table class="table table-striped table-bordered" id="table_mat">
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+    <script>
+        // JavaScript function to create the 5x5 table with buttons
+        function createTable() {
+            var table = document.createElement('table'); // Create table element
+            var tbody = document.createElement('tbody'); // Create table body element
+
+            // Loop through rows
+            for (var i = 0; i < 5; i++) {
+                var row = document.createElement('tr'); // Create table row element
+
+                // Loop through columns
+                for (var j = 0; j < 5; j++) {
+                    var c = j;
+                    var cell = document.createElement('td'); // Create table cell element
+                    var button = document.createElement('button'); // Create button element
+                    var b_id = j+'-'+i;
+                    button.textContent = b_id;
+                    button.id = b_id
+                    button.onclick = function () { // Set onclick event handler for button
+                        var buttonId = this.id; // Get button ID
+                        alert('Button clicked: ' + buttonId); // Display button ID in alert
+                    };
+
+                    cell.appendChild(button); // Append button to table cell
+                    row.appendChild(cell); // Append table cell to table row
+                }
+
+                tbody.appendChild(row); // Append table row to table body
+            }
+
+            table.appendChild(tbody); // Append table body to table
+            document.body.appendChild(table); // Append table to document body
+        }
+
+        // Call createTable function to generate the table
+        createTable();
+
+
+    </script>
+
+    <!-- Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

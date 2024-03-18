@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="container">
+        <h2>Red Green Blue</h2>
+        <p>
+            Represent red, green, blue. You may have always heard these acronyms and wondered why they are so special.
+            This may take you back in time to primary school with primary colors. Using a portion of these 3 colors, you
+            can create any color.
+        </p>
+        <p>
+            Screens
+        </p>
+        <a href="https://en.wikipedia.org/wiki/RGB_color_model"> RGB color model</a>
+    </section>
+
+    <section class="container">
+
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <th>User</th>
+                    <th>Words</th>
+                    <th>Words/Min</th>
+                </tr>
+                <tr>
+                    <td>
+                        But
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="container">
+        <div>
+            <label for="red">Red:</label>
+            <input type="range" id="red" min="0" max="255" value="0">
+        </div>
+        <div>
+            <label for="green">Green:</label>
+            <input type="range" id="green" min="0" max="255" value="0">
+        </div>
+        <div>
+            <label for="blue">Blue:</label>
+            <input type="range" id="blue" min="0" max="255" value="0">
+        </div>
+        <div class="color-box" id="color-box"></div>
+    </section>
+    <script>
+        const redSlider = document.getElementById('red');
+        const greenSlider = document.getElementById('green');
+        const blueSlider = document.getElementById('blue');
+        const colorBox = document.getElementById('color-box');
+
+        function updateColor() {
+            const red = redSlider.value;
+            const green = greenSlider.value;
+            const blue = blueSlider.value;
+            const color = `rgb(${red}, ${green}, ${blue})`;
+            colorBox.style.backgroundColor = color;
+        }
+
+        redSlider.addEventListener('input', updateColor);
+        greenSlider.addEventListener('input', updateColor);
+        blueSlider.addEventListener('input', updateColor);
+
+        // Initialize color
+        updateColor();
+    </script>
+
+    <!-- Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
