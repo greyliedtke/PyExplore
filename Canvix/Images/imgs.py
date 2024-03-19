@@ -53,7 +53,7 @@ def bitmap_conversion(fname, size=(64, 64), brightness=.75):
 
 # ------------------------------------------------------
 # Running Script
-input_file = "island.jpg"
+input_file = "mn.jpg"
 bitmap_conversion(input_file, brightness=1)
 png_to_rgb(input_file)
 # ------------------------------------------------------
