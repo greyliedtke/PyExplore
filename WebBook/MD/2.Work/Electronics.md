@@ -1,7 +1,3 @@
-# Electronics
-
-## Sensors
-
 - Diagram
 - Assembly
 - Micro Controller
@@ -11,5 +7,3 @@
     - Matrix
 - Battery
 - Photo Resistor?
-
-
