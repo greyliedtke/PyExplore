@@ -1,62 +1,43 @@
 #  20kw_Recup_Rect Cycle Deck
 
 
-## Massflow
-![png](figs/Massflow.png)
+Massflow![png](figs/Massflow.png)
 
-## Turbine_Exit
-![png](figs/Turbine_Exit.png)
+Turbine_Exit![png](figs/Turbine_Exit.png)
 
-## Inlet_Temperature
-![png](figs/Inlet_Temperature.png)
+Inlet_Temperature![png](figs/Inlet_Temperature.png)
 
-## Pressure_Ratio
-![png](figs/Pressure_Ratio.png)
+Pressure_Ratio![png](figs/Pressure_Ratio.png)
 
-## N1
-![png](figs/N1.png)
+N1![png](figs/N1.png)
 
-## N2
-![png](figs/N2.png)
+N2![png](figs/N2.png)
 
-## Power
-![png](figs/Power.png)
+Power![png](figs/Power.png)
 
-## Leakage
-![png](figs/Leakage.png)
+Leakage![png](figs/Leakage.png)
 
-## Compressor_Efficiency
-![png](figs/Compressor_Efficiency.png)
+Compressor_Efficiency![png](figs/Compressor_Efficiency.png)
 
-## P_Combined
-![png](figs/P_Combined.png)
+P_Combined![png](figs/P_Combined.png)
 
-## P_LP_Inlet
-![png](figs/P_LP_Inlet.png)
+P_LP_Inlet![png](figs/P_LP_Inlet.png)
 
-## P_LP_Outlet
-![png](figs/P_LP_Outlet.png)
+P_LP_Outlet![png](figs/P_LP_Outlet.png)
 
-## T_LP_Inlet
-![png](figs/T_LP_Inlet.png)
+T_LP_Inlet![png](figs/T_LP_Inlet.png)
 
-## T_HP_Outlet
-![png](figs/T_HP_Outlet.png)
+T_HP_Outlet![png](figs/T_HP_Outlet.png)
 
-## T_HP_Inlet
-![png](figs/T_HP_Inlet.png)
+T_HP_Inlet![png](figs/T_HP_Inlet.png)
 
-## T_LP_Outlet
-![png](figs/T_LP_Outlet.png)
+T_LP_Outlet![png](figs/T_LP_Outlet.png)
 
-## Fuel_Flowrate
-![png](figs/Fuel_Flowrate.png)
+Fuel_Flowrate![png](figs/Fuel_Flowrate.png)
 
-## Efficiency
-![png](figs/Efficiency.png)
+Efficiency![png](figs/Efficiency.png)
 
-## Recuperator_Effectiveness
-![png](figs/Recuperator_Effectiveness.png)
+Recuperator_Effectiveness![png](figs/Recuperator_Effectiveness.png)
 
 
 

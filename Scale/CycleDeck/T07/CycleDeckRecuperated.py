@@ -24,7 +24,7 @@ rd = {
     "20kw_Recup_Rect": {"file": "Data/231027_01.csv", "avg_time": [260, 275]},
 }
 
-rk = "20kw_Recuperated"
+rk = "20kw_Recup_Rect"
 rf = rd[rk]["file"]
 avg_time = rd[rk]["avg_time"]
 df = pd.read_csv(rf)
@@ -100,14 +100,24 @@ t_pt_ducts = [
     "T_NI_PT_Outlet_Duct_6",
     "T_NI_PT_Outlet_Duct_7",
 ]
+t_bypass = ["T_NI_Seal_Bypass_1", "T_NI_Seal_Bypass_3", "T_NI_Seal_Bypass_4"]
 df["T_PT_Duct"] = df[t_pt_ducts].mean(axis=1)
-df["T_Bypass"] = df[
-    ["T_NI_Seal_Bypass_1", "T_NI_Seal_Bypass_3", "T_NI_Seal_Bypass_4"]
-].mean(axis=1)
+df["T_Bypass"] = df[t_bypass].mean(axis=1)
 df["leakage"] = (
     (df["T_PT_Duct"] - df["T_PT_Exit"]) / (df["T_Bypass"] - df["T_PT_Exit"])
 ) * 100
 df["leakage_smooth"] = savgol_filter(df["leakage"], 20, 3)
+
+# validation plots
+plots.pf(
+            df,
+            x_col="elapsed_sec",
+            y_cols=t_pt_ducts+t_bypass+t_pt_exit_cols,
+            title="T PT Ducts and Bypass",
+            x_title="Time [s]",
+            y_title="C",
+            save=f"{path_folder}/figs/T PT Ducts.png",
+        )
 # ------------------------------------------------------
 
 # recuperator averaging
@@ -140,13 +150,14 @@ for i, r in df_cd.iterrows():
         ].mean()
         avg_v = avg_v.values[0]
         v_avgs[r["Title"]] = {"Avg": avg_v, "Units": r["Units"]}
-        md_string += f"{r['Title']}![png](figs/{r['Title']}.png)\n\n"
+        md_string += f"## {r['Title']}\n![png](figs/{r['Title']}.png)\n\n"
     except Exception as e:
         print(f"Error:{e}")
 
 df_avgs = pd.DataFrame(v_avgs).T.reset_index()
 df_avgs.columns = ["Title", "Avg", "Units"]
 df_avgs.to_csv(f"{path_folder}/avgs.csv")
+md_string += f"## Summary Table"
 md_string += f"\n\n Averages over period: {avg_time[0]} to {avg_time[1]}s\n\n"
 md_string += df_avgs.to_markdown()
 with open(f"{path_folder}/{rk}.md", "w") as f:
