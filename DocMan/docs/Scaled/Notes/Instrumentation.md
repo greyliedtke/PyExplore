@@ -1,12 +1,8 @@
 
-## Axial Force Measurement
-- [Amplifier Manual](https://www.ato.com/Content/doc/ATO-load-cell-amplifier-user-manual-ATO-LCTR-OAR.pdf)
-- [Amplifier](https://www.google.com/url?q=https://www.amazon.com/gp/product/B08CMF1VDG/ref%3Dppx_yo_dt_b_search_asin_title?ie%3DUTF8%26psc%3D1&source=gmail&ust=1690416005383000&usg=AOvVaw0OwkifFDTYfMN1AWltyKEb)
-- Load [Cell](https://www.amazon.com/gp/product/B0785MXVYK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 
 ## Flow Sensors
-[flow sensors](https://www.eptsensor.com/flow-sensor/hall-flow-sensor/fm-hl2218-liquid-flow-meter-working-principle.html)
-- 15 pulses / mil/min
+- [flow sensors](https://www.eptsensor.com/flow-sensor/hall-flow-sensor/fm-hl2218-liquid-flow-meter-working-principle.html)
+  - 15 pulses / mil/min
 
 ## Pressure Sensors
 - 10-32 [Barbs](https://www.mcmaster.com/5454K61/)
