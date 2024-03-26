@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .color-box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin-top: 10px;
+        /* Add some spacing */
+    }
+</style>
+
+<div class="container">
+
+    <body>
+        <div class="mb-3"></div>
+
+        <div class="card card-body">
+            <h3 class="card-title">RGB</h3>
+            <a href="https://en.wikipedia.org/wiki/RGB_color_model"> RGB color model</a>
+            Enter RGB
+            <section class="container">
+                <div>
+                    <label for="red">Red:</label>
+                    <input type="range" id="red" min="0" max="255" value="0">
+                </div>
+                <div>
+                    <label for="green">Green:</label>
+                    <input type="range" id="green" min="0" max="255" value="0">
+                </div>
+                <div>
+                    <label for="blue">Blue:</label>
+                    <input type="range" id="blue" min="0" max="255" value="0">
+                </div>
+                <div class="color-box" id="color-box"></div>
+            </section>
+        </div>
+        <div class="mb-3"></div>
+        <div class="card card-body">
+            <h3 class="card-title">Color Picker</h3>
+            <input type="text" class="form-control" id="colorPicker">
+
+        </div>
+        <div class="mb-3"></div>
+        <div class="card card-body">
+            <h3 class="card-title">Modes</h3>
+            Enter RGB
+        </div>
+</div>
+<div class="mb-3"></div>
+<script>
+    const redSlider = document.getElementById('red');
+    const greenSlider = document.getElementById('green');
+    const blueSlider = document.getElementById('blue');
+    const colorBox = document.getElementById('color-box');
+
+    function updateColor() {
+        const red = redSlider.value;
+        const green = greenSlider.value;
+        const blue = blueSlider.value;
+        const color = `rgb(${red}, ${green}, ${blue})`;
+        colorBox.style.backgroundColor = color;
+    }
+    redSlider.addEventListener('input', updateColor);
+    greenSlider.addEventListener('input', updateColor);
+    blueSlider.addEventListener('input', updateColor);
+
+    // Initialize color
+    updateColor();
+
+</script>
+{% endblock %}

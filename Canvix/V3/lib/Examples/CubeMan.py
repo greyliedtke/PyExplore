@@ -4,7 +4,7 @@ Main Cave logic
 
 # pygame tunnel run
 import time
-import lib.Tools.Matrix as mat
+import Tools.Matrix as mat
 import time
 import math
 
@@ -29,7 +29,7 @@ def project_point(x, y, z):
 
 class Scene:
     def __init__(self):
-        self.rate = g.refr
+        self.rate = 1
         # Rotating cube animation
         self.angle = 0
 

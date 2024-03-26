@@ -19,7 +19,7 @@ og_cave = [middle for i in range(cube_l)]
 
 class Scene:
     def __init__(self):
-        self.rate = g.refr
+        self.rate = 1
         self.cave_top = middle
         self.target = middle
         self.playing = False

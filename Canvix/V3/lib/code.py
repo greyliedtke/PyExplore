@@ -5,15 +5,12 @@ lib references
 
 """
 
-import lib.Tools.Hardware as hard
-import lib.Tools.Matrix as mat
-from lib.Examples.CaveMan import cm as g_cave
-from lib.Examples.ClockMan import cm as m_clock
-from lib.Examples.CubeMan import cm as m_cube
+import Tools.Hardware as hard
+import Tools.Matrix as mat
+from Examples.CubeMan import cm as m_cube
 
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import numpy as np
 
 # ------------------------------------------------------
 # Initialize the figure that would be led matrix

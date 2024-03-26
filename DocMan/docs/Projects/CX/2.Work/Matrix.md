@@ -1,3 +1,9 @@
+
+
+![alt text](matrix.png)
+
+
+
 Sure, let's break it down:
 
 **Understanding LEDs:**
