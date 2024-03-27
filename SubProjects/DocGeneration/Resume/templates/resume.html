@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}'s Resume</title>
+</head>
+<body>
+    <header>
+        <h1>{{ name }}</h1>
+        <p>Email: {{ email }}</p>
+        <p>Phone: {{ phone }}</p>
+    </header>
+    <section class="summary section">
+        <h2>Summary</h2>
+        <p>{{ summary }}</p>
+    </section>
+    <section class="experience section">
+        <h2>Experience</h2>
+        <ul>
+            {% for exp in experience %}
+            <li>{{ exp }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="education section">
+        <h2>Education</h2>
+        <ul>
+            {% for edu in education %}
+            <li>{{ edu }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="skills section">
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

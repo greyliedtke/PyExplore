@@ -12,4 +12,4 @@
   - Adjust fuel flow to maintain PR setpoint
 - Secondary: N2 Control
   - Slowly adjust PR setpoint to maintain N2 Control
-![alt text](Logic.png)
+![alt text](./figs/Logic.png)

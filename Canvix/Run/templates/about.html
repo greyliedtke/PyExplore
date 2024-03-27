@@ -19,7 +19,6 @@
         <div class="card card-body">
             <h3 class="card-title">RGB</h3>
             <a href="https://en.wikipedia.org/wiki/RGB_color_model"> RGB color model</a>
-            Enter RGB
             <section class="container">
                 <div>
                     <label for="red">Red:</label>
@@ -34,18 +33,17 @@
                     <input type="range" id="blue" min="0" max="255" value="0">
                 </div>
                 <div class="color-box" id="color-box"></div>
+                <button class="btn btn-success" onclick="sendPi('rgb')">Send Color</button>
             </section>
         </div>
         <div class="mb-3"></div>
         <div class="card card-body">
-            <h3 class="card-title">Color Picker</h3>
-            <input type="text" class="form-control" id="colorPicker">
-
-        </div>
-        <div class="mb-3"></div>
-        <div class="card card-body">
             <h3 class="card-title">Modes</h3>
-            Enter RGB
+            <button class="btn btn-outline-primary" onclick="sendPi('Clock')">Clock</button>
+            <div class="mb-3"></div>
+            <button class="btn btn-outline-primary" onclick="sendPi('Bounce')">Bounce</button>
+            <div class="mb-3"></div>
+            <button class="btn btn-outline-primary" onclick="sendPi('image1')">Image</button>
         </div>
 </div>
 <div class="mb-3"></div>
@@ -68,6 +66,36 @@
 
     // Initialize color
     updateColor();
+
+
+
+    function sendPi(data) {
+        if (data == 'rgb') {
+            data = {
+                red: redSlider.value,
+                green: greenSlider.value,
+                blue: blueSlider.value
+            }
+        }
+
+        fetch("/pi", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=UTF-8"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                console.log('Data sent successfully');
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error occurred:', error);
+            });
+    }
 
 </script>
 {% endblock %}

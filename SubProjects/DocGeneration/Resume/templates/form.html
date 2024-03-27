@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+</head>
+<body>
+    <h1>Resume Form</h1>
+    <form action="/generate" method="post" id="resumeForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="summary">Summary:</label><br>
+        <textarea id="summary" name="summary"></textarea><br>
+        <label for="experience">Experience (One per line):</label><br>
+        <textarea id="experience" name="experience"></textarea><br>
+        <label for="education">Education:</label><br>
+        <div id="educationContainer">
+            <div>
+                <input type="text" name="education[]" placeholder="Degree">
+                <textarea name="education_details[]" placeholder="Details"></textarea>
+            </div>
+        </div>
+        <button type="button" id="addEducation">Add Education</button><br>
+        <label for="skills">Skills:</label><br>
+        <div id="skillsContainer">
+            <div>
+                <input type="text" name="skills[]" placeholder="Skill">
+                <textarea name="skills_details[]" placeholder="Details"></textarea>
+            </div>
+        </div>
+        <button type="button" id="addSkill">Add Skill</button><br>
+        <input type="submit" value="Generate Resume">
+    </form>
+
+    <script>
+        document.getElementById('addEducation').addEventListener('click', function() {
+            var container = document.getElementById('educationContainer');
+            var div = document.createElement('div');
+            div.innerHTML = '<input type="text" name="education[]" placeholder="Degree">' +
+                            '<textarea name="education_details[]" placeholder="Details"></textarea>';
+            container.appendChild(div);
+        });
+
+        document.getElementById('addSkill').addEventListener('click', function() {
+            var container = document.getElementById('skillsContainer');
+            var div = document.createElement('div');
+            div.innerHTML = '<input type="text" name="skills[]" placeholder="Skill">' +
+                            '<textarea name="skills_details[]" placeholder="Details"></textarea>';
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>

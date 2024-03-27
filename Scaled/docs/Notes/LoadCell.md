@@ -1,5 +1,6 @@
 ## Axial Force Measurement
 - [Amplifier Manual](https://www.ato.com/Content/doc/ATO-load-cell-amplifier-user-manual-ATO-LCTR-OAR.pdf)
+    - changing division from 4 to 2...  
   - Modify calibration range to effectively change gain...
   - 4-20 output with 220 ohm resistor
   - 300 kg load cell
@@ -11,6 +12,7 @@
       - ![alt text](figs/image.png)
     - Shaft color extraction
       - ![alt text](figs/bit_ext.png)
-    - 
 - [Amplifier](https://www.google.com/url?q=https://www.amazon.com/gp/product/B08CMF1VDG/ref%3Dppx_yo_dt_b_search_asin_title?ie%3DUTF8%26psc%3D1&source=gmail&ust=1690416005383000&usg=AOvVaw0OwkifFDTYfMN1AWltyKEb)
+- HX711
+  - [good examples](https://github.com/Miakatt/Hx711_circuitpython/blob/main/read_hx711.py)
 - [Load Cell](https://www.amazon.com/gp/product/B0785MXVYK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)

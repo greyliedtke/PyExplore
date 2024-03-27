@@ -1,5 +1,4 @@
 # Grey Liedtke
-grey.liedtke@gmail.com, 612-850-2049
 
 ## Education
 - Bachelor of Science, Mechanical Engineering
